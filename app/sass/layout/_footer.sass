@@ -1,0 +1,135 @@
+.footer
+	background: $bg-gray
+	padding: 56px 0 103px
+	+lg
+		padding: 48px 0 56px
+	+sm
+		padding: 32px 0
+	.container
+		+sm
+			--bs-gutter-x: 32px
+	.row
+		+sm
+			--bs-gutter-x: 64px
+	&__mobile-top-line
+		+lg
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 4rem
+		+sm
+			margin-bottom: 40px
+
+	&__mobile-social-wrap
+		+sm
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: 32px
+
+	&__top-line
+		display: flex
+		justify-content: space-between
+		padding-right: 37px
+		padding-bottom: 75px
+		+xl
+			padding-right: 113px
+		+lg
+			padding-bottom: 48px
+		+md
+			padding-right: 50px
+			width: 100%
+		+sm
+			padding-bottom: 32px
+			padding-right: 0
+
+	&__bottom-line
+		position: relative
+		padding-top: 40px
+		border-top: 1px solid $gray2
+		z-index: 1
+		+lg
+			padding-top: 32px
+		&:after
+			content: ''
+			position: absolute
+			top: -33px
+			right: 0
+			width: 110px
+			height: 120px
+			background: url('../img/icons/mouse.png') no-repeat center center
+			transform: translateY(-100%)
+			z-index: -1
+			+lg
+				top: -48px
+			+sm
+				top: -32px
+
+	&__menu-wrap
+		display: flex
+		+md
+			justify-content: space-between
+			width: 100%
+		+sm
+			display: grid
+			grid-template-columns: 1fr 1fr
+			grid-row-gap: 32px
+			grid-column-gap: 24px
+
+	&__menu-item
+		&:first-child
+			+sm
+				grid-column: 1/3
+		&:not(:last-child)
+			margin-right: 94px
+			+xl
+				margin-right: 110px
+			+md
+				margin-right: 0
+
+		&:nth-child(2)
+			margin-right: 141px
+			+xl
+				margin-right: 80px
+			+md
+				margin-right: 0
+
+	&__links-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 27px
+		+sm
+			margin-bottom: 16px
+
+	&__link
+		font-size: 14px
+		line-height: 20px
+		color: $gray
+		text-decoration: none
+		&:hover
+			color: darken($gray, 10%)
+		&-list
+			display: flex
+			align-items: center
+		&-item
+			&:not(:last-child)
+				margin-right: 40px
+				+md
+					margin-right: 24px
+
+	&__right-text
+		font-size: 12px
+		line-height: 16px
+		color: $gray
+		p
+			margin-bottom: 0
+			&:not(:last-child)
+				margin-bottom: 5px
+				+sm
+					margin-bottom: 8px
+
+		&-wrap
+			display: flex
+			align-items: flex-start
+			justify-content: space-between

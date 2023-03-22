@@ -1,0 +1,55 @@
+.header
+	position: fixed
+	top: 0
+	left: 50%
+	width: 100%
+	min-height: 56px
+	background: $bg-gray
+	transform: translateX(-50%)
+	z-index: 3
+	&.menu-opened
+		.header
+			&__inner
+				background: $bg-gray
+			&__scrollbar
+				opacity: 0
+
+	&__nav
+		+lg
+			display: none
+
+	&__inner
+		position: relative
+		padding: 16px 0 15px
+		background: #fff
+		border-bottom: 1px solid $gray2
+		transition: all 0.5s ease
+		z-index: 4
+
+	&__scrollbar
+		position: absolute
+		bottom: -3px
+		left: 0
+		width: 100%
+		height: 2px
+		background: $main-blue
+		transform: translateX(-100%)
+		transition: all 0.3s ease
+
+	&__wrap
+		display: flex
+		align-items: center
+		// padding: 0 12px
+		+lg
+			justify-content: space-between
+
+	&__logo
+		margin-right: 65px
+
+	&__multilingual_wrap
+		margin-left: auto
+		position: relative
+		display: flex
+		align-items: center
+		+lg
+			display: none

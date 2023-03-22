@@ -1,0 +1,55 @@
+.checkbox
+  display: inline-flex
+  align-items: center
+  cursor: pointer
+  user-select: none
+  transition: all 0.3s ease
+  margin-bottom: 0
+  &--start
+    align-items: flex-start
+  &:hover
+    .checkbox__icon
+      svg
+        transform: scale(1)
+
+  &__input
+    width: 0
+    height: 0
+    position: absolute
+    visibility: hidden
+    &:checked ~ .checkbox__icon
+      background: $main-blue
+      svg
+        fill: $white
+        transform: scale(1)
+
+  &__text
+    font-size: 16px
+    line-height: 20px
+    text-align: left
+    color: #555555
+    a
+      color: $main-blue
+      &:hover
+				// color: $gray
+
+  &__icon
+    width: 17px
+    height: 17px
+    min-width: 17px
+    min-height: 17px
+    background: rgba(#acacac, .57)
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.3s ease
+    margin-right: 13px
+    svg
+			// fill: $c3
+      width: 11px
+      height: 9px
+      min-width: 11px
+      min-height: 9px
+      fill: #efefef
+      transition: all 0.3s ease
+      transform: scale(0)

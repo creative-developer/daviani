@@ -1,0 +1,39 @@
+// Inputs
+.input-wrap
+  margin-bottom: 30px
+
+input,
+textarea
+  width: 100%
+  font-size: 20px
+  line-height: 20px
+  color: $c1
+  border: none
+  padding: 5px 10px
+  transition: all .3s ease
+  &:focus
+    outline: none
+    border-color: $c1
+  &:disabled
+    background: $white
+
+::placeholder
+  color: #999
+
+.form
+  display: flex
+  flex-direction: column
+  gap: 24px
+
+  &__group
+    position: relative
+
+  &__group, &__input
+    width: 100%
+
+  &__button
+    max-width: 200px
+    width: 100%
+
+    +sm
+      max-width: 100%
