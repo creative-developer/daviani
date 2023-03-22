@@ -1,4 +1,7 @@
-export const breakpoints = {
+import { IMediaBreakPoints } from '../interfaces/interfaces';
+import { MediaBreakPointsKeys, MediaBreakPointsValues } from '../types/types';
+
+export const breakpoints: IMediaBreakPoints = {
   xl: '(max-width: 1439px)',
   lg: '(max-width: 991px)',
   md: '(max-width: 767px)',
@@ -6,21 +9,24 @@ export const breakpoints = {
   xsm: '(max-width: 374px)',
 };
 
-// @ts-ignore
-const getBreakpoint = input => {
-  // @ts-ignore
+const getBreakpoint = (input: MediaBreakPointsKeys) => {
   if (breakpoints[input] !== undefined) {
-    // @ts-ignore
     return breakpoints[input];
   } else {
     return input;
   }
 };
 
-// @ts-ignore
-const action = function (rule, handlerTrue, handlerFalse, listener, elThis) {
+const action = function (
+  rule: MediaBreakPointsValues,
+  handlerTrue: () => void,
+  handlerFalse: () => void,
+  listener?: any,
+  elThis?: ThisType<unknown>,
+) {
   if (typeof handlerTrue == 'function' || typeof handlerFalse == 'function') {
-    const mq = window.matchMedia(getBreakpoint(rule));
+    // TODO: Потом нужно вернутся
+    const mq = window.matchMedia(getBreakpoint(rule as any).toString());
 
     const callTrigger = function () {
       const matches = mq.matches;
@@ -40,13 +46,14 @@ const action = function (rule, handlerTrue, handlerFalse, listener, elThis) {
       }
     };
 
-    if (listener !== false) mq.addListener(callTrigger);
+    if (listener !== false) {
+      mq.addListener(callTrigger);
+    }
 
     callTrigger();
   }
 };
 
-// @ts-ignore
-export const MQ = function (rule, handlerTrue, handlerFalse, listener) {
+export const MQ = function (rule: MediaBreakPointsValues, handlerTrue: () => void, handlerFalse: () => void, listener?: any) {
   return action(rule, handlerTrue, handlerFalse, listener, this);
 };

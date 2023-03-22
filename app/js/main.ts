@@ -6,7 +6,9 @@ import { mediaQueriesInit } from './modules/mediaQueries';
 import { popupsInit } from './modules/popups';
 import { mfpPopupInit } from './modules/mfpPopup';
 
-$(document).on('ready', () => {
+$(document).ready(() => {
+  console.log('asdf');
+
   mfpPopupInit();
   mediaQueriesInit();
   smoothScroll();

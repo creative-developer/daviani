@@ -1,7 +1,8 @@
 import { breakpoints, MQ } from './MQ';
 
 export const mediaQueriesInit = () => {
-  // @ts-ignore
+  console.log('serdar');
+
   MQ(
     breakpoints.lg,
     () => {
@@ -12,12 +13,13 @@ export const mediaQueriesInit = () => {
       // out lg
     },
   );
-  // @ts-ignore
   MQ(
     breakpoints.sm,
     () => {
       // in sm
     },
-    () => {},
+    () => {
+      // out sm
+    },
   );
 };
