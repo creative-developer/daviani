@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const env = process.env.NODE_ENV || 'production';
+const env = process.env.NODE_ENV || 'development';
 const mode = env === 'development' ? 'development' : process.env.NODE_ENV || 'production';
 const isDev = mode === 'development';
 
