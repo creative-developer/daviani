@@ -11,6 +11,4 @@ $(document).ready(() => {
   mediaQueriesInit();
   smoothScroll();
   popupsInit();
-
-  console.log('ishledi');
 });

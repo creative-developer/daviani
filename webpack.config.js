@@ -1,32 +1,35 @@
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const env = process.env.NODE_ENV || 'development';
-const mode = env === 'development' ? 'development' : process.env.NODE_ENV || 'production';
-const isDev = mode === 'development';
+const jsLoaders = () => {
+  const loaders = [
+    {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: ['@babel/plugin-proposal-class-properties'],
+      },
+    },
+  ];
+
+  return loaders;
+};
 
 const config = {
-  mode,
-  devtool: isDev ? 'inline-source-map' : undefined,
+  mode: 'development',
+  devtool: 'inline-source-map',
+  entry: {
+    main: './app/js/main.js',
+  },
   output: {
     filename: '[name].bundle.js',
   },
   module: {
     rules: [
       {
-        test: /(\.ts|\.js)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [['@babel/preset-env', { targets: 'defaults' }]],
-          },
-        },
-      },
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+        use: jsLoaders(),
       },
     ],
   },
@@ -36,9 +39,15 @@ const config = {
         extractComments: false,
       }),
     ],
-  },
-  resolve: {
-    extensions: ['', '.ts', '.tsx', '.js', '.jsx'],
+    // splitChunks: {
+    //   cacheGroups: {
+    //     commons: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: 'vendors',
+    //       chunks: 'all',
+    //     },
+    //   },
+    // },
   },
   plugins: [
     new webpack.ProvidePlugin({

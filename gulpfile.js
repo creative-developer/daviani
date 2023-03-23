@@ -6,6 +6,7 @@ const cleancss = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const notify = require('gulp-notify');
 const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
 
 // Pug
 const plumber = require('gulp-plumber');
