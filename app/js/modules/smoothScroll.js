@@ -1,5 +1,5 @@
 export const smoothScroll = () => {
-  $('.js-scroll').on('click', (e: JQuery.ClickEvent<HTMLElement, undefined, HTMLElement, HTMLElement>) => {
+  $('.js-scroll').on('click', e => {
     e.preventDefault();
     const attr = $(e.currentTarget).attr('href').replace('#', '');
     const el = $(`[data-id=${attr}]`);

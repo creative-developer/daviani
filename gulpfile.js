@@ -21,11 +21,10 @@ const path = require('path');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const webpackConfig = require('./webpack.config.js');
-const webpackFiles = require('./config/webpackFilesInput.js');
 
 function minJs() {
   return (
-    src(webpackFiles)
+    src('./app/js/**/*.js')
       .pipe(webpackStream(webpackConfig, webpack))
       .on('error', function (error) {
         this.emit('end');
