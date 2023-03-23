@@ -4,7 +4,6 @@ export const popupsInit = () => {
     event.preventDefault();
     let popupID = $(this).attr('href');
 
-    // @ts-ignore
     window.mfpPopup(popupID);
   });
 
@@ -17,14 +16,13 @@ export const popupsInit = () => {
     const data = {
       title: btn.siblings('.country-popup__title').text() || '',
     };
-    // @ts-ignore
+
     window.mfpPopup(popupID, data);
   });
 
   $('.js-popup-close').on('click', function (e: JQuery.ClickEvent<HTMLElement, undefined, HTMLElement, HTMLElement>) {
     e.preventDefault();
 
-    // @ts-ignore
     $.magnificPopup.close();
   });
 };
