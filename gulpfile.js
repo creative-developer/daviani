@@ -1,5 +1,5 @@
 const { watch, src, dest, parallel } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const browsersync = require('browser-sync');
 
 const cleancss = require('gulp-clean-css');
@@ -41,7 +41,7 @@ function css() {
   return (
     src('app/sass/main.sass')
       .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: 'expand' }).on('error', notify.onError()))
+      .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', notify.onError()))
       .pipe(autoprefixer(['last 10 versions']))
       .pipe(cleancss({ level: { 1: { specialComments: 0 } } }))
       // .pipe(rename({ extname: '.min.css' }))
