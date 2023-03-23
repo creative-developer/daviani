@@ -49,6 +49,7 @@
     "hamburgers": "1.2.1",
     "inputmask": "5.0.8",
     "jquery": "3.6.4",
+    "konva": "8.4.2",
     "magnific-popup": "1.1.0"
   }
 }
