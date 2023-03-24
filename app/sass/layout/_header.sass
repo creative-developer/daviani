@@ -1,1 +1,31 @@
 .header
+  display: block
+  position: absolute
+  left: 50%
+  top: 30px
+  transform: translateX(-50%)
+  width: 100%
+  height: auto
+  z-index: 1
+  &__nav
+    &-left
+      margin-right: 100px
+
+  &__center-content
+    display: flex
+    align-items: center
+
+  &__logo
+    margin-right: 100px
+
+  &__content
+    display: flex
+    align-items: center
+    &--right
+      display: flex
+      align-items: center
+      justify-content: flex-end
+    &-wrap
+      display: flex
+      align-items: center
+      justify-content: space-between

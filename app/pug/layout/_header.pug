@@ -1,5 +1,31 @@
 header.b-header
-  //- .b-location
-  //-   ._icon
-  //-     +icon('location')
-  #container
+  .container
+    ._content-wrap
+      ._content.-left
+        a.b-location(href='#')
+          ._icon.-pin-icon
+            +icon('location')
+          span._text Салоны
+          ._icon.-expand-icon
+            +icon('expand')
+      ._content.-center
+        nav.b-nav.-medium.-light.-horizontal.-uppercase._nav-left
+          ul._list
+            li._item
+              a._link(href='#') О нас
+            li._item
+              a._link(href='#') Услуги
+            li._item
+              a._link(href='#') Специалисты
+        a.b-logo.-medium._logo(href='#')
+          +icon('logo')
+        nav.b-nav.-medium.-light.-horizontal.-uppercase._nav-right
+          ul._list
+            li._item
+              a._link(href='#') Почему мы
+            li._item
+              a._link(href='#') Отзывы
+            li._item
+              a._link(href='#') Контакты
+      ._content.-right
+        a.b-btn.-accent-outlined.-md(href='#') Оставить заявку
