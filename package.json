@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "bootstrap": "5.2.3",
+    "gsap": "3.11.5",
     "hamburgers": "1.2.1",
     "inputmask": "5.0.8",
     "jquery": "3.6.4",
