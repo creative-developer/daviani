@@ -8,15 +8,15 @@ html(lang='ru')
     |
     |
     // Header
-    include ../layout/_header
     .smooth-wrapper
       .smooth-content
-        // content
+        include ../layout/_header
+          // content
         block content
           // Sections
           main.main-page
             include ./index/main
 
-    |
-    |
-    include ../layout/_footer
+        |
+        |
+        include ../layout/_footer

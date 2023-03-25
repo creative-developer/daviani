@@ -6,7 +6,7 @@ const scrollSmootherAnimation = () => {
   ScrollSmoother.create({
     wrapper: '.smooth-wrapper',
     content: '.smooth-content',
-    smooth: 1.5,
+    smooth: 2,
     effects: true,
     autoResize: true,
   });
@@ -36,14 +36,48 @@ const scrollSmootherAnimation = () => {
     });
   }
 
+  // gsap.fromTo(
+  //   '.wheel',
+  //   {
+  //     rotate: 0,
+  //     ease: 'none',
+  //     xPercent: -50,
+  //     yPercent: -50,
+  //     duration: elements.length / 2,
+  //     pin: true,
+  //     scrollTrigger: {
+  //       start: 0,
+  //       end: 'max',
+  //       scrub: true,
+  //       snap: 1 / elements.length,
+  //       invalidateOnRefresh: true,
+  //     },
+  //   },
+  //   {
+  //     rotate: -360,
+  //     ease: 'none',
+  //     xPercent: -50,
+  //     yPercent: -50,
+  //     duration: elements.length / 2,
+  //     scrollTrigger: {
+  //       start: 0,
+  //       end: 'max',
+  //       scrub: true,
+  //       snap: 1 / elements.length,
+  //       invalidateOnRefresh: true,
+  //     },
+  //   },
+  // );
+
   gsap.to('.wheel', {
     rotate: -360,
-    ease: 'linear',
-    opacity: 0,
-    duration: elements.length / 2,
+    ease: 'none',
+    xPercent: -50,
+    // yPercent: -50,
+    duration: 1,
     scrollTrigger: {
       start: 0,
-      end: 'max',
+      end: '100%',
       scrub: true,
       snap: 1 / elements.length,
       invalidateOnRefresh: true,
