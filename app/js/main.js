@@ -10,6 +10,7 @@ import { mediaQueriesInit } from './modules/mediaQueries';
 import { popupsInit } from './modules/popups';
 import { mfpPopupInit } from './modules/mfpPopup';
 import { initScrollSmoother } from './modules/scrollSmoother';
+import { collageAnimationInit } from './modules/collageAnimation';
 
 $(document).ready(() => {
   mfpPopupInit();
@@ -17,4 +18,5 @@ $(document).ready(() => {
   smoothScroll();
   popupsInit();
   initScrollSmoother();
+  collageAnimationInit();
 });

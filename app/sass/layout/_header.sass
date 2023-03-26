@@ -7,25 +7,20 @@
   width: 100%
   height: auto
   z-index: 2
-  &__nav
-    &-left
-      margin-right: 100px
-
-  &__center-content
-    display: flex
-    align-items: center
-
-  &__logo
-    margin-right: 100px
 
   &__content
     display: flex
     align-items: center
-    &--right
-      display: flex
-      align-items: center
-      justify-content: flex-end
     &-wrap
       display: flex
       align-items: center
       justify-content: space-between
+    &--left
+      flex: 1
+      justify-content: space-between
+    &--center
+      justify-content: center
+      padding: 0 100px
+    &--right
+      justify-content: space-between
+      flex: 1

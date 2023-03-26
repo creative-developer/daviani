@@ -1,15 +1,16 @@
 import { WHEEL_IMAGES_LIMIT } from './consts';
 
 const scrollSmootherAnimation = () => {
+  // gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
-  ScrollSmoother.create({
-    wrapper: '.smooth-wrapper',
-    content: '.smooth-content',
-    smooth: 2,
-    effects: true,
-    autoResize: true,
-  });
+  // ScrollSmoother.create({
+  //   wrapper: '.smooth-wrapper',
+  //   content: '.smooth-content',
+  //   smooth: 1.5,
+  //   effects: true,
+  //   autoResize: true,
+  // });
 
   const wheel = document.querySelector('.wheel');
   const elements = gsap.utils.toArray('.wheel__card');
@@ -74,12 +75,14 @@ const scrollSmootherAnimation = () => {
     ease: 'none',
     xPercent: -50,
     // yPercent: -50,
-    duration: 1,
+    duration: 5,
+    yoyo: true,
+    repeat: 10,
     scrollTrigger: {
+      trigger: '.main-screen',
       start: 0,
-      end: '100%',
-      scrub: true,
-      snap: 1 / elements.length,
+      end: '+=30000',
+      scrub: 1,
       invalidateOnRefresh: true,
     },
   });
@@ -93,7 +96,6 @@ const clonningValidImagesCount = () => {
   const wheel = $('.wheel');
   const images = $('.wheel__card');
   const imagesClonningSteps = Math.ceil(WHEEL_IMAGES_LIMIT / images.length);
-
   const arr = [];
 
   for (let i = 0; i < imagesClonningSteps; i++) {
@@ -101,7 +103,7 @@ const clonningValidImagesCount = () => {
   }
 
   const validAmountOfItems = arr.slice(0, WHEEL_IMAGES_LIMIT);
-  $(wheel.html(validAmountOfItems));
+  wheel.html($(validAmountOfItems));
 
   scrollSmootherAnimation();
 };
