@@ -1,7 +1,6 @@
 import { WHEEL_IMAGES_LIMIT } from './consts';
 
 const scrollSmootherAnimation = () => {
-  // gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
   // ScrollSmoother.create({
@@ -70,22 +69,22 @@ const scrollSmootherAnimation = () => {
   //   },
   // );
 
-  gsap.to('.wheel', {
-    rotate: -360,
-    ease: 'none',
-    xPercent: -50,
-    // yPercent: -50,
-    duration: 5,
-    yoyo: true,
-    repeat: 10,
-    scrollTrigger: {
-      trigger: '.main-screen',
-      start: 0,
-      end: '+=30000',
-      scrub: 1,
-      invalidateOnRefresh: true,
-    },
-  });
+  // gsap.to('.wheel', {
+  //   rotate: -360,
+  //   ease: 'none',
+  //   xPercent: -50,
+  //   // yPercent: -50,
+  //   duration: 5,
+  //   yoyo: true,
+  //   repeat: 10,
+  //   scrollTrigger: {
+  //     trigger: '.main-screen',
+  //     start: 0,
+  //     end: '+=30000',
+  //     scrub: 1,
+  //     invalidateOnRefresh: true,
+  //   },
+  // });
 
   setup();
 
@@ -95,6 +94,10 @@ const scrollSmootherAnimation = () => {
 const clonningValidImagesCount = () => {
   const wheel = $('.wheel');
   const images = $('.wheel__card');
+
+  if (!wheel.length) {
+    return;
+  }
   const imagesClonningSteps = Math.ceil(WHEEL_IMAGES_LIMIT / images.length);
   const arr = [];
 
