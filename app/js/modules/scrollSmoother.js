@@ -70,17 +70,13 @@ const scrollSmootherAnimation = () => {
   // );
 
   // gsap.to('.wheel', {
-  //   rotate: -360,
+  //   rotate: -90,
   //   ease: 'none',
-  //   xPercent: -50,
-  //   // yPercent: -50,
   //   duration: 5,
-  //   yoyo: true,
-  //   repeat: 10,
   //   scrollTrigger: {
   //     trigger: '.main-screen',
   //     start: 0,
-  //     end: '+=30000',
+  //     end: '300%',
   //     scrub: 1,
   //     invalidateOnRefresh: true,
   //   },
