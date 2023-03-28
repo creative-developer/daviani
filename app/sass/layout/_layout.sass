@@ -29,7 +29,7 @@ body
 
 main
   overflow: hidden
-  background: $bg
+  background: $bg300
   position: relative
   &.main-page
     &:after
@@ -55,3 +55,16 @@ main
       height: 1469px
       background: url('../img/index/bg/main-right-gradient.png')
       z-index: 0
+
+.global-bg
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: url('../img/bg/mask.png') repeat
+    pointer-events: none
+    z-index: 0
+    opacity: 0.07
