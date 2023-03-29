@@ -31,11 +31,26 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    gap: 70px
+    gap: 62px
 
   &__item
-    &:first-child
-      padding-top: 104px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    &:nth-child(1)
+      padding-top: 208px
+      flex-basis: 791px
+      max-width: 791px
+      height: 802px
+    &:nth-child(2)
+      flex-basis: 950px
+      max-width: 950px
+      height: 833px
+    &:nth-child(3)
+      max-width: 100%
+      flex-basis: 100%
+      padding-top: 81px
 
   &__decor-line
     position: absolute
