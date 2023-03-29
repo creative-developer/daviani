@@ -1,0 +1,72 @@
+.main-contacts
+  padding: 50px 0 101px
+
+  &__wrapper
+    display: flex
+    column-gap: 50px
+
+  &__card
+    flex: 1 1 50%
+    max-width: 50%
+    max-height: 885px
+    padding: 72px
+    background: $bg700
+
+  &__map
+    margin-bottom: 45px
+
+  &__title
+    font-weight: 400
+    font-size: 32px
+    line-height: 32px
+    color: $white
+    margin-bottom: 45px
+    font-family: $titleFont
+
+  &__list
+    margin-bottom: 52px
+
+  &__item
+    font-weight: 400
+    font-size: 18px
+    line-height: 22px
+    &:not(:last-child)
+      margin-bottom: 17px
+
+    .icon
+      &--contacts-location
+        width: 22px
+        height: 22px
+        color: $accent
+      &--contacts-phone
+        width: 22px
+        height: 22px
+        color: $accent
+      &--contacts-clock
+        width: 22px
+        height: 22px
+        color: $accent
+
+  &__link
+    margin-left: 15px
+    text-decoration: none
+    color: rgba($white , 0.75)
+
+  &__btn
+    width: 221px
+    height: 53px
+    margin-right: 22px
+    span
+      color: $bg300
+    .icon
+      &--whatsapp
+        width: 19px
+        height: 19px
+        color: $black
+
+  &__direction-link
+    font-weight: 400
+    font-size: 18px
+    line-height: 22px
+    text-decoration: none
+    color: rgba($white, 0.75)

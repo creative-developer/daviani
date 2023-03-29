@@ -2,17 +2,13 @@
   padding: 80px 0
 
   &__title
-    font-weight: 400
-    font-size: 77px
-    line-height: 77px
-    font-family: $tenorSansFont
-    color: $white
     max-width: 670px
     margin-right: 185px
+    margin-bottom: 0
     &-wrap
       max-width: 1420px
       width: 100%
-      margin: 0 auto 16px auto
+      margin: 0 auto 24px auto
       display: flex
 
   &__sub-title
@@ -31,11 +27,26 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    gap: 70px
+    gap: 62px
 
   &__item
-    &:first-child
-      padding-top: 104px
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    &:nth-child(1)
+      padding-top: 208px
+      flex-basis: 791px
+      max-width: 791px
+      height: 802px
+    &:nth-child(2)
+      flex-basis: 950px
+      max-width: 950px
+      height: 833px
+    &:nth-child(3)
+      max-width: 100%
+      flex-basis: 100%
+      padding-top: 81px
 
   &__decor-line
     position: absolute

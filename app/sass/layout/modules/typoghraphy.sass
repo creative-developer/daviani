@@ -27,30 +27,17 @@ img
   height: auto
 
 // Titles
-h1, h2, h3, h4, h5, h6
-  font-weight: 700
-
-h1
-  font-size: 64px
-  line-height: 68px
-
-h2
-  font-size: 48px
-  line-height: 52px
-
-h3
-  font-size: 40px
-  line-height: 48px
-
-h4
-  font-size: 24px
-  line-height: 28px
-
-h5
-  font-size: 14px
-
-h6
-  font-size: 12px
+.second-title
+  font-weight: 400
+  font-family: $tenorSansFont
+  &:not(&--large)
+    font-size: 77px
+    line-height: 77px
+  &--light
+    color: $white
+  &--large
+    font-size: 100px
+    line-height: 100px
 
 .body1
   font-weight: 400
