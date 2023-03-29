@@ -1,2 +1,87 @@
 .footer
   display: block
+  background: $bg300
+  padding: 52px 0 25px 0
+
+  &__row
+    display: flex
+    justify-content: space-between
+    &--top-line
+      margin-bottom: 58px
+    &--bottom-line
+     
+  
+  &__logo-wrap
+    display: flex
+    justify-content: space-between
+
+  &__col
+    
+    &--left
+      min-width: 500px
+    &--center
+      min-width: 283px
+    &--right
+      display: flex
+      justify-content: space-between
+  
+  &__info-text
+    font-weight: 400
+    font-size: 14px
+    line-height: 20px
+    color: $gray-light
+    
+  &__contacts-wrap
+    display: flex
+    justify-content: space-between
+    margin-right: 108px
+    
+  &__inner-wrap
+    display: flex
+    
+  &__phone
+    display: flex
+    font-family: $titleFont
+    font-weight: 400
+    font-size: 22px
+    line-height: 28px
+    letter-spacing: 0.06em
+    text-decoration: none
+    color: $white
+    margin-bottom: 8px
+    &:hover
+      color: $accent
+
+  &__address
+    max-width: 197px
+    font-weight: 400
+    font-size: 14px
+    line-height: 20px
+    color: $gray-light
+    text-decoration: none
+    &:hover
+      color: $accent
+
+  &__item
+    &:last-child
+      margin-bottom: 0
+      
+
+.social
+  &__list
+    display: flex
+    justify-content: space-between
+    min-width: 172px
+  
+  &__item
+    background-color: #151515
+    width: 48px
+    height: 48px
+    border-radius: 100%
+
+  &__link
+    position: relative
+    background-color: #151515
+    border-radius: 100%
+
+
