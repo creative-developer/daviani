@@ -1,46 +1,47 @@
 .footer
-  display: block
   background: $bg300
   padding: 52px 0 25px 0
 
   &__row
     display: flex
-    justify-content: space-between
     &--top-line
       margin-bottom: 58px
-    &--bottom-line
-     
-  
+    &--bottom
+      align-items: center
+      justify-content: space-between
+
   &__logo-wrap
     display: flex
     justify-content: space-between
 
+  &__left-nav
+    margin-right: 23.5%
+
   &__col
-    
     &--left
-      min-width: 500px
+      flex: 1 1 40.8%
+      max-width: 40.8%
     &--center
-      min-width: 283px
+      flex: 1 1 23%
+      max-width: 23%
     &--right
+      flex: 1 1 36.2%
+      max-width: 36.2%
       display: flex
-      justify-content: space-between
-  
+      justify-content: flex-end
+
   &__info-text
     font-weight: 400
     font-size: 14px
     line-height: 20px
     color: $gray-light
-    
-  &__contacts-wrap
-    display: flex
-    justify-content: space-between
-    margin-right: 108px
-    
+
   &__inner-wrap
     display: flex
-    
+
   &__phone
     display: flex
+    align-items: center
     font-family: $titleFont
     font-weight: 400
     font-size: 22px
@@ -48,9 +49,17 @@
     letter-spacing: 0.06em
     text-decoration: none
     color: $white
-    margin-bottom: 8px
+    margin-bottom: 10px
     &:hover
       color: $accent
+    &-icon-wrap
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 16px
+      color: $green
+    &-wrap
+      margin-right: 107px
 
   &__address
     max-width: 197px
@@ -58,30 +67,13 @@
     font-size: 14px
     line-height: 20px
     color: $gray-light
-    text-decoration: none
-    &:hover
-      color: $accent
+    padding-left: 36px
 
   &__item
     &:last-child
       margin-bottom: 0
-      
 
-.social
-  &__list
-    display: flex
-    justify-content: space-between
-    min-width: 172px
-  
-  &__item
-    background-color: #151515
-    width: 48px
-    height: 48px
-    border-radius: 100%
-
-  &__link
-    position: relative
-    background-color: #151515
-    border-radius: 100%
-
-
+  .icon
+    &--whatsapp
+      width: 20px
+      height: 20px

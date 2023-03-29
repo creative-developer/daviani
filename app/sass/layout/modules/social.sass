@@ -1,0 +1,34 @@
+.social
+  &__list
+    display: flex
+    justify-content: space-between
+    min-width: 172px
+
+  &__item
+    &:not(:last-child)
+      margin-right: 14px
+
+  &__link
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: $dark-black
+    width: 48px
+    height: 48px
+    min-width: 48px
+    min-height: 48px
+    color: $dark-grey
+    border-radius: 50%
+    &:hover
+      color: $accent
+
+  .icon
+    &--vk
+      width: 21px
+      height: 12px
+    &--ok
+      width: 11px
+      height: 19px
+    &--tg
+      width: 20px
+      height: 16px
