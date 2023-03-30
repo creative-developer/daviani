@@ -1,30 +1,72 @@
 section.b-masters
   .container-fluid
-    ._title-wrap
-      h2._title.second-title.second-title--light Наши специалисты парикмахерского зала
-      ._decor-line
-        +icon('golden-decor-line')
+    ._top-line
+      ._title-wrap
+        h2._title.second-title.second-title--light Наши специалисты парикмахерского зала
+        ._decor-line
+          +icon('golden-decor-line')
+      ._slider-btns-wrap
+        button._slider-btn.-prev(type='button')
+          +icon('thin-styled-arrow')
+        button._slider-btn.-next(type='button')
+          +icon('thin-styled-arrow')
 
-  .b-masters-slider._slider
-    ._item
-      ._card
-        ._proffession Парикмахер-Стилист
-        ._name Марина Бессарабова
-        ._experience-wrap
-          span._experience-title Опыт работы:
-          span._experience-date Более 11 лет
-        ._desc
-          p Отлично выполняет мужские стрижки и авторский расслабляющий массаж головы. Ориентируется в трендах, придерживается современного видения парикмахерского искусства.
-        ._btn-wrap
-          a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right._btn(href='#')
-            span Записаться
-            ._icon-wrap
-              +icon('expand-styled')
-          a.b-btn.-lg.-bg200-text.-link._link(href='#') Подробнее
-      ._img-wrap
-        img._img(src='img/index/masters/master1.png', alt='')
+  .b-masters-slider.swiper._slider
+    ._wrapper.swiper-wrapper
+      ._item.swiper-slide
+        ._card
+          ._proffession Парикмахер-Стилист
+          ._name Марина Бессарабова
+          ._experience-wrap
+            span._experience-title Опыт работы:
+            span._experience-date Более 11 лет
+          ._desc
+            p Отлично выполняет мужские стрижки и авторский расслабляющий массаж головы. Ориентируется в трендах, придерживается современного видения парикмахерского искусства.
+          ._btn-wrap
+            a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right._btn(href='#')
+              span Записаться
+              ._icon-wrap
+                +icon('expand-styled')
+            a.b-btn.-lg.-bg200-text.-link._link(href='#') Подробнее
+        ._img-wrap
+          img._img(src='img/index/masters/master1.webp', alt='')
+      ._item.swiper-slide
+        ._card
+          ._proffession Парикмахер-Стилист
+          ._name Марина Бессарабова
+          ._experience-wrap
+            span._experience-title Опыт работы:
+            span._experience-date Более 11 лет
+          ._desc
+            p Отлично выполняет мужские стрижки и авторский расслабляющий массаж головы. Ориентируется в трендах, придерживается современного видения парикмахерского искусства.
+          ._btn-wrap
+            a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right._btn(href='#')
+              span Записаться
+              ._icon-wrap
+                +icon('expand-styled')
+            a.b-btn.-lg.-bg200-text.-link._link(href='#') Подробнее
+        ._img-wrap
+          img._img(src='img/index/masters/master1.webp', alt='')
+      ._item.swiper-slide
+        ._card
+          ._proffession Парикмахер-Стилист
+          ._name Марина Бессарабова
+          ._experience-wrap
+            span._experience-title Опыт работы:
+            span._experience-date Более 11 лет
+          ._desc
+            p Отлично выполняет мужские стрижки и авторский расслабляющий массаж головы. Ориентируется в трендах, придерживается современного видения парикмахерского искусства.
+          ._btn-wrap
+            a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right._btn(href='#')
+              span Записаться
+              ._icon-wrap
+                +icon('expand-styled')
+            a.b-btn.-lg.-bg200-text.-link._link(href='#') Подробнее
+        ._img-wrap
+          img._img(src='img/index/masters/master1.webp', alt='')
+
   .container-fluid
     ._video-wrap
       img._video-img(src='img/index/masters/video-bg.jpg', alt='')
-      a._video-btn(href='https://www.youtube.com/watch?v=6eqPkpOOAxE', data-fancybox)
+      a._video-btn(href='https://www.youtube.com/watch?v=6eqPkpOOAxE', data-fancybox='gallery')
         include ../../../img/icons/yt.svg

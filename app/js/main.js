@@ -1,6 +1,6 @@
 // Libs
 import 'magnific-popup/dist/jquery.magnific-popup.min';
-// TODO: Нужно подключать именно эту версию gsap так как только это версия работает со ScrollSmoother
+// Внимание!!!: Нужно подключать именно эту версию gsap так как только это версия работает со ScrollSmoother
 import './libs/gsap.min';
 import './libs/ScrollTrigger.min';
 import './libs/ScrollSmoother.min';
@@ -11,6 +11,8 @@ import { popupsInit } from './modules/popups';
 import { mfpPopupInit } from './modules/mfpPopup';
 import { initScrollSmoother } from './modules/scrollSmoother';
 import { collageAnimationInit } from './modules/collageAnimation';
+import { initFancyBox } from './modules/fancybox';
+import { initMastersSlider } from './modules/mastersSlider';
 
 $(document).ready(() => {
   mfpPopupInit();
@@ -19,5 +21,7 @@ $(document).ready(() => {
   popupsInit();
   initScrollSmoother();
   collageAnimationInit();
+  initFancyBox();
+  initMastersSlider();
   // servicesTabsInit();
 });
