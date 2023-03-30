@@ -15,7 +15,6 @@
   &:hover:not(.disabled)
     outline: none
     cursor: pointer
-    color: $white
     text-decoration: none
   &.disabled
     opacity: .4
@@ -33,6 +32,10 @@
     color: $white
   &--dark-text
     color: $dark
+  &--bg200-text
+    color: $bg200
+    &:hover
+      color: lighten($bg200, 10%)
   &--accent-text
     color: $accent
   &--accent-outlined
@@ -67,7 +70,8 @@
     font-size: 20px
     line-height: 20px
     letter-spacing: 0.02em
-    padding: 23px 60px
+    &:not(.btn--link)
+      padding: 23px 60px
     .btn
       &__icon-wrap
         width: 28px
@@ -79,7 +83,8 @@
     font-size: 18px
     line-height: 18px
     letter-spacing: 0.02em
-    padding: 22.5px 52px
+    &:not(.btn--link)
+      padding: 22.5px 52px
     .btn
       &__icon-wrap
         width: 10px
@@ -91,7 +96,8 @@
     font-size: 16px
     line-height: 19px
     letter-spacing: 0.02em
-    padding: 13px 31px
+    &:not(.btn--link)
+      padding: 13px 31px
 
   &--sm
     // 47

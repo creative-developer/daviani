@@ -16,3 +16,6 @@ app/js/main.bundle.js
 app/js/vendors.bundle.js.LICENSE.txt
 # html
 app/*.html
+
+# misc
+.DS_Store
