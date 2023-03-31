@@ -16,6 +16,8 @@ app/js/main.bundle.js
 app/js/vendors.bundle.js.LICENSE.txt
 # html
 app/*.html
+/dist
+/build
 
 # misc
 .DS_Store

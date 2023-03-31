@@ -1,4 +1,4 @@
-import { breakpoints, MQ } from './MQ';
+import { breakpoints, MQ } from './MQ.js';
 
 export const mediaQueriesInit = () => {
   MQ(

@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
+import webpack from 'webpack';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const jsLoaders = () => {
   const loaders = [
@@ -15,7 +15,7 @@ const jsLoaders = () => {
   return loaders;
 };
 
-const config = {
+export const webpackConfig = {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
@@ -57,5 +57,3 @@ const config = {
     }),
   ],
 };
-
-module.exports = config;

@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "type": "module",
   "author": "Serdar Gurbanmyradov",
   "license": "ISC",
+  "private": true,
+  "homepage": "https://creative-developer.github.io/daviani/",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "7.21.3",
@@ -16,11 +22,13 @@
     "@prettier/plugin-pug": "2.4.1",
     "babel-loader": "9.1.2",
     "browser-sync": "2.29.0",
+    "del": "7.0.0",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-babel": "8.0.0",
     "gulp-cheerio": "1.0.0",
     "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
     "gulp-notify": "4.0.0",
     "gulp-plumber": "1.2.1",
     "gulp-pretty-html": "2.0.10",
@@ -45,6 +53,7 @@
   "dependencies": {
     "@fancyapps/ui": "5.0.13",
     "bootstrap": "5.2.3",
+    "gh-pages": "5.0.0",
     "gsap": "3.11.5",
     "hamburgers": "1.2.1",
     "inputmask": "5.0.8",

@@ -1,4 +1,4 @@
-import { WHEEL_IMAGES_LIMIT } from './consts';
+import { WHEEL_IMAGES_LIMIT } from './consts.js';
 
 const scrollSmootherAnimation = () => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
