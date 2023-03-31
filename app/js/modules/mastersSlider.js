@@ -1,7 +1,7 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 export const initMastersSlider = () => {
-  const swiper = new Swiper('.masters-slider', {
+  new Swiper('.masters-slider', {
     modules: [Navigation, Pagination],
     slideClass: 'masters-slider__item',
     wrapperClass: 'masters-slider__wrapper',

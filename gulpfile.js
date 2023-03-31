@@ -25,7 +25,6 @@ import path from 'path';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import { getWebpackConfig } from './webpack.config.js';
-import babel from 'gulp-babel';
 
 const sass = gulpSass(dartSass);
 const { watch, src, dest, parallel, series } = gulp;
@@ -38,17 +37,13 @@ function jsLibs() {
 }
 
 function js() {
-  return (
-    src('./app/js/**/*.js')
-      .pipe(webpackStream(getWebpackConfig({ mode: 'development' }), webpack))
-      .on('error', function (error) {
-        this.emit('end');
-      })
-      .pipe(babel({ presets: ['@babel/env'] }))
-      // .pipe(uglify())
-      .pipe(dest('./app/js/'))
-      .pipe(browsersync.stream())
-  );
+  return src('./app/js/**/*.js')
+    .pipe(webpackStream(getWebpackConfig({ mode: 'development' }), webpack))
+    .on('error', function (error) {
+      this.emit('end');
+    })
+    .pipe(dest('./app/js/'))
+    .pipe(browsersync.stream());
 }
 
 function minJs() {
@@ -57,10 +52,8 @@ function minJs() {
     .on('error', function (error) {
       this.emit('end');
     })
-    .pipe(babel({ presets: ['@babel/env'] }))
     .pipe(uglify())
-    .pipe(dest('./app/js/'))
-    .pipe(browsersync.stream());
+    .pipe(dest('./app/js/'));
 }
 
 // main sass
