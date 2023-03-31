@@ -8,12 +8,12 @@ export const initWorksSlider = () => {
     spaceBetween: 6,
     slidesPerView: 'auto',
     speed: 1000,
-    // autoplay: {
-    //   delay: 2000,
-    //   stopOnLastSlide: false,
-    //   pauseOnMouseEnter: false,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2000,
+      stopOnLastSlide: false,
+      pauseOnMouseEnter: false,
+      disableOnInteraction: false,
+    },
     loop: true,
     scrollbar: {
       el: '.swiper-scrollbar',
