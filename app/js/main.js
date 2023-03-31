@@ -13,6 +13,7 @@ import { initScrollSmoother } from './modules/scrollSmoother';
 import { collageAnimationInit } from './modules/collageAnimation';
 import { initFancyBox } from './modules/fancybox';
 import { initMastersSlider } from './modules/mastersSlider';
+import { initWorksSlider } from './modules/worksSlider';
 
 $(document).ready(() => {
   mfpPopupInit();
@@ -23,5 +24,6 @@ $(document).ready(() => {
   collageAnimationInit();
   initFancyBox();
   initMastersSlider();
+  initWorksSlider();
   // servicesTabsInit();
 });

@@ -3,6 +3,7 @@
     position: relative
     background: $accent
     max-width: 1342px
+    overflow: hidden
     z-index: 1
 
   &__wrapper
@@ -10,17 +11,17 @@
 
   &__card
     padding: 143px 0 140px 90px
-    min-height: 586px
+    min-height: 718px
 
   &__img
     width: 100%
     height: 100%
-    object-fit: cover
+    object-fit: contain
     z-index: -1
     &-wrap
       position: absolute
-      right: 0
-      top: 0
+      right: -61px
+      bottom: -24px
       display: flex
       align-items: center
       justify-content: center
