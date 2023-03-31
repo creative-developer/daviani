@@ -15,45 +15,50 @@ const jsLoaders = () => {
   return loaders;
 };
 
-export const webpackConfig = {
-  mode: 'development',
-  devtool: 'inline-source-map',
-  entry: {
-    main: './app/js/main.js',
-  },
-  output: {
-    filename: '[name].bundle.js',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: jsLoaders(),
-      },
-    ],
-  },
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        extractComments: false,
+export const getWebpackConfig = (options = {}) => {
+  const isDev = options.mode === 'development';
+  const webpackConfig = {
+    mode: options.mode || 'development',
+    devtool: isDev ? 'inline-source-map' : undefined,
+    entry: {
+      main: './app/js/main.js',
+    },
+    output: {
+      filename: '[name].bundle.js',
+    },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: jsLoaders(),
+        },
+      ],
+    },
+    optimization: {
+      minimizer: [
+        new TerserPlugin({
+          extractComments: false,
+        }),
+      ],
+      // splitChunks: {
+      //   cacheGroups: {
+      //     commons: {
+      //       test: /[\\/]node_modules[\\/]/,
+      //       name: 'vendors',
+      //       chunks: 'all',
+      //     },
+      //   },
+      // },
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
       }),
     ],
-    // splitChunks: {
-    //   cacheGroups: {
-    //     commons: {
-    //       test: /[\\/]node_modules[\\/]/,
-    //       name: 'vendors',
-    //       chunks: 'all',
-    //     },
-    //   },
-    // },
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-    }),
-  ],
+  };
+
+  return webpackConfig;
 };

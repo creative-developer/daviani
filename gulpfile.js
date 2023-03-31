@@ -24,7 +24,7 @@ import cheerio from 'gulp-cheerio';
 import path from 'path';
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
-import { webpackConfig } from './webpack.config.js';
+import { getWebpackConfig } from './webpack.config.js';
 import babel from 'gulp-babel';
 
 const sass = gulpSass(dartSass);
@@ -37,10 +37,10 @@ function jsLibs() {
   return src(jsLibsPaths).pipe(concat('libs.min.js')).pipe(uglify()).pipe(dest('app/js')).pipe(browsersync.stream());
 }
 
-function minJs() {
+function js() {
   return (
     src('./app/js/**/*.js')
-      .pipe(webpackStream(webpackConfig, webpack))
+      .pipe(webpackStream(getWebpackConfig({ mode: 'development' }), webpack))
       .on('error', function (error) {
         this.emit('end');
       })
@@ -49,6 +49,18 @@ function minJs() {
       .pipe(dest('./app/js/'))
       .pipe(browsersync.stream())
   );
+}
+
+function minJs() {
+  return src('./app/js/**/*.js')
+    .pipe(webpackStream(getWebpackConfig({ mode: 'production' }), webpack))
+    .on('error', function (error) {
+      this.emit('end');
+    })
+    .pipe(babel({ presets: ['@babel/env'] }))
+    .pipe(uglify())
+    .pipe(dest('./app/js/'))
+    .pipe(browsersync.stream());
 }
 
 // main sass
@@ -130,7 +142,7 @@ function svgSprite() {
 }
 
 function buildCopy() {
-  return src(['{src/js,src/css}/*.min.*', 'app/js/main.bundle.js', 'app/js/libs.min.js', 'app/fonts/**/*', 'app/img/**/*', 'app/*.html'], {
+  return src(['{app/js,app/css}/*.min.*', 'app/js/main.bundle.js', 'app/fonts/**/*', 'app/img/**/*', 'app/*.html'], {
     base: 'app/',
   }).pipe(dest('build'));
 }
@@ -143,10 +155,10 @@ async function cleanBuild() {
 function startWatch() {
   watch(['app/sass/**/*.sass', '!app/sass/libs/libs.sass'], { usePolling: true }, css);
   watch('app/pug/**/*.pug', { usePolling: true }, html);
-  watch(['app/js/main.js', 'app/js/modules/*.js'], { usePolling: true }, minJs);
+  watch(['app/js/main.js', 'app/js/modules/*.js'], { usePolling: true }, js);
   watch('app/img/svg-sprite/*.svg', { usePolling: true }, svgSprite);
 }
 
 // Export tasks
 export const build = series(cleanBuild, jsLibs, minJs, css, html, buildCopy, svgSprite);
-export default series(jsLibs, minJs, css, html, svgSprite, parallel(browserSync, startWatch));
+export default series(jsLibs, js, css, html, svgSprite, parallel(browserSync, startWatch));
