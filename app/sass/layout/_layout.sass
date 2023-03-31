@@ -31,6 +31,7 @@ main
   overflow: hidden
   background: $bg300
   position: relative
+  z-index: 1
   &.main-page
     &:after
       content: ''
@@ -66,5 +67,5 @@ main
     height: 100%
     background: url('../img/bg/mask.png') repeat
     pointer-events: none
-    z-index: 0
+    z-index: -1
     opacity: 0.07

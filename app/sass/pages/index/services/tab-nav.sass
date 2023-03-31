@@ -1,0 +1,50 @@
+.tab-nav
+  &__list
+    display: flex
+    align-items: center
+    gap: 10px
+
+  &__item
+    &--active
+      .tab-nav
+        &__link
+          color: $white
+          background: #131313
+          &-img
+            opacity: 0.55
+            visibility: visible
+    &:not(:last-child)
+      margin-right: 30px
+
+  &__link
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: $tenorSansFont
+    font-weight: 400
+    font-size: 32px
+    line-height: 32px
+    color: $accent
+    background: transparent
+    border-radius: 100px
+    padding: 27px 52px
+    text-decoration: none
+    overflow: hidden
+    z-index: 1
+    transition: all 0.3s linear
+    &:hover
+      color: $white
+      background: #131313
+    &-img
+      position: absolute
+      left: 50%
+      top: 50%
+      width: 100%
+      height: 100%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      visibility: hidden
+      pointer-events: none
+      transition: all 0.3s linear
+      z-index: -1

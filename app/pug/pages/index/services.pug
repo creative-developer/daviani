@@ -2,17 +2,94 @@ section.b-services
   .container-fluid
     h2._title.second-title.second-title--light.second-title--large Идеальная прическа от лучших стилистов Москвы
     ._tab-nav-wrap
-      nav.b-tab-nav._tab-nav-wrap
+      nav.b-tab-nav._tab-nav
         ul._list
+          li._item.-active
+            a._link(href='#tinting') Окрашивание
+              img._link-img(src='img/index/services/btn-background.png', alt='')
           li._item
-            a._link(href='#') Окрашивание
+            a._link(href='#stylings') Укладки
+              img._link-img(src='img/index/services/btn-background.png', alt='')
           li._item
-            a._link(href='#') Укладки
-          li._item
-            a._link(href='#') Стрижки
+            a._link(href='#haircuts') Стрижки
+              img._link-img(src='img/index/services/btn-background.png', alt='')
     ._tab-content-wrap
-      .b-tab-content(style='height: 824px')
-        ._item
+      .b-tab-content
+        ._bg-icon
+          +icon('daviani-bg-logo')
+        ._item(data-id='tinting')
+          .b-services-card
+            ._col.-left
+              ._content
+                ul._list
+                  li._item.-active
+                    a._link(href='#') Airtouch с тонированием
+                  li._item
+                    a._link(href='#') Окрашивание волос
+                  li._item
+                    a._link(href='#') Тонирование волос
+                  li._item
+                    a._link(href='#') Мелирование волос
+                  li._item
+                    a._link(href='#') Окрашивание в технике Шатуш
+                ._discount При первом визите -15%
+                ._price 10 800 ₽
+                a.b-btn.-dark-text.-bg-accent.-iconed-right.-aic.-overlay-white-border.-xl._btn(href='#')
+                  span Записаться
+                  ._icon-wrap
+                    +icon('arrow-styled-with-line')
+            ._col.-right
+              ._img-wrap
+                img._img(src='img/index/services/airtouch.jpg', alt='')
+        ._item(data-id='stylings')
+          .b-services-card
+            ._col.-left
+              ._content
+                ul._list
+                  li._item.-active
+                    a._link(href='#') Airtouch с тонированием
+                  li._item
+                    a._link(href='#') Окрашивание волос
+                  li._item
+                    a._link(href='#') Тонирование волос
+                  li._item
+                    a._link(href='#') Мелирование волос
+                  li._item
+                    a._link(href='#') Окрашивание в технике Шатуш
+                ._discount При первом визите -15%
+                ._price 10 800 ₽
+                a.b-btn.-dark-text.-bg-accent.-iconed-right.-aic.-overlay-white-border.-xl._btn(href='#')
+                  span Записаться
+                  ._icon-wrap
+                    +icon('arrow-styled-with-line')
+            ._col.-right
+              ._img-wrap
+                img._img(src='img/index/services/styling.jpg', alt='')
+        ._item(data-id='haircuts')
+          .b-services-card
+            ._col.-left
+              ._content
+                ul._list
+                  li._item.-active
+                    a._link(href='#') stylings
+                  li._item
+                    a._link(href='#') Окрашивание волос
+                  li._item
+                    a._link(href='#') Тонирование волос
+                  li._item
+                    a._link(href='#') Мелирование волос
+                  li._item
+                    a._link(href='#') Окрашивание в технике Шатуш
+                ._discount При первом визите -15%
+                ._price 10 800 ₽
+                a.b-btn.-dark-text.-bg-accent.-iconed-right.-aic.-overlay-white-border.-xl._btn(href='#')
+                  span Записаться
+                  ._icon-wrap
+                    +icon('arrow-styled-with-line')
+            ._col.-right
+              ._img-wrap
+                img._img(src='img/index/services/airtouch.jpg', alt='')
+
     .b-services-banner
       ._img-wrap
         img._img(src='img/index/services/services-banner.jpg', alt='')

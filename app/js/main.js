@@ -14,6 +14,7 @@ import { collageAnimationInit } from './modules/collageAnimation';
 import { initFancyBox } from './modules/fancybox';
 import { initMastersSlider } from './modules/mastersSlider';
 import { initWorksSlider } from './modules/worksSlider';
+import { initServicesTabs } from './modules/initServicesTabs';
 
 $(document).ready(() => {
   mfpPopupInit();
@@ -25,5 +26,6 @@ $(document).ready(() => {
   initFancyBox();
   initMastersSlider();
   initWorksSlider();
+  initServicesTabs();
   // servicesTabsInit();
 });
