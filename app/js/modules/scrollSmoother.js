@@ -3,13 +3,13 @@ import { WHEEL_IMAGES_LIMIT } from './consts.js';
 const scrollSmootherAnimation = () => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
-  ScrollSmoother.create({
-    wrapper: '.smooth-wrapper',
-    content: '.smooth-content',
-    smooth: 1.5,
-    effects: true,
-    autoResize: true,
-  });
+  // ScrollSmoother.create({
+  //   wrapper: '.smooth-wrapper',
+  //   content: '.smooth-content',
+  //   smooth: 1.5,
+  //   effects: true,
+  //   autoResize: true,
+  // });
 
   const wheel = document.querySelector('.wheel');
   const elements = gsap.utils.toArray('.wheel__card');
@@ -69,18 +69,18 @@ const scrollSmootherAnimation = () => {
   //   },
   // );
 
-  gsap.to('.wheel', {
-    rotate: -90,
-    ease: 'none',
-    duration: 5,
-    scrollTrigger: {
-      trigger: '.main-screen',
-      start: 0,
-      end: '300%',
-      scrub: 1,
-      invalidateOnRefresh: true,
-    },
-  });
+  // gsap.to('.wheel', {
+  //   rotate: -90,
+  //   ease: 'none',
+  //   duration: 5,
+  //   scrollTrigger: {
+  //     trigger: '.main-screen',
+  //     start: 0,
+  //     end: '300%',
+  //     scrub: 1,
+  //     invalidateOnRefresh: true,
+  //   },
+  // });
 
   setup();
 
