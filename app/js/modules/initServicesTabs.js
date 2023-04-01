@@ -1,6 +1,29 @@
+const initServicesInnerTabs = () => {
+  const currentParentTabElementId = $('.tab-nav__item--active').find('.tab-nav__link').attr('href').replace('#', '');
+  const currentParentTabElement = $(`.tab-content__item[data-id='${currentParentTabElementId}']`);
+  const tabNavLink = currentParentTabElement.find('.services-card__link');
+  const tabContentItem = currentParentTabElement.find('.services-card__img');
+
+  // init tabs first render
+  tabContentItem.not(tabContentItem.first()).addClass('services-card__img--active');
+
+  tabNavLink.on('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const currentElement = $(e.currentTarget);
+    const id = currentElement.attr('href').replace('#', '');
+    const currentTabContentItem = currentParentTabElement.find(`.services-card__img[data-id='${id}']`);
+
+    currentElement.closest('.services-card__list').find('.services-card__item').removeClass('services-card__item--active');
+    currentElement.parent().addClass('services-card__item--active');
+
+    tabContentItem.not(currentTabContentItem).removeClass('services-card__img--active');
+    currentTabContentItem.addClass('services-card__img--active');
+  });
+};
+
 export const initServicesTabs = () => {
-  const tabList = $('.tab-nav__list');
-  const tabItem = $('.tab-nav__item');
   const tabLink = $('.tab-nav__link');
   const tabContentItem = $('.tab-content__item');
 
@@ -9,6 +32,8 @@ export const initServicesTabs = () => {
 
   tabLink.on('click', e => {
     e.preventDefault();
+    e.stopPropagation();
+
     const currentElement = $(e.currentTarget);
     const id = currentElement.attr('href').replace('#', '');
     const currentTabContentItem = $(`.tab-content__item[data-id='${id}']`);
@@ -18,5 +43,8 @@ export const initServicesTabs = () => {
 
     tabContentItem.not(currentTabContentItem).fadeOut(0);
     currentTabContentItem.fadeIn(500);
+    initServicesInnerTabs();
   });
+
+  initServicesInnerTabs();
 };

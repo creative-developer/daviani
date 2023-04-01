@@ -25,6 +25,5 @@ $(document).ready(() => {
   initMastersSlider();
   initWorksSlider();
   initServicesTabs();
-  // servicesTabsInit();
   initContactsMaps();
 });
