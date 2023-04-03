@@ -23,6 +23,7 @@
     "babel-loader": "9.1.2",
     "browser-sync": "2.29.0",
     "del": "7.0.0",
+    "gh-pages": "5.0.0",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-babel": "8.0.0",
@@ -53,7 +54,6 @@
   "dependencies": {
     "@fancyapps/ui": "5.0.13",
     "bootstrap": "5.2.3",
-    "gh-pages": "5.0.0",
     "gsap": "3.11.5",
     "hamburgers": "1.2.1",
     "inputmask": "5.0.8",

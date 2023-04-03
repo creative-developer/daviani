@@ -5,7 +5,7 @@ export const getWebpackConfig = (options = {}) => {
   const isDev = options.mode === 'development';
   const webpackConfig = {
     mode: options.mode || 'development',
-    devtool: isDev ? 'inline-source-map' : undefined,
+    // devtool: isDev ? 'inline-source-map' : undefined,
     entry: {
       main: './app/js/main.js',
     },

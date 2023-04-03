@@ -13,8 +13,11 @@ import { initMastersSlider } from './modules/mastersSlider.js';
 import { initWorksSlider } from './modules/worksSlider.js';
 import { initServicesTabs } from './modules/initServicesTabs.js';
 import { initContactsMaps } from './modules/contactsMaps.js';
+import { initBlocksAnimation } from './modules/blockAnimation.js';
 
 $(document).ready(() => {
+  gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+
   mfpPopupInit();
   mediaQueriesInit();
   smoothScroll();
@@ -26,4 +29,5 @@ $(document).ready(() => {
   initWorksSlider();
   initServicesTabs();
   initContactsMaps();
+  initBlocksAnimation();
 });
