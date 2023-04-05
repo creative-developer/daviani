@@ -29,5 +29,5 @@ $(document).ready(() => {
   initWorksSlider();
   initServicesTabs();
   initContactsMaps();
-  initBlocksAnimation();
+  // initBlocksAnimation();
 });

@@ -1,6 +1,7 @@
 .collage
   position: relative
   z-index: -1
+
   &__inner-wrap
     // position: relative
     // z-index: 4
@@ -19,8 +20,13 @@
     align-items: center
     width: 496px
     height: 370px
-    transform: translateX(calc(-50% - 8px))
-    margin-left: auto
+    // transform: translateX(calc(-50% - 8px))
+    // margin-left: auto
+    &-wrap
+      position: absolute
+      top: -110px
+      left: 50%
+      transform: translateX(calc(-50% + 21.146vw))
     &-flare
       opacity: 1
       &-wrap
@@ -30,8 +36,8 @@
         display: flex
         align-items: center
         justify-content: center
-        width: 458px
-        height: 458px
+        width: 23.854vw
+        height: 46.782vh
         transform: translateX(50%)
         z-index: 1
 
@@ -43,7 +49,7 @@
     margin: 0 auto
     gap: 80px
     grid-template-columns: minmax(463px, auto) minmax(463px, auto) minmax(463px, auto)
-    margin-top: -260px
+    // margin-top: -260px
     // overflow: hidden
     // z-index: 2
     // background: #000
@@ -67,8 +73,8 @@
       //   transform: translateY(100%)
       //   background-image: linear-gradient(to top, transparent, #000)
     &:nth-child(1)
-      width: 36.1875em
-      height: 24.375em
+      width: 579px
+      height: 390px
       grid-column-start: 1
       grid-column-end: 4
       justify-self: center

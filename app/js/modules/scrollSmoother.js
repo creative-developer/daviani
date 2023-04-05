@@ -67,6 +67,8 @@ const scrollSmootherAnimation = () => {
   //   },
   // );
 
+  // gsap.to('.wheel', { ease: 'none', rotate: 360, yoyo: false, repeat: -1, duration: 100 })
+
   gsap.to('.wheel', {
     rotate: -90,
     ease: 'none',

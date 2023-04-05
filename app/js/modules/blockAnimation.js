@@ -1,4 +1,3 @@
-import { Helpers } from './Helpers.js';
 import { scroller } from './scrollSmoother.js';
 
 export const initBlocksAnimation = () => {
@@ -16,6 +15,8 @@ export const initBlocksAnimation = () => {
       scroller.effects(item, { speed: 0.9 });
     }
   });
+
+  scroller.effects('.collage', { speed: 1.2 });
 
   // TODO: ВОт это актуально
   // gsap.fromTo(
@@ -49,11 +50,10 @@ export const initBlocksAnimation = () => {
 
   tl.fromTo(
     '.main-gallery__title',
-    { y: 100, filter: 'blur(3px)' },
+    { y: 100 },
     {
       opacity: 1,
       y: 0,
-      filter: 'blur(0px)',
       scrollTrigger: {
         trigger: '.main-screen',
         // start: `-${Helpers.getWindowHeightPercentage(90)} top`,
@@ -83,13 +83,13 @@ export const initBlocksAnimation = () => {
   // );
 
   tl.to(collage, {
-    xPercent: -8,
-    scale: 4,
+    xPercent: -6.75,
+    scale: 3.5,
     duration: 1,
     scrollTrigger: {
       trigger: collage,
       start: `top+=${centerElementTopOffsetPosition} top`,
-      end: '90% 75%',
+      end: '100% top',
       scrub: true,
       pin: true,
       markers: true,
@@ -99,9 +99,9 @@ export const initBlocksAnimation = () => {
     scrollTrigger: {
       trigger: collage,
       start: `top+=${centerElementTopOffsetPosition} top`,
-      end: '90% 75%',
+      end: '100% top',
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 
