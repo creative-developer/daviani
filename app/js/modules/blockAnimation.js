@@ -1,3 +1,4 @@
+import { Helpers } from './Helpers.js';
 import { scroller } from './scrollSmoother.js';
 
 export const initBlocksAnimation = () => {
@@ -47,6 +48,8 @@ export const initBlocksAnimation = () => {
   const centerElementCenterPoint = collageCenterElement[0].offsetTop + collageCenterElement.outerHeight() / 2;
   const centerElementTopOffsetPosition = centerElementCenterPoint - windowHeight / 2;
   const items = gsap.utils.toArray('.collage__item').filter(item => !item.classList.contains('collage__item--center'));
+
+  console.log(centerElementTopOffsetPosition);
 
   tl.fromTo(
     '.main-gallery__title',

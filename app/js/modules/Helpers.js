@@ -1,5 +1,6 @@
 export class Helpers {
   static getWindowHeightPercentage = percent => (document.documentElement.clientHeight / 100) * percent;
+  static convertWindowHeightPxToPercent = value => Math.ceil(document.documentElement.clientHeight / value);
 
   static calculatePosition = element => {
     const root = document.documentElement;

@@ -14,10 +14,12 @@ import { initWorksSlider } from './modules/worksSlider.js';
 import { initServicesTabs } from './modules/initServicesTabs.js';
 import { initContactsMaps } from './modules/contactsMaps.js';
 import { initBlocksAnimation } from './modules/blockAnimation.js';
+import { initRems } from './modules/calcRem.js';
 
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
+  initRems();
   mfpPopupInit();
   mediaQueriesInit();
   smoothScroll();
@@ -29,5 +31,5 @@ $(document).ready(() => {
   initWorksSlider();
   initServicesTabs();
   initContactsMaps();
-  // initBlocksAnimation();
+  initBlocksAnimation();
 });
