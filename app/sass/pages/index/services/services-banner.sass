@@ -7,35 +7,40 @@
       align-items: center
 
   &__background
-    max-width: 800px
+    max-width: 50rem
     width: 100%
-    padding: 72px
+    padding: 4.5rem
     background: $bg700
     &-wrap
       position: absolute
-      top: 103px
-      left: 50px
+      top: 6.4375rem
+      left: 3.125rem
 
   &__title
     position: relative
     font-weight: 400
-    font-size: 52px
-    line-height: 60px
+    font-size: 3.25rem
+    line-height: 3.75rem
     color: $white
     font-family: $tenorSansFont
-    margin-bottom: 49px
+    margin-bottom: 3.0625rem
     &:after
       content: ''
       position: absolute
-      bottom: -25px
+      bottom: -1.5625rem
       left: 0
-      width: 80px
-      height: 1px
+      width: 5rem
+      height: 0.0625rem
       background: $accent
 
   &__desc
     font-weight: 400
-    font-size: 18px
-    line-height: 30px
+    font-size: 1.125rem
+    line-height: 1.875rem
     color: rgba($white, 0.55)
     margin-bottom: 0
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
