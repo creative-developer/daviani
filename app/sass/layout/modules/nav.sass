@@ -2,9 +2,17 @@
   &--small
     a
       font-weight: 500
-      font-size: 0.875rem
-      line-height: 1.25rem
-      letter-spacing: 0.04em
+      +min_xxl
+        font-size: 0.875rem
+        line-height: 1.25rem
+        letter-spacing: 0.04em
+      +xxl
+        font-size: 12px
+        line-height: 20px
+        letter-spacing: 0.04em
+      +xl
+        font-size: 10px
+
   &--medium
     a
       font-weight: 400
@@ -26,8 +34,15 @@
       display: flex
       align-items: center
     li
-      &:not(:last-child)
-        margin-right: 2.5rem
+      +min_xxl
+        &:not(:last-child)
+          margin-right: 2.5rem
+      +xxl
+        &:not(:last-child)
+          margin-right: 40px
+      +xl
+        &:not(:last-child)
+          margin-right: 35px
 
   a
     text-decoration: none

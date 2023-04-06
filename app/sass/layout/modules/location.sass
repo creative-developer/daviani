@@ -8,11 +8,18 @@
 
   &__text
     font-weight: 500
-    font-size: 1.125rem
-    line-height: 1.5rem
-    letter-spacing: 0.02em
     color: $white
-    margin-right: 0.375rem
+    letter-spacing: 0.02em
+    +min_xxl
+      font-size: 1.125rem
+      line-height: 1.5rem
+      margin-right: 0.375rem
+    +xxl
+      font-size: 13px
+      line-height: 24px
+      margin-right: 6px
+    +xl
+      font-size: 12px
 
   &__icon
     display: flex
@@ -26,3 +33,6 @@
     &--expand-icon
       width: 1rem
       height: 1rem
+      +xxl
+        width: 10px
+        height: 10px

@@ -93,11 +93,22 @@
   &--md
     // 53
     font-weight: 600
-    font-size: 1rem
-    line-height: 1.1875rem
-    letter-spacing: 0.02em
-    &:not(.btn--link)
-      padding: 0.8125rem 1.9375rem
+    +min_xxl
+      font-size: 1rem
+      line-height: 1.1875rem
+      letter-spacing: 0.02em
+      &:not(.btn--link)
+        padding: 0.8125rem 1.9375rem
+    +xxl
+      font-size: 14px
+      line-height: 19px
+      letter-spacing: 0.02em
+      &:not(.btn--link)
+        padding: 5px 20px
+    +xl
+      font-size: 10px
+      &:not(.btn--link)
+        padding: 3px 15px
 
   &--sm
     // 47
