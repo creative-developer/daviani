@@ -17,6 +17,11 @@ export const initBlocksAnimation = () => {
   });
 
   scroller.effects('.collage', { speed: 1.2 });
+  scroller.effects('.advantages__title', { speed: 0.1 });
+
+  scroller.effects('.advantages__col--left', { speed: 1.1 });
+  scroller.effects('.advantages__col--center', { speed: 1.8 });
+  scroller.effects('.advantages__col--right', { speed: 1.4 });
 
   // TODO: ВОт это актуально
   // gsap.fromTo(
@@ -50,23 +55,19 @@ export const initBlocksAnimation = () => {
 
   // console.log(centerElementTopOffsetPosition);
 
-  tl.fromTo(
-    '.main-gallery__title',
-    { y: 100 },
-    {
-      opacity: 1,
-      y: 0,
-      scrollTrigger: {
-        trigger: '.main-screen',
-        // start: `-${Helpers.getWindowHeightPercentage(90)} top`,
-        // end: `-${Helpers.getWindowHeightPercentage(50)} top`,
-        start: 'top top',
-        end: 'center top',
-        scrub: true,
-        markers: false,
-      },
+  tl.to('.main-gallery__title', {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: '.main-screen',
+      // start: `-${Helpers.getWindowHeightPercentage(90)} top`,
+      // end: `-${Helpers.getWindowHeightPercentage(50)} top`,
+      start: 'top top',
+      end: 'center top',
+      scrub: true,
+      markers: false,
     },
-  );
+  });
 
   // Collage section
   // tl.fromTo(

@@ -1,6 +1,7 @@
 .collage
   position: relative
   z-index: 1
+  will-change: transform
 
   &__inner-wrap
     // position: relative
@@ -55,7 +56,7 @@
     // margin-top: -260px
     // overflow: hidden
     // z-index: 2
-    // background: #000
+    // background: $base-black
     // position: relative
 
   &__item
@@ -74,7 +75,7 @@
       //   width: 100%
       //   height: 200px
       //   transform: translateY(100%)
-      //   background-image: linear-gradient(to top, transparent, #000)
+      //   background-image: linear-gradient(to top, transparent, $base-black)
     &:nth-child(1)
       width: 36.1875rem
       height: 24.375rem
@@ -111,3 +112,4 @@
     width: 100%
     height: 100%
     object-fit: cover
+    will-change: transform
