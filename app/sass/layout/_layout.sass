@@ -26,3 +26,11 @@ body
   +md
     font-size: 11px
   +sm
+
+.custom-container
+  +min_xl
+    margin: 0 auto
+    max-width: 106.25rem
+    padding: 0 calc($grid-gutter-width / 2)
+  +xl
+    +make-container()

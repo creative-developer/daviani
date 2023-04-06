@@ -1,11 +1,18 @@
 .footer
   background: $bg300
-  padding: 3.25rem 0 1.5625rem 0
+  +min_xxl
+    padding: 3.25rem 0 1.5625rem 0
+  +xxl
+    padding: 52px 0 25px 0
 
   &__row
     display: flex
     &--top-line
-      margin-bottom: 3.625rem
+      +min_xxl
+        margin-bottom: 3.625rem
+      +xxl
+        margin-bottom: 50px
+
     &--bottom
       align-items: center
       justify-content: space-between
@@ -44,12 +51,19 @@
     align-items: center
     font-family: $titleFont
     font-weight: 400
-    font-size: 1.375rem
-    line-height: 1.75rem
-    letter-spacing: 0.06em
     text-decoration: none
     color: $white
-    margin-bottom: 0.625rem
+    +min_xxl
+      font-size: 1.375rem
+      line-height: 1.75rem
+      letter-spacing: 0.06em
+      margin-bottom: 0.625rem
+    +xxl
+      font-size: 22px
+      line-height: 28px
+      letter-spacing: 0.06em
+      margin-bottom: 10px
+
     &:hover
       color: $accent
     &-icon-wrap

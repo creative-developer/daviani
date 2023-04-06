@@ -3,7 +3,7 @@ const calcRem = () => {
   let _deltaY = 0;
 
   if (window.innerHeight < window.innerWidth) {
-    _deltaX = (window.innerWidth / 1920) * 100;
+    _deltaX = (window.innerWidth / 1903) * 100;
     _deltaY = (window.innerHeight / 979) * 100;
   } else {
     _deltaX = (window.innerWidth / 1920) * 100;
@@ -18,9 +18,13 @@ const calcRem = () => {
 };
 
 export const initRems = () => {
-  calcRem();
+  if ($(window).outerWidth() > 1440) {
+    calcRem();
+  }
 
   $(window).on('load resize', function () {
-    calcRem();
+    if ($(window).outerWidth() > 1440) {
+      calcRem();
+    }
   });
 };
