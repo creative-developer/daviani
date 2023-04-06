@@ -10,7 +10,6 @@ export const initBlocksAnimation = () => {
 
   document.querySelectorAll('.facilities__item').forEach((item, index) => {
     if (index % 2 === 0) {
-      console.log(item);
       scroller.effects(item, { speed: 1.1 });
     } else {
       scroller.effects(item, { speed: 0.9 });
@@ -49,7 +48,7 @@ export const initBlocksAnimation = () => {
   const centerElementTopOffsetPosition = centerElementCenterPoint - windowHeight / 2;
   const items = gsap.utils.toArray('.collage__item').filter(item => !item.classList.contains('collage__item--center'));
 
-  console.log(centerElementTopOffsetPosition);
+  // console.log(centerElementTopOffsetPosition);
 
   tl.fromTo(
     '.main-gallery__title',
@@ -95,7 +94,7 @@ export const initBlocksAnimation = () => {
       end: '100% top',
       scrub: true,
       pin: true,
-      markers: true,
+      markers: false,
     },
   }).to(items, {
     opacity: 0,

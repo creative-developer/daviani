@@ -34,57 +34,89 @@ const scrollSmootherAnimation = () => {
     });
   }
 
-  // gsap.fromTo(
-  //   '.wheel',
-  //   {
-  //     rotate: 0,
-  //     ease: 'none',
-  //     xPercent: -50,
-  //     yPercent: -50,
-  //     duration: elements.length / 2,
-  //     pin: true,
-  //     scrollTrigger: {
-  //       start: 0,
-  //       end: 'max',
-  //       scrub: true,
-  //       snap: 1 / elements.length,
-  //       invalidateOnRefresh: true,
-  //     },
-  //   },
-  //   {
-  //     rotate: -360,
-  //     ease: 'none',
-  //     xPercent: -50,
-  //     yPercent: -50,
-  //     duration: elements.length / 2,
-  //     scrollTrigger: {
-  //       start: 0,
-  //       end: 'max',
-  //       scrub: true,
-  //       snap: 1 / elements.length,
-  //       invalidateOnRefresh: true,
-  //     },
-  //   },
-  // );
+  function infiniteReverse() {
+    tl.reverse();
+    checkReverseLoop();
+  }
 
-  // gsap.to('.wheel', { ease: 'none', rotate: 360, yoyo: false, repeat: -1, duration: 100 })
+  function checkReverseLoop() {
+    if (tl.reversed() && tl.totalTime() <= tl.duration()) {
+      tl.totalTime(tl.totalTime() + tl.duration() * 1000, true);
+    }
+  }
 
-  gsap.to('.wheel', {
-    rotate: -90,
+  const tl = gsap.to('.wheel', {
+    rotate: -360,
+    duration: 160,
+    repeat: -1,
     ease: 'none',
-    duration: 5,
-    scrollTrigger: {
-      trigger: '.main-screen',
-      start: 0,
-      end: '300%',
-      scrub: 1,
-      invalidateOnRefresh: true,
+    onRepeat: checkReverseLoop,
+    onReverseComplete: infiniteReverse,
+  });
+
+  let direction = 'bottom';
+  let memoizedDirection = 'bottom';
+
+  const handleScrollBottom = self => {
+    tl.play();
+  };
+
+  const handleScrollTop = self => {
+    infiniteReverse();
+  };
+
+  ScrollTrigger.create({
+    trigger: '.main-page',
+    start: 'top top',
+    end: 'bottom top',
+    scrub: 2,
+    markers: true,
+    invalidateOnRefresh: true,
+    onUpdate: self => {
+      direction = self.direction === 1 ? 'bottom' : 'top';
+
+      if (direction === 'bottom' && memoizedDirection !== direction) {
+        memoizedDirection = 'bottom';
+        handleScrollBottom(self);
+      }
+
+      if (direction === 'top' && memoizedDirection !== direction) {
+        memoizedDirection = 'top';
+        handleScrollTop(self);
+      }
+
+      // if (direction === 'top') {
+      //   tl.progress(tl.progress() - self.progress / 200);
+      // }
+
+      // if (direction === 'bottom') {
+      //   tl.progress(tl.progress() + self.progress / 200);
+      // }
     },
+  });
+
+  const mainScreenContainer = $('.main-screen');
+  let startPositionProgress = 0;
+
+  mainScreenContainer.on('click', e => {
+    const clientXProgress = e.clientX / window.outerWidth;
+
+    startPositionProgress = clientXProgress;
+  });
+
+  mainScreenContainer.on('mousemove', e => {
+    // Нажата левая кнопка мыши и ховер
+    if (e.buttons === 1) {
+      const clientXProgress = e.clientX / window.outerWidth;
+      // console.log(clientXProgress - startPositionProgress);
+    }
   });
 
   setup();
 
-  window.addEventListener('resize', setup);
+  window.addEventListener('resize', () => {
+    setup();
+  });
 };
 
 const clonningValidImagesCount = () => {

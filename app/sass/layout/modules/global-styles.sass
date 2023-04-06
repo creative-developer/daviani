@@ -1,0 +1,52 @@
+
+main
+  overflow: hidden
+  background: $bg300
+  position: relative
+  z-index: 1
+  &.main-page
+    &:after
+      content: ''
+      position: absolute
+      top: -2.6875rem
+      left: 50%
+      width: 100%
+      height: 11.6875rem
+      max-width: 90rem
+      background: radial-gradient(29.32% 43.73% at 50% 7.97%, #DBCBA2 0%, rgba(219, 203, 162, 0) 100%)
+      filter: blur(1.7188rem)
+      pointer-events: none
+      transform: translateX(-50%)
+      opacity: 0.88
+      z-index: 1
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      width: 97.875rem
+      height: 91.8125rem
+      background: url('../img/index/bg/main-right-gradient.webp') no-repeat center center/cover
+      z-index: 0
+
+.global-bg
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: url('../img/bg/mask.webp') repeat
+    pointer-events: none
+    z-index: -1
+    opacity: 0.07
+
+.screen-overlay
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 256px
+  z-index: 10
+  background-image: linear-gradient(to top, #000, transparent)
