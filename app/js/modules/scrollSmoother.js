@@ -6,6 +6,7 @@ export const scroller = ScrollSmoother.create({
   smooth: 1.5,
   effects: true,
   autoResize: true,
+  smoothTouch: true,
 });
 
 const scrollSmootherAnimation = () => {

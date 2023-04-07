@@ -1,14 +1,15 @@
 export const breakpoints = {
-  xl: '(max-width: 1439px)',
-  lg: '(max-width: 991px)',
-  md: '(max-width: 767px)',
-  sm: '(max-width: 575px)',
-  xsm: '(max-width: 374px)',
+  xxl: { minWidth: '(min-width: 1440px)', maxWidth: '(max-width: 1439px)' },
+  xl: { minWidth: '(min-width: 1200px)', maxWidth: '(max-width: 1199px)' },
+  lg: { minWidth: '(min-width: 992px)', maxWidth: '(max-width: 991px)' },
+  md: { minWidth: '(min-width: 768px)', maxWidth: '(max-width: 767px)' },
+  sm: { minWidth: '(min-width: 576px)', maxWidth: '(max-width: 575px)' },
+  xsm: { minWidth: '(min-width: 375px)', maxWidth: '(max-width: 374px)' },
 };
 
 const getBreakpoint = input => {
   if (breakpoints[input] !== undefined) {
-    return breakpoints[input];
+    return breakpoints[input].maxWidth;
   } else {
     return input;
   }
