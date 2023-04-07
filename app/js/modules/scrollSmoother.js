@@ -1,14 +1,5 @@
 import { WHEEL_IMAGES_LIMIT } from './consts.js';
 
-export const scroller = ScrollSmoother.create({
-  wrapper: '.smooth-wrapper',
-  content: '.smooth-content',
-  smooth: 1.5,
-  effects: true,
-  autoResize: true,
-  smoothTouch: true,
-});
-
 const scrollSmootherAnimation = () => {
   const wheel = document.querySelector('.wheel');
   const elements = gsap.utils.toArray('.wheel__card');

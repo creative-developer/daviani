@@ -17,8 +17,19 @@ import { initBlocksAnimation } from './modules/blockAnimation.js';
 import { initRems } from './modules/calcRem.js';
 import { initMenu } from './modules/menu.js';
 
+export let scroller = null;
+
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+
+  scroller = ScrollSmoother.create({
+    wrapper: '.smooth-wrapper',
+    content: '.smooth-content',
+    smooth: 1.5,
+    effects: true,
+    autoResize: true,
+    smoothTouch: true,
+  });
 
   initRems();
   mfpPopupInit();
@@ -34,4 +45,10 @@ $(document).ready(() => {
   initContactsMaps();
   initMenu();
   initBlocksAnimation();
+
+  $(window).on('load', () => {
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 150);
+  });
 });
