@@ -49,6 +49,6 @@ $(document).ready(() => {
   $(window).on('load', () => {
     setTimeout(() => {
       ScrollTrigger.refresh();
-    }, 150);
+    }, 500);
   });
 });
