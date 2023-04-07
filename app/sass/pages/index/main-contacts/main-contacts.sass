@@ -10,6 +10,8 @@
     +lg
       flex-direction: column
       gap: 50px 0
+    +sm
+      gap: 16px 0
 
   &__card
     flex: 1 1 50%
@@ -23,6 +25,8 @@
       padding: 30px
     +lg
       max-width: 100%
+    +sm
+      padding: 20px
 
   &__map
     +min_xl
@@ -31,6 +35,9 @@
     +xl
       height: 387px
       margin-bottom: 53px
+    +sm
+      height: 226px
+      margin-bottom: 32px
 
   &__title
     font-weight: 400
@@ -44,12 +51,18 @@
       font-size: 21px
       line-height: 32px
       margin-bottom: 48px
+    +lg
+      font-size: 26px
+    +sm
+      margin-bottom: 32px
 
   &__list
     +min_xl
       margin-bottom: 3.25rem
     +xl
       margin-bottom: 52px
+    +sm
+      margin-bottom: 32px
 
   &__item
     font-weight: 400
@@ -63,6 +76,14 @@
       line-height: 18px
       &:not(:last-child)
         margin-bottom: 17px
+    +lg
+      font-size: 16px
+      line-height: 22px
+    +sm
+      display: flex
+      align-items: center
+      &:not(:last-child)
+        margin-bottom: 14px
 
     .icon
       &--contacts-location
@@ -73,6 +94,8 @@
         +xl
           width: 22px
           height: 22px
+        +sm
+          min-width: 22px
       &--contacts-phone
         color: $accent
         +min_xl
@@ -98,6 +121,12 @@
     +xl
       margin-left: 15px
 
+  &__card-wrap
+    +sm
+      display: flex
+      flex-direction: column
+      align-items: center
+
   &__btn
     +min_xl
       width: 13.8125rem
@@ -107,6 +136,17 @@
       width: 190px
       height: 42px
       margin-right: 20px
+    +lg
+      width: 221px
+      height: 53px
+      margin-right: 22px
+    +sm
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      margin: 0 0 22px
+
     span
       color: $bg300
       font-weight: 600
@@ -117,6 +157,9 @@
       +xl
         font-size: 16px
         line-height: 21px
+      +lg
+        line-height: 19px
+
     .icon
       &--whatsapp
         color: $black
@@ -126,6 +169,9 @@
         +xl
           width: 17px
           height: 17px
+        +lg
+          width: 19px
+          height: 19px
 
   &__direction-link
     font-weight: 400
@@ -137,3 +183,6 @@
     +xl
       font-size: 15px
       line-height: 22px
+    +lg
+      font-size: 14px
+      line-height: 18px
