@@ -33,5 +33,5 @@ $(document).ready(() => {
   initServicesTabs();
   initContactsMaps();
   initMenu();
-  // initBlocksAnimation();
+  initBlocksAnimation();
 });
