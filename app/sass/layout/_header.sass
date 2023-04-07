@@ -2,11 +2,14 @@
   display: block
   position: absolute
   left: 50%
-  top: 1.875rem
   transform: translateX(-50%)
   width: 100%
   height: auto
   z-index: 2
+  +min_xxl
+    top: 1.875rem
+  +xxl
+    top: 30px
 
   &__content
     display: flex
@@ -18,9 +21,17 @@
     &--left
       flex: 1
       justify-content: space-between
+      +xxl
+        flex: 0.4 1 auto
     &--center
       justify-content: center
-      padding: 0 6.25rem
+      +min_xxl
+        padding: 0 6.25rem
+      +xxl
+        padding: 0 43px
+
     &--right
       justify-content: space-between
       flex: 1
+      +xxl
+        flex: 0.5 1 auto

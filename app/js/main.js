@@ -15,6 +15,7 @@ import { initServicesTabs } from './modules/initServicesTabs.js';
 import { initContactsMaps } from './modules/contactsMaps.js';
 import { initBlocksAnimation } from './modules/blockAnimation.js';
 import { initRems } from './modules/calcRem.js';
+import { initMenu } from './modules/menu.js';
 
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -31,5 +32,6 @@ $(document).ready(() => {
   initWorksSlider();
   initServicesTabs();
   initContactsMaps();
+  initMenu();
   // initBlocksAnimation();
 });
