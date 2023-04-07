@@ -1,6 +1,10 @@
 header.b-header
   .custom-container
     ._content-wrap
+      ._content
+        a.b-hamburger.-green.-small.-slider._hamburger.js-menu.hamburger--slider
+          span.hamburger-box
+            span.hamburger-inner
       ._content.-left
         a.b-location(href='#')
           ._icon.-pin-icon
@@ -19,6 +23,11 @@ header.b-header
       ._content.-center
         a.b-logo.-medium._logo(href='#')
           +icon('logo')
+      ._content
+        a._location-link.-icon(href="#") 
+          +icon('location')
+        a._phone-link.-icon(href="#") 
+          +icon('phone')
       ._content.-right
         nav.b-nav.-small.-light.-horizontal.-uppercase._nav-right
           ul._list
@@ -29,6 +38,3 @@ header.b-header
             li._item
               a._link(href='#') Контакты
         a.b-btn.-accent-outlined.-md(href='#') Оставить заявку
-    a.b-hamburger.-green.-small.-slider._hamburger.js-menu.hamburger--slider
-      span.hamburger-box
-        span.hamburger-inner
