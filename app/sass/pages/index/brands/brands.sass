@@ -8,6 +8,8 @@
     height: 9.375rem
     max-width: 108rem
     margin: 0 auto
+    +lg
+      overflow: auto
 
   &__item
     display: flex
@@ -18,23 +20,49 @@
     color: rgba($white ,0.35 )
     transform: translateY(150px)
     opacity: 0
+    +lg
+      min-width: 181.67px
 
   .icon
     &--brand-1
-      width: 7.4375rem
-      height: 7.4375rem
+      +min_xl
+        width: 7.4375rem
+        height: 7.4375rem
+      +xl
+        width: 75px
+        height: 75px
     &--brand-2
-      width: 10.625rem
-      height: 2.0625rem
+      +min_xl
+        width: 10.625rem
+        height: 2.0625rem
+      +xl
+        width: 107px
+        height: 20px
     &--brand-3
-      width: 9.8125rem
-      height: 2.8125rem
+      +min_xl
+        width: 9.8125rem
+        height: 2.8125rem
+      +xl
+        width: 99px
+        height: 28px
     &--brand-4
-      width: 10.8125rem
-      height: 2.875rem
+      +min_xl
+        width: 10.8125rem
+        height: 2.875rem
+      +xl
+        width: 109px
+        height: 29px
     &--brand-5
-      width: 10.5625rem
-      height: 4rem
+      +min_xl
+        width: 10.5625rem
+        height: 4rem
+      +xl
+        width: 106px
+        height: 40px
     &--brand-6
-      width: 12.1875rem
-      height: 1.9375rem
+      +min_xl
+        width: 12.1875rem
+        height: 1.9375rem
+      +xl
+        width: 123px
+        height: 19px
