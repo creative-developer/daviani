@@ -18,11 +18,13 @@
 </head>
 <body>
 	<!-- Header-->
+	<div class="screen-overlay"></div>
 	<div class="smooth-wrapper">
 		<div class="smooth-content">
 			<header class="header">
-				<div class="container">
+				<div class="custom-container">
 					<div class="header__content-wrap">
+						<div class="header__content"><a class="hamburger hamburger--green hamburger--small hamburger--slider header__hamburger js-menu hamburger--slider"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a></div>
 						<div class="header__content header__content--left"><a class="location" href="#">
 								<div class="location__icon location__icon--pin-icon"><svg class="icon icon--location" fill="currentColor">
 										<use xlink:href="img/svg-sprite.svg#location"></use>
@@ -41,6 +43,11 @@
 						</div>
 						<div class="header__content header__content--center"><a class="logo logo--medium header__logo" href="#"><svg class="icon icon--logo" fill="currentColor">
 									<use xlink:href="img/svg-sprite.svg#logo"></use>
+								</svg></a></div>
+						<div class="header__content"><a class="header__location-link header__location-link--icon" href="#"> <svg class="icon icon--location" fill="currentColor">
+									<use xlink:href="img/svg-sprite.svg#location"></use>
+								</svg></a><a class="header__phone-link header__phone-link--icon" href="#"> <svg class="icon icon--phone" fill="currentColor">
+									<use xlink:href="img/svg-sprite.svg#phone"></use>
 								</svg></a></div>
 						<div class="header__content header__content--right">
 							<nav class="nav nav--small nav--light nav--horizontal nav--uppercase header__nav-right">
@@ -82,7 +89,7 @@
 								<ul class="collage__list">
 									<li class="collage__item"><img class="collage__img" src="img/index/collage/image-1.webp" alt=""></li>
 									<li class="collage__item"><img class="collage__img" src="img/index/collage/image-2.webp" alt=""></li>
-									<li class="collage__item collage__item--center"><img class="collage__img" src="img/index/collage/image-3.webp" alt=""></li>
+									<li class="collage__item collage__item--center"><img class="collage__img" src="img/index/collage/image-3.png" alt=""></li>
 									<li class="collage__item"><img class="collage__img" src="img/index/collage/image-4.webp" alt=""></li>
 									<li class="collage__item"><img class="collage__img" src="img/index/collage/image-5.webp" alt=""></li>
 									<li class="collage__item"><img class="collage__img" src="img/index/collage/image-6.webp" alt=""></li>
@@ -111,17 +118,17 @@
 					</div>
 				</section>
 				<section class="services">
+					<h2 class="services__title second-title second-title--light second-title--large">Идеальная прическа от лучших стилистов Москвы</h2>
+					<div class="services__tab-nav-wrap">
+						<nav class="tab-nav services__tab-nav">
+							<ul class="tab-nav__list">
+								<li class="tab-nav__item tab-nav__item--active"><a class="tab-nav__link" href="#tinting">Окрашивание<img class="tab-nav__link-img" src="img/index/services/btn-background.webp" alt=""></a></li>
+								<li class="tab-nav__item"><a class="tab-nav__link" href="#stylings">Укладки<img class="tab-nav__link-img" src="img/index/services/btn-background.webp" alt=""></a></li>
+								<li class="tab-nav__item"><a class="tab-nav__link" href="#haircuts">Стрижки<img class="tab-nav__link-img" src="img/index/services/btn-background.webp" alt=""></a></li>
+							</ul>
+						</nav>
+					</div>
 					<div class="container-fluid">
-						<h2 class="services__title second-title second-title--light second-title--large">Идеальная прическа от лучших стилистов Москвы</h2>
-						<div class="services__tab-nav-wrap">
-							<nav class="tab-nav services__tab-nav">
-								<ul class="tab-nav__list">
-									<li class="tab-nav__item tab-nav__item--active"><a class="tab-nav__link" href="#tinting">Окрашивание<img class="tab-nav__link-img" src="img/index/services/btn-background.webp" alt=""></a></li>
-									<li class="tab-nav__item"><a class="tab-nav__link" href="#stylings">Укладки<img class="tab-nav__link-img" src="img/index/services/btn-background.webp" alt=""></a></li>
-									<li class="tab-nav__item"><a class="tab-nav__link" href="#haircuts">Стрижки<img class="tab-nav__link-img" src="img/index/services/btn-background.webp" alt=""></a></li>
-								</ul>
-							</nav>
-						</div>
 						<div class="services__tab-content-wrap">
 							<div class="tab-content">
 								<div class="tab-content__bg-icon"><svg class="icon icon--daviani-bg-logo" fill="currentColor">
@@ -200,47 +207,49 @@
 								</div>
 							</div>
 						</div>
-						<div class="services-banner">
-							<div class="services-banner__img-wrap"><img class="services-banner__img" src="img/index/services/services-banner.webp" alt=""></div>
-							<div class="services-banner__background-wrap">
-								<div class="services-banner__background">
-									<div class="services-banner__title">Высокое качество услуг и безупречный сервис</div>
-									<p class="services-banner__desc">VIP-кабинеты. До 5 услуг оказываем одновременно, где вдали от суеты и глаз можно сделать несколько услуг одновременно, заказав себе обед из ресторана, насладиться им под любимый фильм</p>
-								</div>
+					</div>
+					<div class="services-banner">
+						<div class="services-banner__img-wrap"><img class="services-banner__img" src="img/index/services/services-banner.webp" alt=""></div>
+						<div class="services-banner__background-wrap">
+							<div class="services-banner__background">
+								<div class="services-banner__title">Высокое качество услуг и безупречный сервис</div>
+								<p class="services-banner__desc">VIP-кабинеты. До 5 услуг оказываем одновременно, где вдали от суеты и глаз можно сделать несколько услуг одновременно, заказав себе обед из ресторана, насладиться им под любимый фильм</p>
 							</div>
 						</div>
 					</div>
 				</section>
 				<section class="advantages">
-					<div class="container">
+					<div class="custom-container">
 						<div class="advantages__title">Почему выбирают DAVIANI & SPA?</div>
 					</div>
-					<div class="advantages__row">
-						<div class="advantages__col advantages__col--left">
-							<div class="advantages__img-wrap advantages__img-wrap--left"><img class="advantages__img" src="img/index/advantages/item-1.webp" alt=""></div>
-						</div>
-						<div class="advantages__col advantages__col--center">
-							<div class="advantages__img-wrap advantages__img-wrap--center"><img class="advantages__img" src="img/index/advantages/item-2.webp" alt=""></div>
-							<div class="advantages-info">
-								<div class="advantages-info__desc">
-									<p>“Наши клиенты — современные жители мегаполиса, которые следят за собой, любят себя и хотят сохранить здоровье и молодость самыми безопасными способами. Это люди, которые ценят свое время и доверяют свою красоту настоящим профессионалам. Красота рождается внутри. Внутри салона DAVIANI”</p>
-								</div>
-								<div class="advantages-info__signature-wrap">
-									<div class="advantages-info__icon advantages-info__icon--left"><svg class="icon icon--signature-left-icon" fill="currentColor">
-											<use xlink:href="img/svg-sprite.svg#signature-left-icon"></use>
-										</svg></div>
-									<div class="advantages-info__name-wrap">
-										<div class="advantages-info__signature-name">Юлия Смолина</div>
-										<div class="advantages-info__signature-proffession">Владелица DAVIANI & SPA</div>
+					<div class="advantages__wrap">
+						<div class="advantages__row">
+							<div class="advantages__col advantages__col--left">
+								<div class="advantages__img-wrap advantages__img-wrap--left"><img class="advantages__img" src="img/index/advantages/item-1.webp" alt=""></div>
+							</div>
+							<div class="advantages__col advantages__col--center">
+								<div class="advantages__img-wrap advantages__img-wrap--center"><img class="advantages__img" src="img/index/advantages/item-2.webp" alt=""></div>
+								<div class="advantages-info">
+									<div class="advantages-info__desc">
+										<p>“Наши клиенты — современные жители мегаполиса, которые следят за собой, любят себя и хотят сохранить здоровье и молодость самыми безопасными способами. Это люди, которые ценят свое время и доверяют свою красоту настоящим профессионалам. Красота рождается внутри. Внутри салона DAVIANI”</p>
 									</div>
-									<div class="advantages-info__icon advantages-info__icon--right"><svg class="icon icon--signature-right-icon" fill="currentColor">
-											<use xlink:href="img/svg-sprite.svg#signature-right-icon"></use>
-										</svg></div>
+									<div class="advantages-info__signature-wrap">
+										<div class="advantages-info__icon advantages-info__icon--left"><svg class="icon icon--signature-left-icon" fill="currentColor">
+												<use xlink:href="img/svg-sprite.svg#signature-left-icon"></use>
+											</svg></div>
+										<div class="advantages-info__name-wrap">
+											<div class="advantages-info__signature-name">Юлия Смолина</div>
+											<div class="advantages-info__signature-proffession">Владелица DAVIANI & SPA</div>
+										</div>
+										<div class="advantages-info__icon advantages-info__icon--right"><svg class="icon icon--signature-right-icon" fill="currentColor">
+												<use xlink:href="img/svg-sprite.svg#signature-right-icon"></use>
+											</svg></div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="advantages__col advantages__col--right">
-							<div class="advantages__img-wrap advantages__img-wrap--right"><img class="advantages__img" src="img/index/advantages/item-3.webp" alt=""></div>
+							<div class="advantages__col advantages__col--right">
+								<div class="advantages__img-wrap advantages__img-wrap--right"><img class="advantages__img" src="img/index/advantages/item-3.webp" alt=""></div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -324,15 +333,16 @@
 					<div class="container-fluid">
 						<h2 class="works__title second-title second-title--light">Наши работы в Инстаграм</h2>
 					</div>
-					<div class="works-slider works__slider">
-						<div class="works-slider__wrapper">
-							<div class="works-slider__item"><img class="works-slider__img" src="img/index/works/img-1.webp" alt=""></div>
-							<div class="works-slider__item"><img class="works-slider__img" src="img/index/works/img-2.webp" alt=""></div>
-							<div class="works-slider__item"><img class="works-slider__img" src="img/index/works/img-3.webp" alt=""></div>
-							<div class="works-slider__item"><img class="works-slider__img" src="img/index/works/img-4.webp" alt=""></div>
-							<div class="works-slider__item"><img class="works-slider__img" src="img/index/works/img-5.webp" alt=""></div>
-							<div class="works-slider__item"><img class="works-slider__img" src="img/index/works/img-6.webp" alt=""></div>
+					<div class="works-slider swiper works__slider">
+						<div class="works-slider__wrapper swiper-wrapper">
+							<div class="works-slider__item swiper-slide"><img class="works-slider__img" src="img/index/works/img-1.webp" alt=""></div>
+							<div class="works-slider__item swiper-slide"><img class="works-slider__img" src="img/index/works/img-2.webp" alt=""></div>
+							<div class="works-slider__item swiper-slide"><img class="works-slider__img" src="img/index/works/img-3.webp" alt=""></div>
+							<div class="works-slider__item swiper-slide"><img class="works-slider__img" src="img/index/works/img-4.webp" alt=""></div>
+							<div class="works-slider__item swiper-slide"><img class="works-slider__img" src="img/index/works/img-5.webp" alt=""></div>
+							<div class="works-slider__item swiper-slide"><img class="works-slider__img" src="img/index/works/img-6.webp" alt=""></div>
 						</div>
+						<div class="works-slider__scroll-bar swiper-scrollbar"></div>
 					</div>
 				</section>
 				<section class="brands">
@@ -407,7 +417,7 @@
 				</section>
 			</main>
 			<footer class="footer">
-				<div class="container">
+				<div class="custom-container footer__wrap">
 					<div class="footer__row footer__row--top-line">
 						<div class="footer__col footer__col--left">
 							<div class="footer__logo-wrap"><a class="logo logo--small footer__logo" href="#"><svg class="icon icon--logo" fill="currentColor">
