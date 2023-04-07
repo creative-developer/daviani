@@ -1,6 +1,6 @@
+import { scroller } from '../main.js';
 import { Helpers } from './Helpers.js';
 import { breakpoints } from './MQ.js';
-import { scroller } from './scrollSmoother.js';
 
 export const initBlocksAnimation = () => {
   const matchMedia = gsap.matchMedia();
