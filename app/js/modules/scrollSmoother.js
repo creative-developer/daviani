@@ -85,13 +85,13 @@ const scrollSmootherAnimation = () => {
         handleScrollTop(self);
       }
 
-      // if (direction === 'top') {
-      //   tl.progress(tl.progress() - self.progress / 200);
-      // }
+      if (direction === 'top') {
+        tl.progress(tl.progress() - self.progress / 200);
+      }
 
-      // if (direction === 'bottom') {
-      //   tl.progress(tl.progress() + self.progress / 200);
-      // }
+      if (direction === 'bottom') {
+        tl.progress(tl.progress() + self.progress / 200);
+      }
     },
   });
 
