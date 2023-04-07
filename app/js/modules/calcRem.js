@@ -18,12 +18,12 @@ const calcRem = () => {
 };
 
 export const initRems = () => {
-  if ($(window).outerWidth() > 1440) {
+  if ($(window).outerWidth() > 1200) {
     calcRem();
   }
 
   $(window).on('load resize', function () {
-    if ($(window).outerWidth() > 1440) {
+    if ($(window).outerWidth() > 1200) {
       calcRem();
     }
   });

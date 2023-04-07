@@ -112,8 +112,8 @@ export const initBlocksAnimation = () => {
     scrollTrigger: {
       trigger: '.services-banner',
       start: 'top bottom',
-      end: 'bottom+=5% bottom',
-      markers: true,
+      end: 'bottom-=10% bottom',
+      markers: false,
       scrub: 1.2,
     },
     defaults: { ease: 'none' },
