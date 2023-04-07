@@ -112,7 +112,7 @@ export const initBlocksAnimation = () => {
     scrollTrigger: {
       trigger: '.services-banner',
       start: 'top center',
-      end: 'bottom center',
+      end: 'bottom-=10% center',
       markers: false,
       scrub: 1.2,
     },
@@ -126,17 +126,14 @@ export const initBlocksAnimation = () => {
     defaults: { ease: 'none' },
     scrollTrigger: {
       trigger: '.works-slider',
-      start: 'top top',
-      bottom: 'bottom-=10% top',
-      scrub: true,
+      start: 'top-=10% top',
+      end: 'bottom-=50% top',
       markers: false,
+      scrub: 1,
     },
   });
 
-  const brandsImagesList = gsap.utils.toArray('.brands__item');
-
-  brandsTl.from(brandsImagesList, { y: 160, stagger: 0.1, duration: 1, ease: 'none' });
-
+  brandsTl.to('.brands__item', { y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: 'power1.in' });
   // gsap.to('.main-gallery__title', {
   //   y: 0,
   //   scrollTrigger: {
