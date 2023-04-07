@@ -111,9 +111,9 @@ export const initBlocksAnimation = () => {
   const servicesTl = gsap.timeline({
     scrollTrigger: {
       trigger: '.services-banner',
-      start: 'top center',
-      end: 'bottom-=10% center',
-      markers: false,
+      start: 'top bottom',
+      end: 'bottom+=5% bottom',
+      markers: true,
       scrub: 1.2,
     },
     defaults: { ease: 'none' },
