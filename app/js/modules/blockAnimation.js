@@ -1,7 +1,9 @@
 import { Helpers } from './Helpers.js';
+import { breakpoints } from './MQ.js';
 import { scroller } from './scrollSmoother.js';
 
 export const initBlocksAnimation = () => {
+  const matchMedia = gsap.matchMedia();
   const windowHeight = document.documentElement.clientHeight;
   const windowWidth = document.documentElement.clientWidth;
 
@@ -23,28 +25,6 @@ export const initBlocksAnimation = () => {
   scroller.effects('.advantages__col--center', { speed: 1.8 });
   scroller.effects('.advantages__col--right', { speed: 1.4 });
 
-  // TODO: ВОт это актуально
-  // gsap.fromTo(
-  //   '.main-gallery__title',
-  //   { y: 100, filter: 'blur(3px)' },
-  //   {
-  //     opacity: 1,
-  //     y: 0,
-  //     filter: 'blur(0px)',
-  //     duration: 2,
-  //     scrollTrigger: {
-  //       trigger: '.main-screen',
-  //       // start: `-${Helpers.getWindowHeightPercentage(90)} top`,
-  //       // end: `-${Helpers.getWindowHeightPercentage(50)} top`,
-  //       start: 'top top',
-  //       end: 'center top',
-  //       scrub: true,
-  //       markers: true,
-  //       // anticipatePin: 1,
-  //     },
-  //   },
-  // );
-
   const tl = gsap.timeline({ defaults: { ease: 'none' } });
 
   const collage = $('.collage');
@@ -53,9 +33,7 @@ export const initBlocksAnimation = () => {
   const centerElementTopOffsetPosition = centerElementCenterPoint - windowHeight / 2;
   const items = gsap.utils.toArray('.collage__item').filter(item => !item.classList.contains('collage__item--center'));
 
-  // console.log(centerElementTopOffsetPosition);
-
-  tl.to('.main-gallery__title', {
+  const mainTitleSettings = {
     opacity: 1,
     y: 0,
     scrollTrigger: {
@@ -66,26 +44,11 @@ export const initBlocksAnimation = () => {
       end: 'center top',
       scrub: true,
       markers: false,
+      invalidateOnRefresh: true,
     },
-  });
+  };
 
-  // Collage section
-  // tl.fromTo(
-  //   collage,
-  //   { y: 300 },
-  //   {
-  //     y: 0,
-  //     scrollTrigger: {
-  //       trigger: '.main-gallery',
-  //       start: 'top top',
-  //       end: 'center top',
-  //       scrub: true,
-  //       markers: true,
-  //     },
-  //   },
-  // );
-
-  tl.to(collage, {
+  const collageSettings = {
     xPercent: -6.75,
     scale: 3.5,
     duration: 1,
@@ -95,9 +58,12 @@ export const initBlocksAnimation = () => {
       end: '100% top',
       scrub: true,
       pin: true,
-      markers: false,
+      markers: true,
+      invalidateOnRefresh: true,
     },
-  }).to(items, {
+  };
+
+  const collageItemsSettings = {
     opacity: 0,
     scrollTrigger: {
       trigger: collage,
@@ -105,9 +71,21 @@ export const initBlocksAnimation = () => {
       end: '100% top',
       scrub: true,
       markers: false,
+      invalidateOnRefresh: true,
     },
+  };
+
+  // Collage section
+  matchMedia.add(breakpoints.xxl.minWidth, () => {
+    tl.to('.main-gallery__title', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
+  });
+  matchMedia.add(breakpoints.xxl.maxWidth, () => {
+    tl.to('.main-gallery__title', mainTitleSettings)
+      .to(collage, { ...collageSettings, xPercent: -7, scale: 4 })
+      .to(items, collageItemsSettings);
   });
 
+  // Services section
   const servicesTl = gsap.timeline({
     scrollTrigger: {
       trigger: '.services-banner',
@@ -122,6 +100,7 @@ export const initBlocksAnimation = () => {
   servicesTl.to('.services-banner__img', { height: '100%' });
   servicesTl.to('.services-banner__background-wrap', { opacity: 1, y: 0 });
 
+  // Brands Section
   const brandsTl = gsap.timeline({
     defaults: { ease: 'none' },
     scrollTrigger: {
@@ -130,75 +109,9 @@ export const initBlocksAnimation = () => {
       end: 'bottom-=50% top',
       markers: false,
       scrub: 1,
+      invalidateOnRefresh: true,
     },
   });
 
   brandsTl.to('.brands__item', { y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: 'power1.in' });
-  // gsap.to('.main-gallery__title', {
-  //   y: 0,
-  //   scrollTrigger: {
-  //     trigger: '.main-gallery__title',
-  //     pin: '.main-gallery__title',
-  //     start: 'bottom center',
-  //     end: 'bottom+=200 center',
-  //     scrub: 1,
-  //     markers: {
-  //       startColor: '#fff',
-  //       endColor: '#fff',
-  //     },
-  //   },
-  // });
-
-  // const collageCenterElementScalingTimeline = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: collage,
-  //     // start: 'top top',
-  //     // start: `top+=${centerElementTopOffsetPosition} top`,
-  //     // end: () => {
-  //     //   return `top+=${centerElementTopOffsetPosition + 200} top`;
-  //     // },
-  //     // end: `bottom top+=${centerElementTopOffsetPosition}`,
-  //     start: `top+=${centerElementTopOffsetPosition} top`,
-  //     end: () => {
-  //       return `90% 75%`;
-  //     },
-  //     scrub: true,
-  //     pin: true,
-  //     // pinSpacing: false,
-  //     markers: true,
-  //     // invalidateOnRefresh: true,
-  //     anticipatePin: true,
-  //   },
-  //   defaults: {
-  //     ease: 'none',
-  //   },
-  // });
-
-  // .to(collage, { yPercent: -100, duration: 2 });
-
-  // gsap.fromTo(
-  //   '.advantages__title',
-  //   {
-  //     y: 500,
-  //     opacity: 0,
-  //   },
-  //   {
-  //     opacity: 1,
-  //     y: 0,
-  //     duration: 2,
-  //     scrollTrigger: {
-  //       trigger: '.advantages',
-  //       endTrigger: '.advantages__row',
-  //       // start: `-${Helpers.getWindowHeightPercentage(80)} +=10%`,
-  //       // end: `-${Helpers.getWindowHeightPercentage(75)} top`,
-  //       // start: 'top top+=20%',
-  //       // end: 'top top',
-  //       pin: true,
-  //       pinnedContainer: '.advantages__title',
-  //       scrub: true,
-  //       markers: true,
-  //       invalidateOnRefresh: true,
-  //     },
-  //   },
-  // );
 };
