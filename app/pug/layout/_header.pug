@@ -1,12 +1,12 @@
 header.b-header
   .custom-container
     ._content-wrap
-      ._content
-        a.b-hamburger.-green.-small.-slider._hamburger.js-menu.hamburger--slider
-          span.hamburger-box
-            span.hamburger-inner
       ._content.-left
-        a.b-location(href='#')
+        ._mobile
+          a.b-hamburger.-green.-small.-slider._hamburger.js-menu.hamburger--slider
+            span.hamburger-box
+              span.hamburger-inner
+        a.b-location._location(href='#')
           ._icon.-pin-icon
             +icon('location')
           span._text Салоны
@@ -23,12 +23,12 @@ header.b-header
       ._content.-center
         a.b-logo.-medium._logo(href='#')
           +icon('logo')
-      ._content
-        a._location-link.-icon(href="#") 
-          +icon('location')
-        a._phone-link.-icon(href="#") 
-          +icon('phone')
       ._content.-right
+        ._mobile
+          a._location-link.-icon(href='#')
+            +icon('location')
+          a._phone-link.-icon(href='#')
+            +icon('phone')
         nav.b-nav.-small.-light.-horizontal.-uppercase._nav-right
           ul._list
             li._item
@@ -37,4 +37,4 @@ header.b-header
               a._link(href='#') Отзывы
             li._item
               a._link(href='#') Контакты
-        a.b-btn.-accent-outlined.-md(href='#') Оставить заявку
+        a.b-btn.-accent-outlined.-md._btn(href='#') Оставить заявку

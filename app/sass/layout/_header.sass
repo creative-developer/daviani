@@ -6,10 +6,32 @@
   width: 100%
   height: auto
   z-index: 2
-  +min_xxl
+  +min_xl
     top: 1.875rem
-  +xxl
+  +xl
     top: 30px
+
+  &__mobile
+    +min_lg
+      display: none
+    +lg
+      display: flex
+      align-items: center
+  &__location
+    +lg
+      display: none
+
+  &__nav
+    &-left
+      +lg
+        display: none
+    &-right
+      +lg
+        display: none
+
+  &__btn
+    +lg
+      display: none
 
   &__content
     display: flex
@@ -18,24 +40,20 @@
       display: flex
       align-items: center
       justify-content: space-between
+
     &--left
       flex: 1
       justify-content: space-between
-      +xxl
-        flex: 0.4 1 auto
-      +lg
-        display: none
+
     &--center
       justify-content: center
-      +min_xxl
+      +min_xl
         padding: 0 6.25rem
-      +xxl
+      +xl
         padding: 0 30px
 
     &--right
       justify-content: space-between
       flex: 1
-      +xxl
-        flex: 0.5 1 auto
       +lg
-        display: none
+        justify-content: flex-end
