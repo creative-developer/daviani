@@ -108,6 +108,35 @@ export const initBlocksAnimation = () => {
     },
   });
 
+  const servicesTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.services-banner',
+      start: 'top center',
+      end: 'bottom center',
+      markers: false,
+      scrub: 1.2,
+    },
+    defaults: { ease: 'none' },
+  });
+
+  servicesTl.to('.services-banner__img', { height: '100%' });
+  servicesTl.to('.services-banner__background-wrap', { opacity: 1, y: 0 });
+
+  const brandsTl = gsap.timeline({
+    defaults: { ease: 'none' },
+    scrollTrigger: {
+      trigger: '.works-slider',
+      start: 'top top',
+      bottom: 'bottom-=10% top',
+      scrub: true,
+      markers: false,
+    },
+  });
+
+  const brandsImagesList = gsap.utils.toArray('.brands__item');
+
+  brandsTl.from(brandsImagesList, { y: 160, stagger: 0.1, duration: 1, ease: 'none' });
+
   // gsap.to('.main-gallery__title', {
   //   y: 0,
   //   scrollTrigger: {

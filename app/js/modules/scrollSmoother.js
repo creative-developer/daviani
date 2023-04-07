@@ -70,7 +70,7 @@ const scrollSmootherAnimation = () => {
     start: 'top top',
     end: 'bottom top',
     scrub: 2,
-    markers: true,
+    // markers: true,
     invalidateOnRefresh: true,
     onUpdate: self => {
       direction = self.direction === 1 ? 'bottom' : 'top';

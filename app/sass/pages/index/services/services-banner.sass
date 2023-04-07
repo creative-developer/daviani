@@ -1,27 +1,19 @@
 .services-banner
   position: relative
+  overflow: hidden
   &__img
     width: 100%
-    height: 100%
     object-fit: cover
     will-change: transform
+    // transform: translateY(25%)
+    height: 38.5%
     &-wrap
       display: flex
       justify-content: center
-      align-items: center
+      align-items: flex-start
       position: relative
       width: 100%
-      height: 385px
-      &:after
-        content: ''
-        position: absolute
-        bottom: 1px
-        left: 0
-        width: 100%
-        height: 25rem
-        transform: translateY(100%)
-        z-index: 2
-        +gradient_y($bg300, transparent)
+      height: 62.5rem
 
   &__background
     max-width: 50rem
@@ -32,6 +24,8 @@
       position: absolute
       top: 6.4375rem
       left: 3.125rem
+      transform: translateY(300%)
+      opacity: 0
 
   &__title
     position: relative
@@ -56,8 +50,3 @@
     line-height: 1.875rem
     color: rgba($white, 0.55)
     margin-bottom: 0
-
-  &__img
-    width: 100%
-    height: 100%
-    object-fit: cover
