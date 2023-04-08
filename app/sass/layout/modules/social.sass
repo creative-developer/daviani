@@ -5,8 +5,12 @@
     min-width: 10.75rem
 
   &__item
-    &:not(:last-child)
-      margin-right: 0.875rem
+    +min_xl
+      &:not(:last-child)
+        margin-right: 0.875rem
+    +xl
+      &:not(:last-child)
+        margin-right: 12px
 
   &__link
     display: flex

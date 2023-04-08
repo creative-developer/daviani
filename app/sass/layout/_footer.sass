@@ -12,6 +12,9 @@
         margin-bottom: 3.625rem
       +xl
         margin-bottom: 50px
+      +lg
+        flex-direction: column
+        align-items: center
 
     &--bottom
       align-items: center
@@ -20,28 +23,49 @@
   &__logo-wrap
     display: flex
     justify-content: space-between
+    +lg
+      flex-direction: column
 
   &__left-nav
     margin-right: 23.5%
+    +lg
+      margin-right: 0
 
   &__col
     &--left
       flex: 1 1 40.8%
       max-width: 40.8%
+      +xl
+        max-width: 36%
+      +lg
+        max-width: 100%
     &--center
       flex: 1 1 23%
-      max-width: 23%
+      max-width: 25%
+      +lg
+        max-width: 100%
+        margin-bottom: 64px
     &--right
       flex: 1 1 36.2%
       max-width: 36.2%
       display: flex
       justify-content: flex-end
+      +xl
+        max-width: 39%
+      +lg
+        display: flex
+        flex-direction: column
+        max-width: 100%
 
   &__info-text
     font-weight: 400
-    font-size: 0.875rem
-    line-height: 1.25rem
     color: $gray-light
+    +min_xl
+      font-size: 0.875rem
+      line-height: 1.25rem
+    +xl
+      font-size: 14px
+      line-height: 20px
 
   &__inner-wrap
     display: flex
@@ -53,16 +77,17 @@
     font-weight: 400
     text-decoration: none
     color: $white
+    letter-spacing: 0.06em
     +min_xl
       font-size: 1.375rem
       line-height: 1.75rem
-      letter-spacing: 0.06em
       margin-bottom: 0.625rem
     +xl
-      font-size: 22px
+      font-size: 13px
       line-height: 28px
-      letter-spacing: 0.06em
       margin-bottom: 10px
+    +lg
+      font-size: 22px
 
     &:hover
       color: $accent
@@ -73,15 +98,34 @@
       margin-right: 1rem
       color: $green
     &-wrap
-      margin-right: 6.6875rem
+      +min_xl
+        margin-right: 6.6875rem
+      +xl
+        margin-right: 46px
+      +lg
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-right: 0
+        margin-bottom: 24px
 
   &__address
-    max-width: 12.3125rem
     font-weight: 400
-    font-size: 0.875rem
-    line-height: 1.25rem
     color: $gray-light
-    padding-left: 2.25rem
+    +min_xl
+      max-width: 12.3125rem
+      font-size: 0.875rem
+      line-height: 1.25rem
+      padding-left: 2.25rem
+    +xl
+      max-width: 197px
+      font-size: 12px
+      line-height: 20px
+      padding-left: 36px
+    +lg
+      max-width: 100%
+      padding-left: 0
+      font-size: 14px
 
   &__item
     &:last-child
@@ -89,5 +133,9 @@
 
   .icon
     &--whatsapp
-      width: 1.25rem
-      height: 1.25rem
+      +min_xl
+        width: 1.25rem
+        height: 1.25rem
+      +xl
+        width: 20px
+        height: 20px
