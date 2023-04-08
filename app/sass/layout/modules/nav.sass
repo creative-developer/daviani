@@ -14,8 +14,14 @@
   &--medium
     a
       font-weight: 400
-      font-size: 1rem
-      line-height: 1.25rem
+      +min_xl
+        font-size: 1rem
+        line-height: 1.25rem
+      +xl
+        font-size: 13px
+        line-height: 20px
+      +lg
+        font-size: 16px
   &--uppercase
     a
       text-transform: uppercase
@@ -27,6 +33,8 @@
   &--vertical
     li
       margin-bottom: 1rem
+      +lg
+        margin-bottom: 12px
   &--horizontal
     ul
       display: flex
@@ -44,3 +52,9 @@
 
   a
     text-decoration: none
+
+  &__list--vertical
+    +lg
+      display: flex
+      flex-direction: column
+      align-items: center
