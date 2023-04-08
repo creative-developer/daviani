@@ -58,7 +58,7 @@ export const initBlocksAnimation = () => {
       end: '100% top',
       scrub: true,
       pin: true,
-      markers: true,
+      // markers: true,
       invalidateOnRefresh: true,
     },
   };

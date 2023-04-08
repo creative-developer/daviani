@@ -3,9 +3,11 @@ const initServicesInnerTabs = () => {
   const currentParentTabElement = $(`.tab-content__item[data-id='${currentParentTabElementId}']`);
   const tabNavLink = currentParentTabElement.find('.services-card__link');
   const tabContentItem = currentParentTabElement.find('.services-card__img');
+  const price = currentParentTabElement.find('.services-card__price span');
 
   // init tabs first render
-  tabContentItem.not(tabContentItem.first()).addClass('services-card__img--active');
+  const firstItem = tabContentItem.first().addClass('services-card__img--active');
+  tabContentItem.not(firstItem).removeClass('services-card__img--active');
 
   tabNavLink.on('click', e => {
     e.preventDefault();
@@ -15,6 +17,7 @@ const initServicesInnerTabs = () => {
     const id = currentElement.attr('href').replace('#', '');
     const currentTabContentItem = currentParentTabElement.find(`.services-card__img[data-id='${id}']`);
 
+    price.text(currentElement.attr('data-price'));
     currentElement.closest('.services-card__list').find('.services-card__item').removeClass('services-card__item--active');
     currentElement.parent().addClass('services-card__item--active');
 
