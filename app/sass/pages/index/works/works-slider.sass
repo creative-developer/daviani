@@ -1,21 +1,46 @@
 .works-slider
-  padding-bottom: 2.1875rem
   --swiper-scrollbar-bg-color: rgba(230, 232, 233, 0.1)
   --swiper-scrollbar-drag-bg-color: #DBCBA4
-  --swiper-scrollbar-size: 0.25rem
   --swiper-scrollbar-border-radius: 0
   --swiper-scrollbar-bottom: 0
-  --swiper-scrollbar-sides-offset: 3.125rem
+  +min_xl
+    --swiper-scrollbar-size: 0.25rem
+    --swiper-scrollbar-sides-offset: 3.125rem
+    padding-bottom: 2.1875rem
+  +xl
+    --swiper-scrollbar-sides-offset: 40px
+    --swiper-scrollbar-size: 4px
+    padding-bottom: 32px
+  +lg
+    padding-bottom: 27px
+    --swiper-scrollbar-sides-offset: 16px
+    --swiper-scrollbar-size: 3px
 
   &__wrapper
     transition-timing-function: linear !important
     will-change: transform
 
   &__item
-    max-width: 22.3125rem
-    min-width: 22.3125rem
-    width: 22.3125rem
-    height: 39.6875rem
+    +min_xl
+      max-width: 22.3125rem
+      min-width: 22.3125rem
+      width: 22.3125rem
+      height: 39.6875rem
+    +xl
+      max-width: 320px
+      min-width: 320px
+      width: 320px
+      height: 569px
+    +lg
+      max-width: 280px
+      min-width: 280px
+      width: 280px
+      height: 518px
+    +sm
+      max-width: 200px
+      min-width: 200px
+      width: 200px
+      height: 357px
 
   &__img
     width: 100%

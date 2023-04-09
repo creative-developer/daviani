@@ -1,29 +1,57 @@
 .brands
-  padding: 2.25rem 0 3.25rem
+  +min_xl
+    padding: 2.25rem 0 3.25rem
+  +xl
+    padding: 36px 0 52px
+  +lg
+    padding: 25px 0 35px
+  +sm
+    padding: 20px 0 25px
 
   &__wrapper
-    display: flex
-    justify-content: space-between
-    align-items: center
-    height: 9.375rem
-    max-width: 108rem
-    margin: 0 auto
     +lg
       overflow-x: auto
+      overflow-y: visible
+      +disableScrollBar
+      margin-right: -16px
+
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 auto
+    +min_xl
+      max-width: 108rem
+    +xl
+      max-width: 1728px
+    +sm
+      margin-left: -25px
 
   &__item
     display: flex
     align-items: center
     justify-content: center
-    flex: 1 1 16.66%
-    max-width: 16.66%
     color: rgba($white ,0.35 )
     transform: translateY(150px)
     opacity: 0
+    flex: 1
+    max-width: 100%
+    +min_xl
+      height: 9.375rem
+    +xl
+      height: 96px
     +lg
-      min-width: 181.67px
+      width: 173px
+      min-width: 173px
+      height: 90px
+    +sm
+      width: 160px
+      height: 84px
+      min-width: 160px
+      min-height: 84px
 
   .icon
+    will-change: transform
     &--brand-1
       +min_xl
         width: 7.4375rem
@@ -31,6 +59,9 @@
       +xl
         width: 75px
         height: 75px
+      +sm
+        width: 67px
+        height: 51px
     &--brand-2
       +min_xl
         width: 10.625rem
@@ -38,6 +69,10 @@
       +xl
         width: 107px
         height: 20px
+      +sm
+        width: 95px
+        height: 19px
+
     &--brand-3
       +min_xl
         width: 9.8125rem
@@ -45,6 +80,10 @@
       +xl
         width: 99px
         height: 28px
+      +sm
+        width: 88px
+        height: 25px
+
     &--brand-4
       +min_xl
         width: 10.8125rem
@@ -52,6 +91,9 @@
       +xl
         width: 109px
         height: 29px
+      +sm
+        width: 97px
+        height: 26px
     &--brand-5
       +min_xl
         width: 10.5625rem
@@ -59,6 +101,9 @@
       +xl
         width: 106px
         height: 40px
+      +sm
+        width: 94px
+        height: 36px
     &--brand-6
       +min_xl
         width: 12.1875rem
@@ -66,3 +111,6 @@
       +xl
         width: 123px
         height: 19px
+      +sm
+        width: 109px
+        height: 18px
