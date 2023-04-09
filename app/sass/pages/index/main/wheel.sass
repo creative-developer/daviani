@@ -1,21 +1,31 @@
 .wheel
   position: absolute
-  top: 32.8125rem
   left: 50%
   display: flex
   align-items: center
   justify-content: center
   transform: translateX(-50%)
-  width: 305vw
-  height: 305vw
   will-change: transform
+  +min_xl
+    top: 32.8125rem
+    width: 305vw
+    height: 305vw
+  +xl
+    top: 400px
+    width: 3620px
+    height: 3620px
   &__card
     position: absolute
     top: 0
     left: 0
-    width: 19.875rem
-    height: 28.125rem
     user-select: none
+    +min_xl
+      width: 19.875rem
+      height: 28.125rem
+    +xl
+      width: 210px
+      height: 298px
+
     &-img
       width: 100%
       height: 100%

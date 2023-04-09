@@ -2,7 +2,6 @@
   position: relative
   overflow: hidden
   z-index: 1
-  // TODO: Потом нужно исправить заголовок как в дизайне
   &__title
     position: relative
     font-family: $titleFont
@@ -12,9 +11,13 @@
     text-align: center
     letter-spacing: 0.04em
     color: $accent
+    background: url(../img/index/advantages/title-img.png) no-repeat center center/cover
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
     height: 100vh
     padding-top: 15vh
     margin-bottom: 16rem
+    opacity: 0.66
     z-index: -1
     +xxl
       padding-top: 170px

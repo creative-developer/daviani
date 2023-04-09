@@ -1,26 +1,57 @@
 .main-gallery
-  margin-top: -3.4375rem
-  padding-bottom: 3.8125rem
   position: relative
-  z-index: -1
-  &__title
-    max-width: 93.75rem
-    margin: 0 auto
-    font-family: $titleFont
-    font-weight: 400
-    font-size: 6.25rem
-    line-height: 5.625rem
-    text-align: center
-    letter-spacing: 0.04em
-    margin-bottom: 0.6875rem
-    transform: translateY(6.25rem)
-    opacity: 0.1
-    will-change: transform
-    // mix-blend-mode: overlay
-    // opacity: 0.77
-    span
-      color: $accent
-      display: block
+  z-index: 1
+  +min_xl
+    padding-bottom: 3.8125rem
+    margin-top: -3.4375rem
+  +xl
+    padding-bottom: 61px
+    padding-top: 65px
 
   &__top-line
     margin-bottom: 7.5625rem
+
+  &__title-wrap
+    +min_xl
+      transform: translateY(6.25rem)
+      opacity: 0.1
+
+.main-title
+  position: relative
+  font-family: $titleFont
+  font-weight: 400
+  text-align: center
+  margin: 0 auto
+  will-change: transform
+  &--op-55
+    opacity: 0.55
+
+  &__highlighted
+    color: $accent
+    display: block
+
+  &__content
+    background-image: url('../img/index/collage/title-bg.png')
+    background-size: cover
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+  +min_xl
+    max-width: 93.75rem
+    font-size: 6.25rem
+    line-height: 5.625rem
+    letter-spacing: 0.04em
+    margin-bottom: 0.6875rem
+  +xl
+    font-size: 68px
+    line-height: 68px
+    margin-bottom: 11px
+  +lg
+    font-size: 57px
+    line-height: 57px
+    margin-bottom: 11px
+  +md
+    font-size: 52px
+    line-height: 52px
+  +sm
+    font-size: 32px
+    line-height: 32px

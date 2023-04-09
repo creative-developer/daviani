@@ -76,13 +76,11 @@ export const initBlocksAnimation = () => {
   };
 
   // Collage section
-  matchMedia.add(breakpoints.xxl.minWidth, () => {
-    tl.to('.main-gallery__title', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
+  matchMedia.add(breakpoints.xl.minWidth, () => {
+    tl.to('.main-gallery__title-wrap', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
   });
-  matchMedia.add(breakpoints.xxl.maxWidth, () => {
-    tl.to('.main-gallery__title', mainTitleSettings)
-      .to(collage, { ...collageSettings, xPercent: -7, scale: 4 })
-      .to(items, collageItemsSettings);
+  matchMedia.add(breakpoints.xl.maxWidth, () => {
+    tl.to(collage, { ...collageSettings, xPercent: -7, scale: 4 }).to(items, collageItemsSettings);
   });
 
   // Services section

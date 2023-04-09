@@ -1,24 +1,36 @@
 .footer
   background: $bg300
   +min_xl
-    padding: 3.25rem 0 1.5625rem 0
+    padding: 3.25rem 0 1.5625rem
   +xl
-    padding: 52px 0 25px 0
+    padding: 52px 0 25px
+  +lg
+    padding: 40px 0 32px
 
   &__row
     display: flex
+    +lg
+      flex-direction: column
+      align-items: center
     &--top-line
       +min_xl
         margin-bottom: 3.625rem
       +xl
         margin-bottom: 50px
-      +lg
-        flex-direction: column
-        align-items: center
+      .footer
+        &__col
+          &--center
+            +lg
+              margin-bottom: 72px
 
-    &--bottom
-      align-items: center
-      justify-content: space-between
+    &--bottom-line
+      +lg
+        flex-direction: column-reverse
+      .footer
+        &__col
+          &:not(:first-child)
+            +lg
+              margin-bottom: 15px
 
   &__logo-wrap
     display: flex
@@ -32,30 +44,41 @@
       margin-right: 0
 
   &__col
+    +lg
+      flex: 1 1 100%
+      max-width: 100%
     &--left
-      flex: 1 1 40.8%
-      max-width: 40.8%
-      +xl
-        max-width: 36%
-      +lg
-        max-width: 100%
+      +min_lg
+        flex: 1 1 40.8%
+        max-width: 40.8%
+        +xl
+          flex: 1 1 36%
+          max-width: 36%
+      // +lg
+      //   flex: 1 1 100%
+      //   max-width: 100%
     &--center
-      flex: 1 1 23%
-      max-width: 25%
-      +lg
-        max-width: 100%
-        margin-bottom: 64px
+      +min_lg
+        flex: 1 1 23%
+        max-width: 25%
+      // +lg
+      //   flex: 1 1 100%
+      //   max-width: 100%
+      //   margin-bottom: 64px
     &--right
-      flex: 1 1 36.2%
-      max-width: 36.2%
-      display: flex
-      justify-content: flex-end
-      +xl
-        max-width: 39%
-      +lg
+      +min_lg
+        flex: 1 1 36.2%
+        max-width: 36.2%
         display: flex
-        flex-direction: column
-        max-width: 100%
+        justify-content: flex-end
+        +xl
+          flex: 1 1 39%
+          max-width: 39%
+      // +lg
+      //   display: flex
+      //   flex-direction: column
+      //   flex: 1 1 100%
+      //   max-width: 100%
 
   &__info-text
     font-weight: 400
@@ -64,8 +87,12 @@
       font-size: 0.875rem
       line-height: 1.25rem
     +xl
+      max-width: 90%
       font-size: 14px
       line-height: 20px
+    +lg
+      text-align: center
+      max-width: 100%
 
   &__inner-wrap
     display: flex
@@ -139,3 +166,7 @@
       +xl
         width: 20px
         height: 20px
+
+  &__social
+    .social__list
+      justify-content: center

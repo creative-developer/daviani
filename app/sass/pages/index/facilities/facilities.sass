@@ -1,0 +1,88 @@
+.facilities
+  padding: 5rem 0
+  position: relative
+  z-index: 1
+
+  &__title
+    max-width: 41.875rem
+    margin-right: 11.5625rem
+    margin-bottom: 0
+    &-wrap
+      max-width: 88.75rem
+      width: 100%
+      margin: 0 auto 1.5rem auto
+      display: flex
+
+  &__sub-title
+    font-weight: 400
+    font-size: 1.5rem
+    line-height: 2.375rem
+    color: $white
+    max-width: 29.375rem
+    width: 100%
+
+  &__photos-wrap
+    position: relative
+
+  &__list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 3.875rem
+    +min_xxxl
+      gap: 3.875rem
+    +xxxl
+      gap: 4.395%
+
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    &:nth-child(1)
+      +min_xxxl
+        padding-top: 5rem
+        flex-basis: 49.4375rem
+        max-width: 49.4375rem
+        height: 50.125rem
+      +xxxl
+        flex-basis: 43.407%
+        max-width: 43.407%
+        height: 600px
+
+    &:nth-child(2)
+      +min_xxxl
+        flex-basis: 59.375rem
+        max-width: 59.375rem
+        height: 52.0625rem
+      +xxxl
+        flex-basis: 52.198%
+        max-width: 52.198%
+        height: 633px
+
+    &:nth-child(3)
+      max-width: 100%
+      flex-basis: 100%
+      +min_xl
+        padding-top: 5.0625rem
+        height: 50rem
+      +xl
+        padding-top: 81px
+        height: 40.5rem
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__decor-line
+    position: absolute
+    top: -11.0625rem
+    right: 1.875rem
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $accent
+    width: 20.375rem
+    height: 19.75rem
+    z-index: 1

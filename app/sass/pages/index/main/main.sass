@@ -1,6 +1,11 @@
 .main-screen
   position: relative
   display: block
-  min-height: 100vh
-  padding-top: 10.0625rem + 8.75rem
   overflow: hidden
+  +min_xl
+    min-height: 100vh
+    padding-top: 10.0625rem + 8.75rem
+  +xl
+    min-height: 666px
+    padding-top: 300px
+    padding-bottom: 100px
