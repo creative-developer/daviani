@@ -31,13 +31,39 @@ img
   font-weight: 400
   font-family: $tenorSansFont
   &:not(&--large)
-    font-size: 4.8125rem
-    line-height: 4.8125rem
+    +min_xl
+      font-size: 4.8125rem
+      line-height: 4.8125rem
+    +xl
+      font-size: 66px
+      line-height: 66px
+    +lg
+      font-size: 52px
+      line-height: 52px
+    +md
+      font-size: 42px
+      line-height: 42px
+    +sm
+      font-size: 32px
+      line-height: 32px
   &--light
     color: $white
   &--large
-    font-size: 6.25rem
-    line-height: 6.25rem
+    +min_xl
+      font-size: 6.25rem
+      line-height: 6.25rem
+    +xl
+      font-size: 80px
+      line-height: 80px
+    +lg
+      font-size: 52px
+      line-height: 52px
+    +md
+      font-size: 42px
+      line-height: 42px
+    +sm
+      font-size: 32px
+      line-height: 32px
 
 .body1
   font-weight: 400

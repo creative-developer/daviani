@@ -1,3 +1,5 @@
+import { smartScroller } from './smartScroller.js';
+
 const initServicesInnerTabs = () => {
   const currentParentTabElementId = $('.tab-nav__item--active').find('.tab-nav__link').attr('href').replace('#', '');
   const currentParentTabElement = $(`.tab-content__item[data-id='${currentParentTabElementId}']`);
@@ -38,6 +40,7 @@ export const initServicesTabs = () => {
     e.stopPropagation();
 
     const currentElement = $(e.currentTarget);
+
     const id = currentElement.attr('href').replace('#', '');
     const currentTabContentItem = $(`.tab-content__item[data-id='${id}']`);
 
@@ -46,6 +49,8 @@ export const initServicesTabs = () => {
 
     tabContentItem.not(currentTabContentItem).fadeOut(0);
     currentTabContentItem.fadeIn(500);
+
+    smartScroller(currentElement.parent(), $('.tab-nav'));
     initServicesInnerTabs();
   });
 

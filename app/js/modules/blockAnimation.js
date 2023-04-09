@@ -1,11 +1,9 @@
 import { scroller } from '../main.js';
-import { Helpers } from './Helpers.js';
 import { breakpoints } from './MQ.js';
 
 export const initBlocksAnimation = () => {
   const matchMedia = gsap.matchMedia();
   const windowHeight = document.documentElement.clientHeight;
-  const windowWidth = document.documentElement.clientWidth;
 
   scroller.effects('.facilities__sub-title', { speed: 0.9 });
   scroller.effects('.facilities__title', { speed: 1.1 });
@@ -43,7 +41,7 @@ export const initBlocksAnimation = () => {
       start: 'top top',
       end: 'center top',
       scrub: true,
-      markers: false,
+      markers: true,
       invalidateOnRefresh: true,
     },
   };

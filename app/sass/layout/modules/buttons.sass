@@ -32,6 +32,8 @@
     color: $white
   &--dark-text
     color: $dark
+    &:hover
+      color: $dark
   &--bg200-text
     color: $bg200
     &:hover
@@ -42,6 +44,8 @@
     border: 0.0625rem solid $accent
   &--bg-accent
     background-color: $accent
+    &:hover
+      background-color: #E6DABE
   &--bg-dark
     background-color: $bg200
   &--overlay-white-border
@@ -60,55 +64,79 @@
     align-items: center
   &--iconed-right
     span
-      margin-right: 0.625rem
+      +min_xl
+        margin-right: 0.625rem
+      +xl
+        margin-right: 10px
   &--iconed-left
     span
-      margin-left: 0.625rem
+      +min_xl
+        margin-left: 0.625rem
+      +xl
+        margin-left: 10px
   &--xl
     // 66
     font-weight: 600
-    font-size: 1.25rem
-    line-height: 1.25rem
     letter-spacing: 0.02em
+    +min_xl
+      font-size: 1.25rem
+      line-height: 1.25rem
+    +xl
+      font-size: 20px
+      line-height: 20px
     &:not(.btn--link)
-      padding: 1.4375rem 3.75rem
+      +min_xl
+        padding: 1.4375rem 3.75rem
+      +xl
+        padding: 18px 36px
     .btn
       &__icon-wrap
-        width: 1.75rem
-        height: 1rem
+        +min_xl
+          width: 1.75rem
+          height: 1rem
+        +xl
+          width: 28px
+          height: 16px
 
   &--lg
     // 63
     font-weight: 600
-    font-size: 1.125rem
-    line-height: 1.125rem
     letter-spacing: 0.02em
+    +min_xl
+      font-size: 1.125rem
+      line-height: 1.125rem
+    +xl
+      font-size: 18px
+      line-height: 18px
     &:not(.btn--link)
-      padding: 1.4063rem 3.25rem
+      +min_xl
+        padding: 1.4063rem 3.25rem
+      +xl
+        padding: 22.5px 52px
     .btn
       &__icon-wrap
-        width: 0.625rem
-        height: 1rem
+        +min_xl
+          width: 0.625rem
+          height: 1rem
+        +xl
+          width: 10px
+          height: 16px
 
   &--md
     // 53
     font-weight: 600
+    letter-spacing: 0.02em
     +min_xl
       font-size: 1rem
       line-height: 1.1875rem
-      letter-spacing: 0.02em
-      &:not(.btn--link)
+    +xl
+      font-size: 11px
+      line-height: 11px
+    &:not(.btn--link)
+      +min_xl
         padding: 0.8125rem 1.9375rem
-    +xl
-      font-size: 14px
-      line-height: 19px
-      letter-spacing: 0.02em
-      &:not(.btn--link)
-        padding: 5px 20px
-    +xl
-      font-size: 10px
-      &:not(.btn--link)
-        padding: 3px 15px
+      +xl
+        padding: 10px 12px
 
   &--sm
     // 47

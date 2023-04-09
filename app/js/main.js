@@ -22,14 +22,16 @@ export let scroller = null;
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
-  scroller = ScrollSmoother.create({
-    wrapper: '.smooth-wrapper',
-    content: '.smooth-content',
-    smooth: 1.5,
-    effects: true,
-    autoResize: true,
-    smoothTouch: true,
-  });
+  // FIXME: Сейчас анимация сломана, нужно обернуть весь контент в дивы .smooth-wrapper, .smooth-content
+
+  // scroller = ScrollSmoother.create({
+  //   wrapper: '.smooth-wrapper',
+  //   content: '.smooth-content',
+  //   smooth: 1.5,
+  //   effects: true,
+  //   autoResize: true,
+  //   smoothTouch: true,
+  // });
 
   initRems();
   mfpPopupInit();
@@ -44,11 +46,11 @@ $(document).ready(() => {
   initServicesTabs();
   initContactsMaps();
   initMenu();
-  initBlocksAnimation();
+  // initBlocksAnimation();
 
-  $(window).on('load', () => {
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 500);
-  });
+  // $(window).on('load', () => {
+  //   setTimeout(() => {
+  //     ScrollTrigger.refresh();
+  //   }, 500);
+  // });
 });

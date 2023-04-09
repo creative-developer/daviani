@@ -22,6 +22,7 @@
         line-height: 20px
       +lg
         font-size: 16px
+
   &--uppercase
     a
       text-transform: uppercase
@@ -40,15 +41,11 @@
       display: flex
       align-items: center
     li
-      +min_xl
-        &:not(:last-child)
+      &:not(:last-child)
+        +min_xl
           margin-right: 2.5rem
-      +xl
-        &:not(:last-child)
-          margin-right: 40px
-      +xl
-        &:not(:last-child)
-          margin-right: 25px
+        +xl
+          margin-right: 24px
 
   a
     text-decoration: none

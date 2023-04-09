@@ -1,7 +1,20 @@
 .services-card
   display: flex
+  +md
+    flex-wrap: wrap
+
   &__content
-    padding: 6.5rem 10.625rem 6.4375rem 7.0625rem
+    +min_xl
+      padding: 6.5rem 10.625rem 6.4375rem 7.0625rem
+    +xl
+      padding: 40px 60px 40px 40px
+    +lg
+      padding: 30px 60px 30px 30px
+    +md
+      display: flex
+      align-items: center
+      flex-direction: column
+      padding: 32px 0 0
 
   &__img
     position: absolute
@@ -23,19 +36,52 @@
       display: flex
       align-items: center
       justify-content: center
-      max-width: 72.125rem
-      height: 44.6875rem
+      height: 100%
+      +min_xl
+        max-width: 72.125rem
+        min-height: 44.6875rem
+      +xl
+        min-height: 100%
+      +md
+        height: 350px
 
   &__col
     &--left
-      flex: 1 1 36.593%
-      max-width: 36.593%
+      flex: 1 1 37%
+      max-width: 37%
+      +xl
+        flex: 1 1 50%
+        max-width: 50%
+      +lg
+        flex: 1 1 53.241%
+        max-width: 53.241%
+      +md
+        flex: 1 1 100%
+        max-width: 100%
+        order: 2
     &--right
-      flex: 1 1 63.407%
-      max-width: 63.407%
+      flex: 1 1 63%
+      max-width: 63%
+      +xl
+        flex: 1 1 50%
+        max-width: 50%
+      +lg
+        flex: 1 1 46.759%
+        max-width: 46.759%
+      +md
+        flex: 1 1 100%
+        max-width: 100%
+        order: 1
 
   &__list
-    margin-bottom: 6.375rem
+    +min_xl
+      margin-bottom: 6.375rem
+    +xl
+      margin-bottom: 60px
+    +md
+      display: flex
+      align-items: center
+      flex-direction: column
 
   &__item
     &--active
@@ -45,33 +91,57 @@
           color: $accent
 
     &:not(:last-child)
-      margin-bottom: 1rem
+      +min_xl
+        margin-bottom: 1rem
+      +xl
+        margin-bottom: 16px
 
   &__link
     font-weight: 400
-    font-size: 1.5rem
-    line-height: 2.125rem
     color: $white
     text-decoration: none
     font-family: $tenorSansFont
+    +min_xl
+      font-size: 1.5rem
+      line-height: 2.125rem
+    +xl
+      font-size: 20px
+      line-height: 26px
+    +sm
+      font-size: 18px
+      line-height: 24px
     &:hover
       color: darken($white, 15%)
 
   &__discount
     font-weight: 400
-    font-size: 1rem
-    line-height: 1.25rem
     color: rgba($white, 0.55)
     margin-bottom: 0.5rem
+    +min_xl
+      font-size: 1rem
+      line-height: 1.25rem
+    +xl
+      font-size: 16px
+      line-height: 20px
 
   &__price
     font-family: $titleFont
     font-weight: 400
-    font-size: 2.5rem
-    line-height: 3.125rem
     letter-spacing: 0.04em
     color: $white
-    margin-bottom: 1.75rem
+    +min_xl
+      margin-bottom: 1.75rem
+      font-size: 2.5rem
+      line-height: 3.125rem
+    +xl
+      font-size: 30px
+      line-height: 40px
+      margin-bottom: 22px
+    +lg
+      font-size: 40px
+      line-height: 50px
+    +md
+      margin-bottom: 32px
 
   &__btn
     width: 100%
