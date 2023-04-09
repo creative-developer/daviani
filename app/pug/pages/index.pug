@@ -9,24 +9,24 @@ html(lang='ru')
     |
     // Header
     .b-screen-overlay
-    .smooth-wrapper
+    //- .smooth-wrapper
       .smooth-content
-        include ../layout/_header
-          // content
-        block content
-          // Sections
-          main.main-page
-            .b-global-bg
-            include ./index/main
-            include ./index/gallery
-            include ./index/facilities
-            include ./index/services
-            include ./index/advantages
-            include ./index/masters
-            include ./index/works
-            include ./index/brands
-            include ./index/main-contacts
+    include ../layout/_header
+      // content
+    block content
+      // Sections
+      main.main-page
+        .b-global-bg
+        include ./index/main
+        include ./index/gallery
+        include ./index/facilities
+        include ./index/services
+        include ./index/advantages
+        include ./index/masters
+        include ./index/works
+        include ./index/brands
+        include ./index/main-contacts
 
-        |
-        |
-        include ../layout/_footer
+    |
+    |
+    include ../layout/_footer

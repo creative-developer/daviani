@@ -6,10 +6,13 @@
     margin-top: -3.4375rem
   +xl
     padding-bottom: 61px
-    padding-top: 65px
+    padding-top: 30px
+  +sm
+    padding-top: 0
 
   &__top-line
-    margin-bottom: 7.5625rem
+    +min_xl
+      margin-bottom: 7.5625rem
 
   &__title-wrap
     +min_xl
@@ -23,6 +26,7 @@
   text-align: center
   margin: 0 auto
   will-change: transform
+  z-index: 5
   &--op-55
     opacity: 0.55
 
