@@ -5,15 +5,16 @@ export const initBlocksAnimation = () => {
   const matchMedia = gsap.matchMedia();
   const windowHeight = document.documentElement.clientHeight;
 
-  scroller.effects('.facilities__sub-title', { speed: 0.9 });
-  scroller.effects('.facilities__title', { speed: 1.1 });
-
-  document.querySelectorAll('.facilities__item').forEach((item, index) => {
-    if (index % 2 === 0) {
-      scroller.effects(item, { speed: 1.1 });
-    } else {
-      scroller.effects(item, { speed: 0.9 });
-    }
+  matchMedia.add(breakpoints.md.minWidth, () => {
+    scroller.effects('.facilities__sub-title', { speed: 0.9 });
+    scroller.effects('.facilities__title', { speed: 1.1 });
+    document.querySelectorAll('.facilities__item').forEach((item, index) => {
+      if (index % 2 === 0) {
+        scroller.effects(item, { speed: 1.1 });
+      } else {
+        scroller.effects(item, { speed: 0.9 });
+      }
+    });
   });
 
   scroller.effects('.collage', { speed: 1.2 });

@@ -1,25 +1,76 @@
 .facilities
-  padding: 5rem 0
   position: relative
   z-index: 1
+  +min_xl
+    padding: 5rem 0
+  +xl
+    padding: 60px 0
+  +lg
+    padding: 40px 0
+  +md
+    padding: 30px 0
+  +sm
+    padding: 26px 0
 
   &__title
-    max-width: 41.875rem
-    margin-right: 11.5625rem
     margin-bottom: 0
+    +min_xl
+      max-width: 41.875rem
+      margin-right: 11.5625rem
+    +xl
+      max-width: 450px
+      margin-right: 32px
+    +lg
+      max-width: 58.288%
+      margin-right: 2.174%
+    +md
+      max-width: 100%
+      margin-right: 0
+      text-align: center
+      margin-bottom: 24px
+
     &-wrap
-      max-width: 88.75rem
+      position: relative
       width: 100%
-      margin: 0 auto 1.5rem auto
       display: flex
+      z-index: 2
+      +min_xl
+        max-width: 88.75rem
+        margin: 0 auto 1.5rem auto
+      +xl
+        max-width: 100%
+        margin-bottom: 55px
+        justify-content: space-between
+      +lg
+        margin-bottom: 100px
+      +md
+        align-items: center
+        flex-direction: column
+        justify-content: flex-start
+        max-width: 100%
+        text-align: center
 
   &__sub-title
     font-weight: 400
-    font-size: 1.5rem
-    line-height: 2.375rem
     color: $white
-    max-width: 29.375rem
     width: 100%
+    +min_xl
+      font-size: 1.5rem
+      max-width: 29.375rem
+      line-height: 2.375rem
+    +xl
+      font-size: 20px
+      line-height: 26px
+      margin-right: 30px
+      max-width: 400px
+    +lg
+      max-width: 38.451%
+    +md
+      margin-right: 0
+      max-width: 100%
+    +sm
+      font-size: 20px
+      line-height: 26px
 
   &__photos-wrap
     position: relative
@@ -28,11 +79,10 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    gap: 3.875rem
-    +min_xxxl
-      gap: 3.875rem
-    +xxxl
+    +min_md
       gap: 4.395%
+    +md
+      gap: 16px
 
   &__item
     display: flex
@@ -40,25 +90,37 @@
     justify-content: center
     width: 100%
     &:nth-child(1)
-      +min_xxxl
+      flex-basis: 43.407%
+      max-width: 43.407%
+      +min_xl
         padding-top: 5rem
-        flex-basis: 49.4375rem
-        max-width: 49.4375rem
         height: 50.125rem
-      +xxxl
-        flex-basis: 43.407%
-        max-width: 43.407%
-        height: 600px
+      +xl
+        height: 350px
+      +lg
+        height: 318px
+      +md
+        flex: 1 1 100%
+        max-width: 100%
+        height: 300px
+      +sm
+        height: 260px
 
     &:nth-child(2)
-      +min_xxxl
-        flex-basis: 59.375rem
-        max-width: 59.375rem
+      flex-basis: 52.198%
+      max-width: 52.198%
+      +min_xl
         height: 52.0625rem
-      +xxxl
-        flex-basis: 52.198%
-        max-width: 52.198%
-        height: 633px
+      +xl
+        height: 410px
+      +lg
+        height: 380px
+      +md
+        flex: 1 1 100%
+        max-width: 100%
+        height: 300px
+      +sm
+        height: 260px
 
     &:nth-child(3)
       max-width: 100%
@@ -68,7 +130,14 @@
         height: 50rem
       +xl
         padding-top: 81px
-        height: 40.5rem
+        height: 550px
+      +lg
+        height: 480px
+      +md
+        padding-top: 0
+        height: 300px
+      +sm
+        height: 260px
 
   &__img
     width: 100%
@@ -77,12 +146,32 @@
 
   &__decor-line
     position: absolute
-    top: -11.0625rem
-    right: 1.875rem
     display: flex
     align-items: center
     justify-content: center
     color: $accent
-    width: 20.375rem
-    height: 19.75rem
     z-index: 1
+    +min_xl
+      top: -11.0625rem
+      right: 1.875rem
+      width: 20.375rem
+      height: 19.75rem
+    +xl
+      top: -100px
+      right: 30px
+      width: 219px
+      height: 169px
+      top: -100px
+      right: 30px
+      width: 219px
+      height: 169px
+    +md
+      width: 180px
+      height: 139px
+      right: auto
+      top: -52px
+      left: 50%
+      transform: translateX(-50%)
+    +sm
+      width: 144px
+      height: 111px
