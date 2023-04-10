@@ -7,10 +7,14 @@ export const mediaQueriesInit = () => {
     () => {
       // in lg
       console.log('in lg');
+      const sliderBtns = $('.masters__slider-btns-wrap').find('.masters__slider-btn');
+      $('.masters__mobile-slider-btns-wrap').append(sliderBtns);
     },
     () => {
       // out lg
       console.log('out lg');
+      const sliderBtns = $('.masters__mobile-slider-btns-wrap').find('.masters__slider-btn');
+      $('.masters__slider-btns-wrap').append(sliderBtns);
     },
   );
   MQ(

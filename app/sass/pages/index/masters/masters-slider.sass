@@ -12,13 +12,12 @@
     +lg
       display: flex
       align-items: center
+      flex-direction: column-reverse
+      justify-content: space-between
       text-align: center
       padding: 32px 32px 24px
       max-width: 407px
-      // flex-wrap: wrap-reverse
       height: auto
-      flex-direction: column-reverse
-      justify-content: space-between
     +sm
       padding: 0
       padding-top: 17px
@@ -39,7 +38,13 @@
       display: flex
       align-items: center
       flex-direction: column
+      justify-content: space-between
       padding: 0 16px 16px
+      height: 100%
+    &-top-line
+      +lg
+        display: flex
+        flex-direction: column
 
   &__img
     width: 100%
