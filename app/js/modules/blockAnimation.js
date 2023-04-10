@@ -96,7 +96,8 @@ export const initBlocksAnimation = () => {
   });
 
   servicesTl.to('.services-banner__img', { height: '100%' });
-  servicesTl.to('.services-banner__background-wrap', { opacity: 1, y: 0 });
+  // servicesTl.to('.services-banner__background-wrap', { opacity: 1, yPercent: 100, y: 0 });
+  servicesTl.to('.services-banner__background-wrap', { opacity: 1, yPercent: 0, y: 0 });
 
   // Brands Section
   const brandsTl = gsap.timeline({
