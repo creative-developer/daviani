@@ -20,9 +20,23 @@ export const initBlocksAnimation = () => {
   scroller.effects('.collage', { speed: 1.2 });
   scroller.effects('.advantages__title', { speed: 0.1 });
 
-  scroller.effects('.advantages__col--left', { speed: 1.1 });
-  scroller.effects('.advantages__col--center', { speed: 1.8 });
-  scroller.effects('.advantages__col--right', { speed: 1.4 });
+  matchMedia.add(breakpoints.md.minWidth, () => {
+    scroller.effects('.advantages__col--left', { speed: 1.1 });
+    scroller.effects('.advantages__col--center', { speed: 1.8 });
+    scroller.effects('.advantages__col--right', { speed: 1.4 });
+  });
+
+  matchMedia.add(breakpoints.xl.maxWidth, () => {
+    scroller.effects('.advantages__col--left', { speed: 0.8 });
+    scroller.effects('.advantages__col--center', { speed: 1.6 });
+    scroller.effects('.advantages__col--right', { speed: 0.8 });
+  });
+
+  matchMedia.add(breakpoints.sm.maxWidth, () => {
+    scroller.effects('.advantages__col--left', { speed: 0.9 });
+    scroller.effects('.advantages__col--center', { speed: 1.2 });
+    scroller.effects('.advantages__col--right', { speed: 0.9 });
+  });
 
   const tl = gsap.timeline({ defaults: { ease: 'none' } });
 

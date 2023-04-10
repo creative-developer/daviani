@@ -2,25 +2,47 @@
   position: relative
   overflow: hidden
   z-index: 1
+  +md
+    padding-bottom: 20px
   &__title
     position: relative
     font-family: $titleFont
     font-weight: 400
-    font-size: 12.5rem
-    line-height: 11.25rem
     text-align: center
     letter-spacing: 0.04em
     color: $accent
     background: url(../img/index/advantages/title-img.png) no-repeat center center/cover
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
-    height: 100vh
-    padding-top: 15vh
-    margin-bottom: 16rem
     opacity: 0.66
     z-index: -1
+    +min_xl
+      margin-bottom: 16rem
+      font-size: 12.5rem
+      line-height: 11.25rem
+    +min_xxl
+      height: 100vh
+      padding-top: 17vh
     +xxl
       padding-top: 170px
+    +xl
+      font-size: 129px
+      line-height: 129px
+      padding-bottom: 150px
+      padding-top: 130px
+    +lg
+      font-size: 120px
+      line-height: 120px
+    +md
+      font-size: 90px
+      line-height: 90px
+    +sm
+      font-size: 60px
+      line-height: 74px
+      max-width: 90%
+    +xsm
+      max-width: 100%
+
     &-wrap
       overflow: hidden
 
@@ -34,10 +56,14 @@
       top: 2px
       left: 0
       width: 100%
-      height: 25.125rem
       +gradient_y(transparent, $bg300)
       transform: translateY(-100%)
       will-change: transform
+      +min_xl
+        height: 25.125rem
+      +lg
+        height: 350px
+
     &:before
       content: ''
       position: absolute
@@ -65,16 +91,55 @@
     &--left
       flex: 1 1 25%
       max-width: 25%
-      margin-top: 16rem
+      +min_xl
+        margin-top: 16rem
+      +xl
+        margin-top: 160px
+        flex: 1 1 20%
+        max-width: 20%
+      +lg
+        margin-left: -30px
+        margin-right: -30px
+      +md
+        flex: 1 1 50%
+        max-width: 50%
+        order: 1
+
     &--center
       flex: 1 1 50%
       max-width: 50%
       align-items: center
-      margin-top: -16rem
+      +min_xl
+        margin-top: -16rem
+      +xl
+        margin-top: -160px
+        flex: 1 1 60%
+        max-width: 60%
+        padding: 0 16px
+      +md
+        position: relative
+        flex: 1 1 100%
+        max-width: 100%
+        order: 3
+        z-index: 2
+        margin-top: -280px
+
     &--right
-      margin-top: 16rem
       flex: 1 1 25%
       max-width: 25%
+      +min_xl
+        margin-top: 16rem
+      +xl
+        margin-top: 160px
+        flex: 1 1 20%
+        max-width: 20%
+      +lg
+        margin-left: -30px
+        margin-right: -30px
+      +md
+        flex: 1 1 50%
+        max-width: 50%
+        order: 2
 
   &__img
     width: 100%
@@ -85,15 +150,44 @@
       align-items: center
       justify-content: center
       &--left
-        max-width: 29.875rem
         width: 100%
-        height: 42.25rem
+        +min_xl
+          max-width: 29.875rem
+          height: 42.25rem
+        +xl
+          max-width: 248px
+          height: 351px
+        +lg
+          max-width: 194px
+          height: 274px
+        +md
+          max-width: 105px
+          height: 149px
+
       &--center
-        max-width: 37.5rem
         width: 100%
-        height: 48.6875rem
         margin-bottom: 3.25rem
+        +min_xl
+          max-width: 37.5rem
+          height: 48.6875rem
+        +xl
+          max-width: 387px
+          height: 531px
+        +lg
+          max-width: 300px
+          height: 389px
+
       &--right
-        max-width: 25rem
         width: 100%
-        height: 32.8125rem
+        +min_xl
+          max-width: 25rem
+          height: 32.8125rem
+        +xl
+          max-width: 248px
+          height: 325px
+        +lg
+          max-width: 256px
+          height: 335px
+        +md
+          max-width: 149px
+          height: 189px

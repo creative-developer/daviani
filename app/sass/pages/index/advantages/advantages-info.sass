@@ -1,23 +1,40 @@
 .advantages-info
-  max-width: 49.375rem
   margin: 0 auto
+  +min_xl
+    max-width: 49.375rem
+  +xl
+    max-width: 790px
 
   &__desc
     font-style: italic
     font-weight: 300
-    font-size: 2.25rem
-    line-height: 3.375rem
     text-align: center
     color: rgba($white, 0.75)
-    margin-bottom: 1.3125rem
+    +min_lg
+      font-size: 2.25rem
+      line-height: 3.375rem
+      margin-bottom: 1.3125rem
+    +lg
+      font-size: 30px
+      line-height: 42px
+    +md
+      font-size: 26px
+      line-height: 40px
     p
       margin-bottom: 0
 
   &__icon
     color: rgba($white, 0.3)
-    width: 4.8125rem
-    height: 8.875rem
     opacity: 0.22
+    +min_xl
+      width: 4.8125rem
+      height: 8.875rem
+    +xl
+      width: 68px
+      height: 125px
+    +lg
+      width: 77px
+      height: 142px
 
   &__signature
     &-wrap
@@ -26,20 +43,33 @@
       justify-content: center
     &-name
       font-weight: 400
-      font-size: 1.375rem
-      line-height: 1.375rem
       text-align: center
       color: rgba($accent, 0.75)
-      margin-bottom: 0.625rem
+      +min_xl
+        font-size: 1.375rem
+        line-height: 1.375rem
+        margin-bottom: 0.625rem
+      +xl
+        font-size: 22px
+        line-height: 22px
+        margin-bottom: 10px
 
     &-proffession
       font-style: italic
       font-weight: 300
-      font-size: 0.875rem
-      line-height: 1.125rem
       text-align: center
       color: rgba($white, 0.55)
+      +min_xl
+        font-size: 0.875rem
+        line-height: 1.125rem
+      +xl
+        font-size: 14px
+        line-height: 18px
 
   &__name-wrap
-    margin-top: -0.625rem
-    padding: 0 0.25rem
+    +min_xl
+      margin-top: -0.625rem
+      padding: 0 0.25rem
+    +xl
+      margin-top: -10px
+      padding: 0 4px
