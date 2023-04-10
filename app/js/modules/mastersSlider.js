@@ -1,3 +1,4 @@
+import { breakpoints } from './consts.js';
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 export const initMastersSlider = () => {
@@ -14,5 +15,19 @@ export const initMastersSlider = () => {
     },
     speed: 700,
     autoplay: true,
+    breakpoints: {
+      [breakpoints.xl.minWidthNumberValue]: {
+        spaceBetween: 50,
+      },
+      [breakpoints.lg.minWidthNumberValue]: {
+        spaceBetween: 40,
+      },
+      [breakpoints.md.minWidthNumberValue]: {
+        spaceBetween: 30,
+      },
+      0: {
+        spaceBetween: 16,
+      },
+    },
   });
 };

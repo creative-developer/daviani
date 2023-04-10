@@ -36,18 +36,41 @@
       color: $dark
   &--bg200-text
     color: $bg200
+    padding-bottom: 1px
+    margin-bottom: -1px
+    overflow: hidden
     &:hover
-      color: lighten($bg200, 10%)
+      color: lighten($bg200, 15%)
+      &:after
+        transform: translateX(0)
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 1px
+      background: currentColor
+      transform: translateX(calc(-100% - 1px))
+      transition: all 0.3s ease
+
   &--accent-text
     color: $accent
+    &:hover
+      color: $accent
   &--accent-outlined
-    border: 0.0625rem solid $accent
+    +min_xl
+      border: 0.0625rem solid $accent
+    +xl
+      border: 1px solid $accent
   &--bg-accent
     background-color: $accent
     &:hover
       background-color: #E6DABE
   &--bg-dark
     background-color: $bg200
+    &:hover
+      background-color: lighten($bg200, 5%)
   &--overlay-white-border
     &:after
       content: ''
@@ -113,6 +136,9 @@
         padding: 1.4063rem 3.25rem
       +xl
         padding: 22.5px 52px
+      +lg
+        padding: 17.5px 52px
+
     .btn
       &__icon-wrap
         +min_xl

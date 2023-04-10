@@ -1,5 +1,5 @@
 import { scroller } from '../main.js';
-import { breakpoints } from './MQ.js';
+import { breakpoints } from './consts.js';
 
 export const initBlocksAnimation = () => {
   const matchMedia = gsap.matchMedia();
@@ -41,7 +41,7 @@ export const initBlocksAnimation = () => {
       start: 'top top',
       end: 'center top',
       scrub: true,
-      markers: true,
+      markers: false,
       invalidateOnRefresh: true,
     },
   };
@@ -89,6 +89,7 @@ export const initBlocksAnimation = () => {
       end: 'bottom-=10% bottom',
       markers: false,
       scrub: 1.2,
+      invalidateOnRefresh: true,
     },
     defaults: { ease: 'none' },
   });
@@ -104,10 +105,10 @@ export const initBlocksAnimation = () => {
       start: 'top-=10% top',
       end: 'bottom-=50% top',
       markers: false,
-      scrub: 1,
       invalidateOnRefresh: true,
+      toggleActions: 'play none none reverse',
     },
   });
 
-  brandsTl.to('.brands__item', { y: 0, opacity: 1, stagger: 0.1, duration: 1, ease: 'power1.in' });
+  brandsTl.to('.brands__item', { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: 'power1.in' });
 };

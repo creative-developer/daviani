@@ -1,11 +1,4 @@
-export const breakpoints = {
-  xxl: { minWidth: '(min-width: 1440px)', maxWidth: '(max-width: 1439px)' },
-  xl: { minWidth: '(min-width: 1200px)', maxWidth: '(max-width: 1199px)' },
-  lg: { minWidth: '(min-width: 992px)', maxWidth: '(max-width: 991px)' },
-  md: { minWidth: '(min-width: 768px)', maxWidth: '(max-width: 767px)' },
-  sm: { minWidth: '(min-width: 576px)', maxWidth: '(max-width: 575px)' },
-  xsm: { minWidth: '(min-width: 375px)', maxWidth: '(max-width: 374px)' },
-};
+import { breakpoints } from './consts.js';
 
 const getBreakpoint = input => {
   if (breakpoints[input] !== undefined) {

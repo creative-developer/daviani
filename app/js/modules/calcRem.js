@@ -6,7 +6,7 @@ const calcRem = () => {
     _deltaX = (window.innerWidth / 1903) * 100;
     _deltaY = (window.innerHeight / 979) * 100;
   } else {
-    _deltaX = (window.innerWidth / 1920) * 100;
+    _deltaX = (window.innerWidth / 1903) * 100;
     _deltaY = (window.innerHeight / 979) * 100;
   }
 
