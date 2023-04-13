@@ -2,7 +2,20 @@
   position: relative
   z-index: 1
   will-change: transform
+  +xl
+    font-size: 8.5px
+  +lg
+    font-size: 7px
+  +md
+    font-size: 5.3px
+  +sm
+    font-size: 3.8px
+  +xsm
+    font-size: 3.6px
 
+  .container-fluid
+    +sm
+      padding: 0
   &__inner-wrap
     // position: relative
     // z-index: 4
@@ -19,8 +32,12 @@
     position: relative
     display: flex
     align-items: center
-    width: 31rem
-    height: 23.125rem
+    +min_xl
+      width: 31rem
+      height: 23.125rem
+    +xl
+      width: 31em
+      height: 23.125em
     // transform: translateX(calc(-50% - 8px))
     // margin-left: auto
     &-img
@@ -29,30 +46,45 @@
       object-fit: cover
     &-wrap
       position: absolute
-      top: -6.875rem
       left: 50%
-      transform: translateX(calc(-50% + 25.375rem))
+      +min_xl
+        top: -6.875rem
+        transform: translateX(calc(-50% + 25.375rem))
+      +xl
+        top: -6.875em
+        transform: translateX(calc(-50% + 25.375em))
+
     &-flare
       opacity: 1
       &-wrap
         position: absolute
-        top: -3.4375rem
-        right: 0.9375rem
         display: flex
         align-items: center
         justify-content: center
-        width: 28.625rem
-        height: 28.625rem
         transform: translateX(50%)
         z-index: 1
+        +min_xl
+          top: -3.4375rem
+          right: 0.9375rem
+          width: 28.625rem
+          height: 28.625rem
+        +xl
+          top: -3.4375em
+          right: 0.9375em
+          width: 28.625em
+          height: 28.625em
 
   &__list
     display: grid
     max-width: 107.5rem
     width: 100%
     margin: 0 auto
-    gap: 5rem
-    grid-template-columns: minmax(28.9375rem, auto) minmax(28.9375rem, auto) minmax(28.9375rem, auto)
+    +min_xl
+      gap: 5rem
+      grid-template-columns: minmax(28.9375rem, auto) minmax(28.9375rem, auto) minmax(28.9375rem, auto)
+    +xl
+      gap: 5em
+      grid-template-columns: minmax(28.9375em, auto) minmax(28.9375em, auto) minmax(28.9375em, auto)
     // margin-top: -260px
     // overflow: hidden
     // z-index: 2
@@ -77,36 +109,70 @@
       //   transform: translateY(100%)
       //   background-image: linear-gradient(to top, transparent, $base-black)
     &:nth-child(1)
-      width: 36.1875rem
-      height: 24.375rem
       grid-column-start: 1
       grid-column-end: 4
       justify-self: center
-      margin-right: -6.625rem
+      +min_xl
+        width: 36.1875rem
+        height: 24.375rem
+        margin-right: -6.625rem
+      +xl
+        width: 36.1875em
+        height: 24.375em
+        margin-right: -6.625em
     &:nth-child(2)
-      width: 33.8125rem
-      height: 38.1875rem
-      margin-top: -15.375rem
+      +min_xl
+        width: 33.8125rem
+        height: 38.1875rem
+        margin-top: -15.375rem
+      +xl
+        width: 33.8125em
+        height: 38.1875em
+        margin-top: -15.375em
     &:nth-child(3)
-      width: 33.8125rem
-      height: 26.25rem
+      +min_xl
+        width: 33.8125rem
+        height: 26.25rem
+      +xl
+        width: 33.8125em
+        height: 26.25em
     &:nth-child(4)
-      width: 29.5625rem
-      height: 25.1875rem
-      margin-top: -3.25rem
+      +min_xl
+        width: 29.5625rem
+        height: 25.1875rem
+        margin-top: -3.25rem
+      +xl
+        width: 29.5625em
+        height: 25.1875em
+        margin-top: -3.25em
     &:nth-child(5)
-      width: 39rem
-      height: 25.5625rem
-      margin-top: -0.3125rem
+      +min_xl
+        width: 39rem
+        height: 25.5625rem
+        margin-top: -0.3125rem
+      +xl
+        width: 39em
+        height: 25.5625em
+        margin-top: -0.3125em
     &:nth-child(6)
-      width: 28.9375rem
-      height: 31.25rem
       justify-self: center
-      margin-right: -4.8125rem
+      +min_xl
+        width: 28.9375rem
+        height: 31.25rem
+        margin-right: -4.8125rem
+      +xl
+        width: 28.9375em
+        height: 31.25em
+        margin-right: -4.8125em
     &:nth-child(7)
-      width: 29.5625rem
-      height: 27.75rem
-      margin-top: -3.25rem
+      +min_xl
+        width: 29.5625rem
+        height: 27.75rem
+        margin-top: -3.25rem
+      +xl
+        width: 29.5625em
+        height: 27.75em
+        margin-top: -3.25em
 
   &__img
     width: 100%

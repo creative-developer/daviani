@@ -18,20 +18,21 @@ import { initRems } from './modules/calcRem.js';
 import { initMenu } from './modules/menu.js';
 
 export let scroller = null;
+export const scrollTriggerInstance = ScrollTrigger;
 
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
-
-  // FIXME: Сейчас анимация сломана, нужно обернуть весь контент в дивы .smooth-wrapper, .smooth-content
 
   scroller = ScrollSmoother.create({
     wrapper: '.smooth-wrapper',
     content: '.smooth-content',
     smooth: 1.5,
+    normalizeScroll: true,
     effects: true,
     autoResize: true,
     smoothTouch: true,
   });
+  ScrollTrigger.normalizeScroll(true);
 
   initRems();
   mfpPopupInit();

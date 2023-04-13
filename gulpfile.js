@@ -69,6 +69,19 @@ function css() {
     .pipe(browsersync.stream());
 }
 
+function compressImages() {
+  gulp
+    .src('app/img/**/*.{png,jpg,jpeg}')
+    .pipe(
+      tinypng({
+        key: 'API_KEY',
+        sigFile: 'images/.tinypng-sigs',
+        log: true,
+      }),
+    )
+    .pipe(gulp.dest('images'));
+}
+
 // Pug + bem
 pugbem.b = true;
 

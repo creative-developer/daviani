@@ -46,47 +46,6 @@ const scrollSmootherAnimation = () => {
     onReverseComplete: infiniteReverse,
   });
 
-  let direction = 'bottom';
-  let memoizedDirection = 'bottom';
-
-  const handleScrollBottom = self => {
-    tl.play();
-  };
-
-  const handleScrollTop = self => {
-    infiniteReverse();
-  };
-
-  ScrollTrigger.create({
-    trigger: '.main-page',
-    start: 'top top',
-    end: 'bottom top',
-    scrub: 2,
-    // markers: true,
-    invalidateOnRefresh: true,
-    onUpdate: self => {
-      direction = self.direction === 1 ? 'bottom' : 'top';
-
-      if (direction === 'bottom' && memoizedDirection !== direction) {
-        memoizedDirection = 'bottom';
-        handleScrollBottom(self);
-      }
-
-      if (direction === 'top' && memoizedDirection !== direction) {
-        memoizedDirection = 'top';
-        handleScrollTop(self);
-      }
-
-      if (direction === 'top') {
-        tl.progress(tl.progress() - self.progress / 200);
-      }
-
-      if (direction === 'bottom') {
-        tl.progress(tl.progress() + self.progress / 200);
-      }
-    },
-  });
-
   const mainScreenContainer = $('.main-screen');
   let startPositionProgress = 0;
 
