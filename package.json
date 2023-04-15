@@ -11,6 +11,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
+    "compress": "gulp compress",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
@@ -23,6 +24,7 @@
     "babel-loader": "9.1.2",
     "browser-sync": "2.29.0",
     "del": "7.0.0",
+    "dotenv": "16.0.3",
     "gh-pages": "5.0.0",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",

@@ -10,6 +10,7 @@ import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import { deleteAsync } from 'del';
+import * as dotenv from 'dotenv';
 
 // Pug
 import plumber from 'gulp-plumber';
@@ -26,6 +27,7 @@ import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import { getWebpackConfig } from './webpack.config.js';
 
+const config = dotenv.config();
 const sass = gulpSass(dartSass);
 const { watch, src, dest, parallel, series } = gulp;
 
@@ -70,16 +72,15 @@ function css() {
 }
 
 function compressImages() {
-  gulp
-    .src('app/img/**/*.{png,jpg,jpeg}')
+  src('app/img/**/*.{png,jpg,jpeg}')
     .pipe(
       tinypng({
-        key: 'API_KEY',
+        key: process.env.TINYPNG_API_KEY,
         sigFile: 'images/.tinypng-sigs',
         log: true,
       }),
     )
-    .pipe(gulp.dest('images'));
+    .pipe(gulp.dest('app/img'));
 }
 
 // Pug + bem
@@ -166,5 +167,6 @@ function startWatch() {
 }
 
 // Export tasks
+export const compress = series(compressImages);
 export const build = series(cleanBuild, jsLibs, minJs, css, html, buildCopy, svgSprite);
 export default series(jsLibs, js, css, html, svgSprite, parallel(browserSync, startWatch));
