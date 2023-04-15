@@ -11,6 +11,7 @@ import uglify from 'gulp-uglify';
 import rename from 'gulp-rename';
 import { deleteAsync } from 'del';
 import * as dotenv from 'dotenv';
+import tinypng from 'gulp-tinypng';
 
 // Pug
 import plumber from 'gulp-plumber';
@@ -72,15 +73,7 @@ function css() {
 }
 
 function compressImages() {
-  src('app/img/**/*.{png,jpg,jpeg}')
-    .pipe(
-      tinypng({
-        key: process.env.TINYPNG_API_KEY,
-        sigFile: 'images/.tinypng-sigs',
-        log: true,
-      }),
-    )
-    .pipe(gulp.dest('app/img'));
+  src('app/img/**/*.{png,jpg,jpeg,webp}').pipe(tinypng(process.env.TINYPNG_API_KEY)).pipe(gulp.dest('app/img'));
 }
 
 // Pug + bem
