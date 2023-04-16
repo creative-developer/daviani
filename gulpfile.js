@@ -147,7 +147,7 @@ function svgSprite() {
 }
 
 function buildCopy() {
-  return src(['{app/js,app/css}/*.min.*', 'app/js/main.bundle.js', 'app/fonts/**/*', 'app/img/**/*', 'app/*.html'], {
+  return src(['{app/js,app/css}/*.min.*', 'app/js/main.bundle.js', 'app/fonts/**/*', 'app/img/**/*', 'app/*.html', 'app/.htaccess'], {
     base: 'app/',
   }).pipe(dest('build'));
 }
