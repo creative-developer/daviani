@@ -33,7 +33,12 @@ const sass = gulpSass(dartSass);
 const { watch, src, dest, parallel, series } = gulp;
 
 // GSAP trouble
-const jsLibsPaths = ['app/js/libs/gsap.min.js', 'app/js/libs/ScrollTrigger.min.js', 'app/js/libs/ScrollSmoother.min.js'];
+const jsLibsPaths = [
+  'app/js/libs/gsap/gsap.min.js',
+  'app/js/libs/gsap/ScrollTrigger.min.js',
+  'app/js/libs/gsap/ScrollSmoother.min.js',
+  'app/js/libs/lazyload/lazyload.min.js',
+];
 
 function jsLibs() {
   return src(jsLibsPaths).pipe(concat('libs.min.js')).pipe(uglify()).pipe(dest('app/js')).pipe(browsersync.stream());
@@ -73,7 +78,7 @@ function css() {
 }
 
 function compressImages() {
-  src('app/img/**/*.{png,jpg,jpeg,webp}').pipe(tinypng(process.env.TINYPNG_API_KEY)).pipe(gulp.dest('app/img'));
+  src('app/img/**/*.{png,jpg,jpeg,webp}').pipe(tinypng(process.env.TINYPNG_API_KEY)).pipe(gulp.dest('app/img')).pipe(deleteAsync('.gulp'));
 }
 
 // Pug + bem
