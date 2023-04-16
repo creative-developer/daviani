@@ -35,7 +35,6 @@ $(document).ready(() => {
   });
 
   initRems();
-  initLazyLoadImages();
   mfpPopupInit();
   mediaQueriesInit();
   smoothScroll();
@@ -51,6 +50,7 @@ $(document).ready(() => {
   initBlocksAnimation();
 
   $(window).on('load', () => {
+    initLazyLoadImages();
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);

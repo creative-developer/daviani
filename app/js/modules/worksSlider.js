@@ -18,6 +18,9 @@ export const initWorksSlider = () => {
       beforeInit: function () {
         $('.works-slider__wrapper').append(cloningElements);
       },
+      afterInit: function () {
+        lazyload($('.works-slider__wrapper').find('.works-slider__img.lazy'));
+      },
     },
     loop: true,
     freeMode: true,

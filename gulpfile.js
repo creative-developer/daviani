@@ -37,7 +37,7 @@ const jsLibsPaths = [
   'app/js/libs/gsap/gsap.min.js',
   'app/js/libs/gsap/ScrollTrigger.min.js',
   'app/js/libs/gsap/ScrollSmoother.min.js',
-  'app/js/libs/lazyload/lazyload.min.js',
+  'node_modules/lazyload/lazyload.min.js',
 ];
 
 function jsLibs() {
