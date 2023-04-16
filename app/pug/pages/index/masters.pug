@@ -6,9 +6,9 @@ section.b-masters
         ._decor-line
           +icon('golden-decor-line')
       ._slider-btns-wrap
-        button._slider-btn.-prev(type='button')
+        button._slider-btn.-prev(type='button', aria-label='Master slider previous btn')
           +icon('thin-styled-arrow')
-        button._slider-btn.-next(type='button')
+        button._slider-btn.-next(type='button', aria-label='Master slider next btn')
           +icon('thin-styled-arrow')
 
   .b-masters-slider.swiper._slider
@@ -72,5 +72,10 @@ section.b-masters
     ._video-container
       ._video-wrap
         img._video-img.lazy(src='img/index/masters/dummy/dummy-image-video.gif', data-src='img/index/masters/video-bg.webp', alt='')
-        a._video-btn(href='https://www.youtube.com/watch?v=6eqPkpOOAxE', data-fancybox='gallery', data-height='900px')
+        a._video-btn(
+          href='https://www.youtube.com/watch?v=6eqPkpOOAxE',
+          data-fancybox='gallery',
+          data-height='900px',
+          aria-label='Watch video button'
+        )
           include ../../../img/icons/yt.svg
