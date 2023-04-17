@@ -34,10 +34,12 @@ const { watch, src, dest, parallel, series } = gulp;
 
 // GSAP trouble
 const jsLibsPaths = [
+  'node_modules/jquery/dist/jquery.min.js',
   'app/js/libs/gsap/gsap.min.js',
   'app/js/libs/gsap/ScrollTrigger.min.js',
   'app/js/libs/gsap/ScrollSmoother.min.js',
   'node_modules/lazyload/lazyload.min.js',
+  'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
 ];
 
 function jsLibs() {
@@ -147,9 +149,22 @@ function svgSprite() {
 }
 
 function buildCopy() {
-  return src(['{app/js,app/css}/*.min.*', 'app/js/main.bundle.js', 'app/fonts/**/*', 'app/img/**/*', 'app/*.html', 'app/.htaccess'], {
-    base: 'app/',
-  }).pipe(dest('build'));
+  return src(
+    [
+      'app/css/main.min.css',
+      'app/js/*.js',
+      '!app/js/main.js',
+      // 'app/js/main.bundle.js',
+      // 'app/js/workers.js',
+      'app/fonts/**/*',
+      'app/img/**/*',
+      'app/*.html',
+      'app/.htaccess',
+    ],
+    {
+      base: 'app/',
+    },
+  ).pipe(dest('build'));
 }
 
 async function cleanBuild() {

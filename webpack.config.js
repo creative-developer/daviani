@@ -34,13 +34,7 @@ export const getWebpackConfig = (options = {}) => {
         }),
       ],
     },
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-      }),
-    ],
+    plugins: [],
   };
 
   return webpackConfig;

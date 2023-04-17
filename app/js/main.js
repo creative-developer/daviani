@@ -1,8 +1,3 @@
-// Libs
-import 'magnific-popup/dist/jquery.magnific-popup.min.js';
-// import './libs/lazyload/lazyload.min.js';
-// Внимание!!!: Нужно подключать именно эту версию gsap так как только это версия работает со ScrollSmoother
-
 import { smoothScroll } from './modules/smoothScroll.js';
 import { mediaQueriesInit } from './modules/mediaQueries.js';
 import { popupsInit } from './modules/popups.js';
@@ -28,7 +23,7 @@ $(document).ready(() => {
   scroller = ScrollSmoother.create({
     wrapper: '.smooth-wrapper',
     content: '.smooth-content',
-    smooth: 1.5,
+    smooth: 1.3,
     effects: true,
     autoResize: true,
     smoothTouch: true,
@@ -48,9 +43,9 @@ $(document).ready(() => {
   initContactsMaps();
   initMenu();
   initBlocksAnimation();
+  initLazyLoadImages();
 
   $(window).on('load', () => {
-    initLazyLoadImages();
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);

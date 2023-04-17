@@ -26,42 +26,42 @@ const scrollSmootherAnimation = () => {
     });
   }
 
-  function infiniteReverse() {
-    tl.reverse();
-    checkReverseLoop();
-  }
+  // function infiniteReverse() {
+  //   tl.reverse();
+  //   checkReverseLoop();
+  // }
 
-  function checkReverseLoop() {
-    if (tl.reversed() && tl.totalTime() <= tl.duration()) {
-      tl.totalTime(tl.totalTime() + tl.duration() * 1000, true);
-    }
-  }
+  // function checkReverseLoop() {
+  //   if (tl.reversed() && tl.totalTime() <= tl.duration()) {
+  //     tl.totalTime(tl.totalTime() + tl.duration() * 1000, true);
+  //   }
+  // }
 
-  const tl = gsap.to('.wheel', {
-    rotate: -360,
-    duration: 160,
-    repeat: -1,
-    ease: 'none',
-    onRepeat: checkReverseLoop,
-    onReverseComplete: infiniteReverse,
-  });
+  // const tl = gsap.to('.wheel', {
+  //   rotate: -360,
+  //   duration: 160,
+  //   repeat: -1,
+  //   ease: 'none',
+  //   onRepeat: checkReverseLoop,
+  //   onReverseComplete: infiniteReverse,
+  // });
 
-  const mainScreenContainer = $('.main-screen');
-  let startPositionProgress = 0;
+  // const mainScreenContainer = $('.main-screen');
+  // let startPositionProgress = 0;
 
-  mainScreenContainer.on('click', e => {
-    const clientXProgress = e.clientX / window.outerWidth;
+  // mainScreenContainer.on('click', e => {
+  //   const clientXProgress = e.clientX / window.outerWidth;
 
-    startPositionProgress = clientXProgress;
-  });
+  //   startPositionProgress = clientXProgress;
+  // });
 
-  mainScreenContainer.on('mousemove', e => {
-    // Нажата левая кнопка мыши и ховер
-    if (e.buttons === 1) {
-      const clientXProgress = e.clientX / window.outerWidth;
-      // console.log(clientXProgress - startPositionProgress);
-    }
-  });
+  // mainScreenContainer.on('mousemove', e => {
+  //   // Нажата левая кнопка мыши и ховер
+  //   if (e.buttons === 1) {
+  //     const clientXProgress = e.clientX / window.outerWidth;
+  //     // console.log(clientXProgress - startPositionProgress);
+  //   }
+  // });
 
   setup();
 
