@@ -16,18 +16,7 @@
   .container-fluid
     +sm
       padding: 0
-  &__inner-wrap
-    // position: relative
-    // z-index: 4
-  // &:after
-  //   content: ''
-  //   position: absolute
-  //   top: 0
-  //   left: 0
-  //   width: 100%
-  //   height: 400px
-  //   transform: translateY(-100%)
-  //   background-image: linear-gradient(to bottom, transparent, #000)
+
   &__diamond
     position: relative
     display: flex
@@ -38,8 +27,6 @@
     +xl
       width: 31em
       height: 23.125em
-    // transform: translateX(calc(-50% - 8px))
-    // margin-left: auto
     &-img
       width: 100%
       height: 100%
@@ -85,11 +72,6 @@
     +xl
       gap: 5em
       grid-template-columns: minmax(28.9375em, auto) minmax(28.9375em, auto) minmax(28.9375em, auto)
-    // margin-top: -260px
-    // overflow: hidden
-    // z-index: 2
-    // background: $base-black
-    // position: relative
 
   &__item
     display: flex
@@ -100,15 +82,6 @@
     will-change: opacity
     &--center
       z-index: 2
-      // &:after
-      //   content: ''
-      //   position: absolute
-      //   bottom: 0
-      //   left: 0
-      //   width: 100%
-      //   height: 200px
-      //   transform: translateY(100%)
-      //   background-image: linear-gradient(to top, transparent, $base-black)
     &:nth-child(1)
       grid-column-start: 1
       grid-column-end: 4
