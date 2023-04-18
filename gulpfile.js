@@ -38,7 +38,6 @@ const jsLibsPaths = [
   'app/js/libs/gsap/gsap.min.js',
   'app/js/libs/gsap/ScrollTrigger.min.js',
   'app/js/libs/gsap/ScrollSmoother.min.js',
-  'node_modules/lazyload/lazyload.min.js',
   'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
 ];
 

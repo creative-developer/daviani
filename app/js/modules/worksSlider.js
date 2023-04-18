@@ -1,4 +1,5 @@
 import Swiper, { Scrollbar, Autoplay, FreeMode } from 'swiper';
+import { initLazyLoadImages } from './lazyLoadImages.js';
 
 export const initWorksSlider = () => {
   const cloningElements = $('.works-slider__item').clone();
@@ -19,7 +20,7 @@ export const initWorksSlider = () => {
         $('.works-slider__wrapper').append(cloningElements);
       },
       afterInit: function () {
-        lazyload($('.works-slider__wrapper').find('.works-slider__img.lazy'));
+        initLazyLoadImages();
       },
     },
     loop: true,

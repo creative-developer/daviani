@@ -15,7 +15,6 @@ import { initMenu } from './modules/menu.js';
 import { initLazyLoadImages } from './modules/lazyLoadImages.js';
 
 export let scroller = null;
-export const scrollTriggerInstance = ScrollTrigger;
 
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -23,11 +22,14 @@ $(document).ready(() => {
   scroller = ScrollSmoother.create({
     wrapper: '.smooth-wrapper',
     content: '.smooth-content',
-    smooth: 1.3,
+    smooth: 1.5,
     effects: true,
     autoResize: true,
-    smoothTouch: true,
+    smoothTouch: false,
+    ignoreMobileResize: true,
   });
+
+  ScrollTrigger.config({ ignoreMobileResize: true });
 
   initRems();
   mfpPopupInit();

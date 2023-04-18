@@ -19,11 +19,9 @@ export const mediaQueriesInit = () => {
     breakpoints.sm.maxWidth,
     () => {
       // in sm
-      console.log('normalizeScroll');
-      ScrollTrigger.normalizeScroll(true);
+      ScrollTrigger.normalizeScroll();
     },
     () => {
-      console.log('unNormalizeScroll');
       ScrollTrigger.normalizeScroll(false);
       // out sm
     },

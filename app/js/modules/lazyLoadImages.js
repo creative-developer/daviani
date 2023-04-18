@@ -1,3 +1,6 @@
+import lozad from 'lozad';
+
 export const initLazyLoadImages = () => {
-  lazyload($('.lazy'));
+  const observer = lozad('.lazy');
+  observer.observe();
 };

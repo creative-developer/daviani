@@ -61,8 +61,7 @@
     "hamburgers": "1.2.1",
     "inputmask": "5.0.8",
     "jquery": "3.6.4",
-    "konva": "8.4.2",
-    "lazyload": "2.0.0-rc.2",
+    "lozad": "1.16.0",
     "magnific-popup": "1.1.0",
     "swiper": "9.1.1"
   }
