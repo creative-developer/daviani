@@ -1,11 +1,11 @@
 import { scroller } from '../main.js';
-import { breakpoints } from './consts.js';
+import { breakpoints, gsapMatchMedia } from './consts.js';
 
 export const initBlocksAnimation = () => {
-  const matchMedia = gsap.matchMedia();
   const windowHeight = document.documentElement.clientHeight;
+  const collage = $('.collage');
 
-  matchMedia.add(breakpoints.md.minWidth, () => {
+  gsapMatchMedia.add(breakpoints.md.minWidth, () => {
     scroller.effects('.facilities__sub-title', { speed: 0.9 });
     scroller.effects('.facilities__title', { speed: 1.1 });
     document.querySelectorAll('.facilities__item').forEach((item, index) => {
@@ -17,22 +17,25 @@ export const initBlocksAnimation = () => {
     });
   });
 
-  scroller.effects('.collage', { speed: 1.2 });
+  gsapMatchMedia.add(breakpoints.lg.minWidth, () => {
+    scroller.effects(collage, { speed: 1.2 });
+  });
+
   scroller.effects('.advantages__title', { speed: 0.1 });
 
-  matchMedia.add(breakpoints.md.minWidth, () => {
+  gsapMatchMedia.add(breakpoints.md.minWidth, () => {
     scroller.effects('.advantages__col--left', { speed: 1.1 });
     scroller.effects('.advantages__col--center', { speed: 1.8 });
     scroller.effects('.advantages__col--right', { speed: 1.4 });
   });
 
-  matchMedia.add(breakpoints.xl.maxWidth, () => {
+  gsapMatchMedia.add(breakpoints.xl.maxWidth, () => {
     scroller.effects('.advantages__col--left', { speed: 0.8 });
     scroller.effects('.advantages__col--center', { speed: 1.6 });
     scroller.effects('.advantages__col--right', { speed: 0.8 });
   });
 
-  matchMedia.add(breakpoints.sm.maxWidth, () => {
+  gsapMatchMedia.add(breakpoints.sm.maxWidth, () => {
     scroller.effects('.advantages__col--left', { speed: 0.9 });
     scroller.effects('.advantages__col--center', { speed: 1.2 });
     scroller.effects('.advantages__col--right', { speed: 0.9 });
@@ -40,7 +43,6 @@ export const initBlocksAnimation = () => {
 
   const tl = gsap.timeline({ defaults: { ease: 'none' } });
 
-  const collage = $('.collage');
   const collageCenterElement = $('.collage__item--center');
   const centerElementCenterPoint = collageCenterElement[0].offsetTop + collageCenterElement.outerHeight() / 2;
   const centerElementTopOffsetPosition = centerElementCenterPoint - windowHeight / 2;
@@ -89,10 +91,10 @@ export const initBlocksAnimation = () => {
   };
 
   // Collage section
-  matchMedia.add(breakpoints.xl.minWidth, () => {
+  gsapMatchMedia.add(breakpoints.xxl.minWidth, () => {
     tl.to('.main-gallery__title-wrap', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
   });
-  matchMedia.add(breakpoints.xl.maxWidth, () => {
+  gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
     tl.to(collage, { ...collageSettings, xPercent: -7, scale: 4 }).to(items, collageItemsSettings);
   });
 

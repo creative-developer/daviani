@@ -2,16 +2,6 @@
   position: relative
   z-index: 1
   will-change: transform
-  +xl
-    font-size: 8.5px
-  +lg
-    font-size: 7px
-  +md
-    font-size: 5.3px
-  +sm
-    font-size: 3.8px
-  +xsm
-    font-size: 3.6px
 
   .container-fluid
     +sm
@@ -21,14 +11,9 @@
     position: relative
     display: flex
     align-items: center
-    +min_xl
-      // width: 31rem
-      // height: 23.125rem
-      width: 25.833vw
-      height: 37.794vh
-    +xl
-      width: 31em
-      height: 23.125em
+    width: 25.833vw
+    height: 19.271vw
+
     &-img
       width: 100%
       height: 100%
@@ -36,14 +21,8 @@
     &-wrap
       position: absolute
       left: 50%
-      +min_xl
-        // top: -6.875rem
-        // transform: translateX(calc(-50% + 25.375rem))
-        top: -11.236vh
-        transform: translateX(calc(-50% + 21.146vw))
-      +xl
-        // top: -6.875em
-        // transform: translateX(calc(-50% + 25.375em))
+      top: -5.729vw
+      transform: translateX(calc(-50% + 21.146vw))
 
     &-flare
       opacity: 1
@@ -54,35 +33,17 @@
         justify-content: center
         transform: translateX(50%)
         z-index: 1
-        +min_xl
-          // top: -3.4375rem
-          // right: 0.9375rem
-          // width: 28.625rem
-          // height: 28.625rem
-          top: -5.618vh
-          right: 0.781vw
-          width: 23.854vw
-          height: 46.782vh
-        +xl
-          top: -3.4375em
-          right: 0.9375em
-          width: 28.625em
-          height: 28.625em
+        top: -2.865vw
+        right: 0.781vw
+        width: 23.854vw
+        height: 23.854vw
 
   &__list
     display: grid
     width: 100%
     margin: 0 auto
-    +min_xl
-      // gap: 5rem
-      // grid-template-columns: minmax(28.9375rem, auto) minmax(28.9375rem, auto) minmax(28.9375rem, auto)
-      // max-width: 107.5rem
-      gap: 4.167vw
-      grid-template-columns: minmax(24.115vw, auto) minmax(24.115vw, auto) minmax(24.115vw, auto)
-      max-width: 89.583vw
-    +xl
-      gap: 5em
-      grid-template-columns: minmax(28.9375em, auto) minmax(28.9375em, auto) minmax(28.9375em, auto)
+    gap: 4.167vw
+    grid-template-columns: minmax(24.115vw, auto) minmax(24.115vw, auto) minmax(24.115vw, auto)
 
   &__item
     display: flex
@@ -97,87 +58,33 @@
       grid-column-start: 1
       grid-column-end: 4
       justify-self: center
-      +min_xl
-        // width: 36.1875rem
-        // height: 24.375rem
-        // margin-right: -6.625rem
-        width: 30.156vw
-        height: 39.837vh
-        margin-right: -5.521vw
-      +xl
-        width: 36.1875em
-        height: 24.375em
-        margin-right: -6.625em
+      width: 30.156vw
+      height: 20.313vw
+      margin-right: -5.521vw
     &:nth-child(2)
-      +min_xl
-        // width: 33.8125rem
-        // height: 38.1875rem
-        // margin-top: -15.375rem
-        width: 28.177vw
-        height: 62.411vh
-        margin-top: -25.128vh
-      +xl
-        width: 33.8125em
-        height: 38.1875em
-        margin-top: -15.375em
+      width: 28.177vw
+      height: 31.823vw
+      margin-top: -12.813vw
     &:nth-child(3)
-      +min_xl
-        // width: 33.8125rem
-        // height: 26.25rem
-        width: 28.177vw
-        height: 42.901vh
-      +xl
-        width: 33.8125em
-        height: 26.25em
+      width: 28.177vw
+      height: 21.875vw
     &:nth-child(4)
-      +min_xl
-        // width: 29.5625rem
-        // height: 25.1875rem
-        // margin-top: -3.25rem
-        width: 24.635vw
-        height: 41.164vh
-        margin-top: -5.312vh
-      +xl
-        width: 29.5625em
-        height: 25.1875em
-        margin-top: -3.25em
+      width: 24.635vw
+      height: 20.990vw
+      margin-top: -2.708vw
     &:nth-child(5)
-      +min_xl
-        // width: 39rem
-        // height: 25.5625rem
-        // margin-top: -0.3125rem
-        width: 32.500vw
-        height: 41.777vh
-        margin-top: -0.511vh
-      +xl
-        width: 39em
-        height: 25.5625em
-        margin-top: -0.3125em
+      width: 32.500vw
+      height: 21.302vw
+      margin-top: -0.260vw
     &:nth-child(6)
       justify-self: center
-      +min_xl
-        // width: 28.9375rem
-        // height: 31.25rem
-        // margin-right: -4.8125rem
-        width: 24.115vw
-        height: 51.073vh
-        margin-right: -4.010vw
-      +xl
-        width: 28.9375em
-        height: 31.25em
-        margin-right: -4.8125em
+      width: 24.115vw
+      height: 26.042vw
+      margin-right: -4.010vw
     &:nth-child(7)
-      +min_xl
-        // width: 29.5625rem
-        // height: 27.75rem
-        // margin-top: -3.25rem
-        width: 24.635vw
-        height: 45.352vh
-        margin-top: -5.312vh
-      +xl
-        width: 29.5625em
-        height: 27.75em
-        margin-top: -3.25em
+      width: 24.635vw
+      height: 23.125vw
+      margin-top: -2.708vw
 
   &__img
     width: 100%

@@ -8,3 +8,5 @@ export const breakpoints = {
   sm: { minWidthNumberValue: 576, minWidth: '(min-width: 576px)', maxWidthNumberValue: 575, maxWidth: '(max-width: 575px)' },
   xsm: { minWidthNumberValue: 375, minWidth: '(min-width: 375px)', maxWidthNumberValue: 374, maxWidth: '(max-width: 374px)' },
 };
+
+export const gsapMatchMedia = gsap.matchMedia();
