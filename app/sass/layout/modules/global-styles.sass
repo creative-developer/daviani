@@ -62,3 +62,10 @@ main
   box-sizing: border-box
   overflow: visible
   width: 100%
+
+img.lazy
+  opacity: 0
+  transition: all 0.5s ease
+
+img.lazy[data-loaded="true"]
+  opacity: 1
