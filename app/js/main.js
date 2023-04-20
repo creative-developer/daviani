@@ -13,6 +13,8 @@ import { initBlocksAnimation } from './modules/blockAnimation.js';
 import { initRems } from './modules/calcRem.js';
 import { initMenu } from './modules/menu.js';
 import { initLazyLoadImages } from './modules/lazyLoadImages.js';
+import { initMobileBlocksAnimation } from './modules/initMobileBlocksAnimation.js';
+import { aosAnimationInit } from './modules/animationOnScroll.js';
 
 export let scroller = null;
 
@@ -45,7 +47,9 @@ $(document).ready(() => {
   initContactsMaps();
   initMenu();
   initBlocksAnimation();
+  initMobileBlocksAnimation();
   initLazyLoadImages();
+  aosAnimationInit();
 
   $(window).on('load', () => {
     setTimeout(() => {

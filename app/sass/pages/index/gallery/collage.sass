@@ -44,6 +44,11 @@
     margin: 0 auto
     gap: 4.167vw
     grid-template-columns: minmax(24.115vw, auto) minmax(24.115vw, auto) minmax(24.115vw, auto)
+    max-width: 89.583vw
+    +lg
+      gap: 4.541vw
+      grid-template-columns: repeat(3, 1fr)
+      max-width: 100%
 
   &__item
     display: flex
@@ -61,30 +66,56 @@
       width: 30.156vw
       height: 20.313vw
       margin-right: -5.521vw
+      +lg
+        width: 32.6vw
+        height: 21.956vw
+        margin-right: -6.121vw
+
     &:nth-child(2)
       width: 28.177vw
       height: 31.823vw
       margin-top: -12.813vw
+      +lg
+        width: 30.65vw
+        height: 34.208vw
+        margin-top: -13.813vw
+
     &:nth-child(3)
       width: 28.177vw
       height: 21.875vw
+      +lg
+        width: 30.575vw
+        height: 23.411vw
+
     &:nth-child(4)
       width: 24.635vw
       height: 20.990vw
       margin-top: -2.708vw
+      +lg
+        width: 26.741vw
+        height: 22.503vw
     &:nth-child(5)
       width: 32.500vw
       height: 21.302vw
       margin-top: -0.260vw
+      +lg
+        width: 35.116vw
+        height: 22.906vw
     &:nth-child(6)
       justify-self: center
       width: 24.115vw
       height: 26.042vw
       margin-right: -4.010vw
+      +lg
+        width: 25.933vw
+        height: 28.254vw
     &:nth-child(7)
       width: 24.635vw
       height: 23.125vw
       margin-top: -2.708vw
+      +lg
+        width: 26.741vw
+        height: 24.924vw
 
   &__img
     width: 100%

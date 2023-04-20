@@ -64,8 +64,10 @@ main
   width: 100%
 
 img.lazy
-  opacity: 0
-  transition: all 0.5s ease
+  &:not(.collage__img)
+    opacity: 0
+    transition: all 0.5s ease
 
 img.lazy[data-loaded="true"]
-  opacity: 1
+  &:not(.collage__img)
+    opacity: 1

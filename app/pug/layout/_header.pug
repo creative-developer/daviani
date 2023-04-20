@@ -3,15 +3,17 @@ header.b-header
     ._content-wrap
       ._content.-left
         ._mobile
-          a.b-hamburger.-green.-small.-slider._hamburger.js-menu.hamburger--slider(href='#', aria-label='Hamburger btn')
-            span.hamburger-box
-              span.hamburger-inner
-        a.b-location._location(href='#')
-          ._icon.-pin-icon
-            +icon('location')
-          span._text Салоны
-          ._icon.-expand-icon
-            +icon('expand')
+          ._hamburger-wrap
+            a.b-hamburger.-green.-small.-slider._hamburger.js-menu.hamburger--slider(href='#', aria-label='Hamburger btn')
+              span.hamburger-box
+                span.hamburger-inner
+        ._location-wrap
+          a.b-location._location(href='#')
+            ._icon.-pin-icon
+              +icon('location')
+            span._text Салоны
+            ._icon.-expand-icon
+              +icon('expand')
         nav.b-nav.-small.-light.-horizontal.-uppercase._nav-left
           ul._list
             li._item
@@ -24,7 +26,7 @@ header.b-header
         a.b-logo.-medium._logo(href='#', aria-label='Logotype link')
           +icon('logo')
       ._content.-right
-        ._mobile
+        ._mobile.-right
           a._location-link.-icon(href='#', aria-label='Location button')
             +icon('location')
           a._phone-link.-icon(href='#', aria-label='Phone button')
@@ -37,4 +39,5 @@ header.b-header
               a._link(href='#') Отзывы
             li._item
               a._link(href='#') Контакты
-        a.b-btn.-accent-outlined.-md._btn(href='#') Оставить заявку
+        ._right-btn-wrap
+          a.b-btn.-accent-outlined.-md._btn(href='#') Оставить заявку

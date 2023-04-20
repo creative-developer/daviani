@@ -1,0 +1,107 @@
+{
+  "common": [
+    {
+      "el": ".header__location-wrap",
+      "animation": {
+        "class": "fade-right"
+      }
+    },
+    {
+      "el": ".header__hamburger-wrap",
+      "animation": {
+        "class": "fade-right"
+      }
+    },
+    {
+      "el": ".header__mobile--right",
+      "animation": {
+        "class": "fade-left"
+      }
+    },
+    {
+      "el": ".header__nav-left",
+      "animation": {
+        "class": "fade-right",
+        "delay": 100
+      }
+    },
+    {
+      "el": ".header__content--center"
+    },
+    {
+      "el": ".header__nav-right",
+      "animation": {
+        "class": "fade-left",
+        "delay": 100
+      }
+    },
+    {
+      "el": ".header__right-btn-wrap",
+      "animation": {
+        "class": "fade-left"
+      }
+    }
+  ],
+  "main-page": [
+    {
+      "el": ".main-title"
+    },
+    {
+      "el": ".collage__item",
+      "animation": {
+        "increment": true,
+        "offset": 100
+      }
+    },
+    {
+      "el": ".brands__item",
+      "animation": {
+        "increment": true,
+        "offset": 60
+      }
+    },
+    {
+      "el": ".collage__diamond"
+    },
+    {
+      "el": ".services__title"
+    },
+    {
+      "el": ".services .tab-nav__item",
+      "animation": {
+        "delay": 100,
+        "increment": true
+      }
+    },
+    {
+      "el": ".services .tab-content",
+      "animation": {
+        "delay": 200
+      }
+    },
+    {
+      "el": ".services .services-card__item",
+      "animation": {
+        "delay": 200
+      }
+    },
+    {
+      "el": ".services .services-card__discount",
+      "animation": {
+        "delay": 300
+      }
+    },
+    {
+      "el": ".services .services-card__price",
+      "animation": {
+        "delay": 400
+      }
+    },
+    {
+      "el": ".services .services-card__btn-wrap",
+      "animation": {
+        "delay": 500
+      }
+    }
+  ]
+}

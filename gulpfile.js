@@ -39,6 +39,7 @@ const jsLibsPaths = [
   'app/js/libs/gsap/ScrollTrigger.min.js',
   'app/js/libs/gsap/ScrollSmoother.min.js',
   'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
+  'node_modules/aos/dist/aos.js',
 ];
 
 function jsLibs() {

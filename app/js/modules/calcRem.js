@@ -1,3 +1,5 @@
+import { breakpoints } from './consts.js';
+
 const calcRem = () => {
   let _deltaX = 0;
   let _deltaY = 0;
@@ -18,12 +20,12 @@ const calcRem = () => {
 };
 
 export const initRems = () => {
-  if ($(window).outerWidth() > 1200) {
+  if ($(window).outerWidth() > breakpoints.xl.maxWidthNumberValue) {
     calcRem();
   }
 
   $(window).on('load resize', function () {
-    if ($(window).outerWidth() > 1200) {
+    if ($(window).outerWidth() > breakpoints.xl.maxWidthNumberValue) {
       calcRem();
     }
   });

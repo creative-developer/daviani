@@ -1,7 +1,18 @@
 import { MQ } from './MQ.js';
+import { initBlocksAnimation } from './blockAnimation.js';
 import { breakpoints } from './consts.js';
 
 export const mediaQueriesInit = () => {
+  MQ(
+    breakpoints.xl.maxWidth,
+    () => {
+      // in xl
+    },
+    () => {
+      // out xl
+      // initBlocksAnimation();
+    },
+  );
   MQ(
     breakpoints.lg.maxWidth,
     () => {

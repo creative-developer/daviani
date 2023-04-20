@@ -17,7 +17,7 @@ export const initBlocksAnimation = () => {
     });
   });
 
-  gsapMatchMedia.add(breakpoints.lg.minWidth, () => {
+  gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
     scroller.effects(collage, { speed: 1.2 });
   });
 
@@ -41,7 +41,7 @@ export const initBlocksAnimation = () => {
     scroller.effects('.advantages__col--right', { speed: 0.9 });
   });
 
-  const tl = gsap.timeline({ defaults: { ease: 'none' } });
+  const mainTimeline = gsap.timeline({ defaults: { ease: 'none' } });
 
   const collageCenterElement = $('.collage__item--center');
   const centerElementCenterPoint = collageCenterElement[0].offsetTop + collageCenterElement.outerHeight() / 2;
@@ -91,11 +91,28 @@ export const initBlocksAnimation = () => {
   };
 
   // Collage section
+  // gsapMatchMedia.add(breakpoints.xxl.minWidth, () => {
+  //   tl.to('.main-gallery__title-wrap', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
+  // });
+  // gsapMatchMedia.add(breakpoints.xxl.maxWidth, () => {
+  //   tl.to(collage, { ...collageSettings, xPercent: -7, scale: 4 }).to(items, collageItemsSettings);
+  // });
+
   gsapMatchMedia.add(breakpoints.xxl.minWidth, () => {
-    tl.to('.main-gallery__title-wrap', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
+    mainTimeline.to('.main-gallery__title-wrap', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
+    console.log('breakpoints.xxl.minWidth');
   });
+
   gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
-    tl.to(collage, { ...collageSettings, xPercent: -7, scale: 4 }).to(items, collageItemsSettings);
+    gsapMatchMedia.add(breakpoints.xxl.maxWidth, () => {
+      mainTimeline.to(collage, { ...collageSettings, xPercent: -7, scale: 4 }).to(items, collageItemsSettings);
+      console.log('breakpoints.xxl.maxWidth');
+    });
+  });
+
+  gsapMatchMedia.add(breakpoints.xl.maxWidth, () => {
+    console.log('breakpoints.xl.maxWidth');
+    mainTimeline.pause().kill();
   });
 
   // Services section
@@ -116,17 +133,18 @@ export const initBlocksAnimation = () => {
   servicesTl.to('.services-banner__background-wrap', { opacity: 1, yPercent: 0, y: 0 });
 
   // Brands Section
-  const brandsTl = gsap.timeline({
-    defaults: { ease: 'none' },
-    scrollTrigger: {
-      trigger: '.works-slider',
-      start: 'top-=10% top',
-      end: 'bottom-=50% top',
-      markers: false,
-      invalidateOnRefresh: true,
-      toggleActions: 'play none none reverse',
-    },
+  gsapMatchMedia.add(breakpoints.xxl.minWidth, () => {
+    const brandsTl = gsap.timeline({
+      defaults: { ease: 'none' },
+      scrollTrigger: {
+        trigger: '.works-slider',
+        start: 'top-=10% top',
+        end: 'bottom-=50% top',
+        markers: false,
+        invalidateOnRefresh: true,
+        toggleActions: 'play none none reverse',
+      },
+    });
+    brandsTl.to('.brands__item', { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: 'power1.in' });
   });
-
-  brandsTl.to('.brands__item', { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: 'power1.in' });
 };
