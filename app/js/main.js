@@ -15,23 +15,27 @@ import { initMenu } from './modules/menu.js';
 import { initLazyLoadImages } from './modules/lazyLoadImages.js';
 import { initMobileBlocksAnimation } from './modules/initMobileBlocksAnimation.js';
 import { aosAnimationInit } from './modules/animationOnScroll.js';
+import { breakpoints, gsapMatchMedia } from './modules/consts.js';
 
 export let scroller = null;
 
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
-  scroller = ScrollSmoother.create({
-    wrapper: '.smooth-wrapper',
-    content: '.smooth-content',
-    smooth: 1.5,
-    effects: true,
-    autoResize: true,
-    smoothTouch: false,
-    ignoreMobileResize: true,
-  });
+  gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
+    scroller = ScrollSmoother.create({
+      wrapper: '.smooth-wrapper',
+      content: '.smooth-content',
+      smooth: 1.5,
+      effects: true,
+      autoResize: true,
+      smoothTouch: false,
+      ignoreMobileResize: true,
+    });
 
-  ScrollTrigger.config({ ignoreMobileResize: true });
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    initBlocksAnimation();
+  });
 
   initRems();
   mfpPopupInit();
@@ -46,12 +50,12 @@ $(document).ready(() => {
   initServicesTabs();
   initContactsMaps();
   initMenu();
-  initBlocksAnimation();
   initMobileBlocksAnimation();
   initLazyLoadImages();
   aosAnimationInit();
 
   $(window).on('load', () => {
+    AOS.refresh();
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);

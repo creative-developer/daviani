@@ -102,6 +102,9 @@
       "animation": {
         "delay": 500
       }
+    },
+    {
+      "el": ".services .services-banner__background-wrap"
     }
   ]
 }

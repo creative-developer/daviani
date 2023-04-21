@@ -11,20 +11,21 @@ class AnimationOnScroll {
     return $('main').attr('class');
   }
 
-  getAnimationOptions() {
-    $.ajax({
+  getAnimationOptions(cb) {
+    return $.ajax({
       type: 'GET',
       url: this.jsonUrl, // demo
       dataType: 'json',
       success: response => {
         this.animations = response; // saving
         this.animate();
+
+        return response;
       },
       error: (jqXHR, textStatus, errorThrown) => {
         console.log('animations GET error: ' + this.jsonUrl + ' - ' + errorThrown + '!');
       },
     }).done(() => {
-      console.log(this.aosOptions);
       AOS.init(this.aosOptions);
     });
   }
@@ -89,7 +90,7 @@ class AnimationOnScroll {
   }
 
   init() {
-    this.getAnimationOptions();
+    return this.getAnimationOptions();
   }
 }
 
@@ -100,16 +101,23 @@ export const aosAnimationInit = () => {
     aosOptions: {
       offset: 50,
       duration: 700,
-      // once: true,
+      delay: 0,
+      once: false,
+      mirror: true,
+      throttleDelay: 50,
+      startEvent: 'load',
       disable: function () {
         const maxWidth = 1200;
         const isMobile = document.documentElement.clientWidth < maxWidth;
-        console.log(isMobile);
+
         return !isMobile;
       },
     },
   });
 
+  document.addEventListener('customEvent', ({ detail }) => {
+    console.log('in', detail);
+  });
   // Init animations
   anim.init();
 };
