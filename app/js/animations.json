@@ -105,6 +105,21 @@
     },
     {
       "el": ".services .services-banner__background-wrap"
+    },
+    {
+      "el": ".facilities__title"
+    },
+    {
+      "el": ".facilities__sub-title"
+    },
+    {
+      "el": ".facilities__item",
+      "animation": {
+        "increment": true
+      }
+    },
+    {
+      "el": ".facilities__decor-line-inner"
     }
   ]
 }

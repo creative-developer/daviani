@@ -47,8 +47,16 @@
     max-width: 89.583vw
     +lg
       gap: 4.541vw
-      grid-template-columns: repeat(3, 1fr)
       max-width: 100%
+    +sm
+      gap: 5.208vw
+      width: 118.400vw
+      max-width: 118.400vw
+      margin-left: -9.2vw
+      grid-template-columns: minmax(29.8613333vw, auto) minmax(29.8613333vw, auto) minmax(29.8613333vw, auto)
+      // justify-content: space-around
+    +xsm
+      gap: 4.762vw
 
   &__item
     display: flex
@@ -70,6 +78,9 @@
         width: 32.6vw
         height: 21.956vw
         margin-right: -6.121vw
+      +sm
+        width: 40vw
+        height: 26.933vw
 
     &:nth-child(2)
       width: 28.177vw
@@ -79,6 +90,9 @@
         width: 30.65vw
         height: 34.208vw
         margin-top: -13.813vw
+      +sm
+        width: 37.333vw
+        height: 42.133vw
 
     &:nth-child(3)
       width: 28.177vw
@@ -86,6 +100,9 @@
       +lg
         width: 30.575vw
         height: 23.411vw
+      +sm
+        width: 37.333vw
+        height: 29.067vw
 
     &:nth-child(4)
       width: 24.635vw
@@ -94,6 +111,10 @@
       +lg
         width: 26.741vw
         height: 22.503vw
+      +sm
+        width: 32.533vw
+        height: 27.733vw
+
     &:nth-child(5)
       width: 32.500vw
       height: 21.302vw
@@ -101,6 +122,10 @@
       +lg
         width: 35.116vw
         height: 22.906vw
+      +sm
+        width: 42.933vw
+        height: 26.933vw
+
     &:nth-child(6)
       justify-self: center
       width: 24.115vw
@@ -109,6 +134,10 @@
       +lg
         width: 25.933vw
         height: 28.254vw
+      +sm
+        width: 31.733vw
+        height: 34.400vw
+      margin-right: -4.81vw
     &:nth-child(7)
       width: 24.635vw
       height: 23.125vw
@@ -116,6 +145,9 @@
       +lg
         width: 26.741vw
         height: 24.924vw
+      +sm
+        width: 32.533vw
+        height: 30.400vw
 
   &__img
     width: 100%
