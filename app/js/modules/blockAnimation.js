@@ -5,7 +5,7 @@ export const initBlocksAnimation = () => {
   const windowHeight = document.documentElement.clientHeight;
   const collage = $('.collage');
 
-  gsapMatchMedia.add(breakpoints.md.minWidth, () => {
+  gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
     scroller.effects('.facilities__sub-title', { speed: 0.9 });
     scroller.effects('.facilities__title', { speed: 1.1 });
     document.querySelectorAll('.facilities__item').forEach((item, index) => {
@@ -115,22 +115,24 @@ export const initBlocksAnimation = () => {
     mainTimeline.pause().kill();
   });
 
-  // Services section
-  const servicesTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.services-banner',
-      start: 'top bottom',
-      end: 'bottom-=10% bottom',
-      markers: false,
-      scrub: 1.2,
-      invalidateOnRefresh: true,
-    },
-    defaults: { ease: 'none' },
-  });
+  gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
+    // Services section
+    const servicesTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.services-banner',
+        start: 'top bottom',
+        end: 'bottom-=10% bottom',
+        markers: false,
+        scrub: 1.2,
+        invalidateOnRefresh: true,
+      },
+      defaults: { ease: 'none' },
+    });
 
-  servicesTl.to('.services-banner__img', { height: '100%' });
-  // servicesTl.to('.services-banner__background-wrap', { opacity: 1, yPercent: 100, y: 0 });
-  servicesTl.to('.services-banner__background-wrap', { opacity: 1, yPercent: 0, y: 0 });
+    servicesTl.to('.services-banner__img', { height: '100%' });
+    // servicesTl.to('.services-banner__background-wrap', { opacity: 1, yPercent: 100, y: 0 });
+    servicesTl.to('.services-banner__background-wrap', { opacity: 1, yPercent: 0, y: 0 });
+  });
 
   // Brands Section
   gsapMatchMedia.add(breakpoints.xxl.minWidth, () => {

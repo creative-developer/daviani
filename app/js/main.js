@@ -22,20 +22,20 @@ export let scroller = null;
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
-  gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
-    scroller = ScrollSmoother.create({
-      wrapper: '.smooth-wrapper',
-      content: '.smooth-content',
-      smooth: 1.5,
-      effects: true,
-      autoResize: true,
-      smoothTouch: false,
-      ignoreMobileResize: true,
-    });
-
-    ScrollTrigger.config({ ignoreMobileResize: true });
-    initBlocksAnimation();
+  // gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
+  scroller = ScrollSmoother.create({
+    wrapper: '.smooth-wrapper',
+    content: '.smooth-content',
+    smooth: 1.5,
+    effects: true,
+    autoResize: true,
+    smoothTouch: false,
+    ignoreMobileResize: true,
   });
+
+  ScrollTrigger.config({ ignoreMobileResize: true });
+  initBlocksAnimation();
+  // });
 
   initRems();
   mfpPopupInit();

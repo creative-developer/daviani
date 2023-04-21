@@ -9,7 +9,10 @@
     width: 100%
     object-fit: cover
     will-change: transform
-    height: 38.5%
+    +min_xl
+      height: 38.5%
+    +xl
+      height: 100%
     &-wrap
       display: flex
       justify-content: center
@@ -42,15 +45,22 @@
 
     &-wrap
       position: absolute
+      transform: translateY(300%)
       +min_xl
         top: 6.4375rem
         left: 3.125rem
         opacity: 0
-      +min_lg
-        transform: translateY(300%)
       +xl
-        top: 103px
-        left: 50px
+        position: static
+        top: auto
+        bottom: auto
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: -111px
+        // top: 103px
+        // left: 50px
       // +lg
       //   top: auto
       //   left: 50%
@@ -60,19 +70,11 @@
       //   display: flex
       //   align-items: center
       //   justify-content: center
-      +lg
-        position: static
-        top: auto
-        bottom: auto
+      // +lg
+        // position: static
         // transform: translate(-50%, 100%)
-        width: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-top: -111px
       +md
         padding: 0 30px
-      +sm
 
   &__title
     position: relative
