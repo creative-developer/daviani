@@ -30,14 +30,17 @@
 				<div class="custom-container">
 					<div class="header__content-wrap">
 						<div class="header__content header__content--left">
-							<div class="header__mobile"><a class="hamburger hamburger--green hamburger--small hamburger--slider header__hamburger js-menu hamburger--slider" href="#" aria-label="Hamburger btn"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a></div><a class="location header__location" href="#">
-								<div class="location__icon location__icon--pin-icon"><svg class="icon icon--location" fill="currentColor">
-										<use xlink:href="img/svg-sprite.svg#location"></use>
-									</svg></div><span class="location__text">Салоны</span>
-								<div class="location__icon location__icon--expand-icon"><svg class="icon icon--expand" fill="currentColor">
-										<use xlink:href="img/svg-sprite.svg#expand"></use>
-									</svg></div>
-							</a>
+							<div class="header__mobile">
+								<div class="header__hamburger-wrap"><a class="hamburger hamburger--green hamburger--small hamburger--slider header__hamburger js-menu hamburger--slider" href="#" aria-label="Hamburger btn"><span class="hamburger-box"><span class="hamburger-inner"></span></span></a></div>
+							</div>
+							<div class="header__location-wrap"><a class="location header__location" href="#">
+									<div class="location__icon location__icon--pin-icon"><svg class="icon icon--location" fill="currentColor">
+											<use xlink:href="img/svg-sprite.svg#location"></use>
+										</svg></div><span class="location__text">Салоны</span>
+									<div class="location__icon location__icon--expand-icon"><svg class="icon icon--expand" fill="currentColor">
+											<use xlink:href="img/svg-sprite.svg#expand"></use>
+										</svg></div>
+								</a></div>
 							<nav class="nav nav--small nav--light nav--horizontal nav--uppercase header__nav-left">
 								<ul class="nav__list">
 									<li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
@@ -50,7 +53,7 @@
 									<use xlink:href="img/svg-sprite.svg#logo"></use>
 								</svg></a></div>
 						<div class="header__content header__content--right">
-							<div class="header__mobile"><a class="header__location-link header__location-link--icon" href="#" aria-label="Location button"><svg class="icon icon--location" fill="currentColor">
+							<div class="header__mobile header__mobile--right"><a class="header__location-link header__location-link--icon" href="#" aria-label="Location button"><svg class="icon icon--location" fill="currentColor">
 										<use xlink:href="img/svg-sprite.svg#location"></use>
 									</svg></a><a class="header__phone-link header__phone-link--icon" href="#" aria-label="Phone button"><svg class="icon icon--phone" fill="currentColor">
 										<use xlink:href="img/svg-sprite.svg#phone"></use>
@@ -61,7 +64,8 @@
 									<li class="nav__item"><a class="nav__link" href="#">Отзывы</a></li>
 									<li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
 								</ul>
-							</nav><a class="btn btn--accent-outlined btn--md header__btn" href="#">Оставить заявку<!-- content--></a>
+							</nav>
+							<div class="header__right-btn-wrap"><a class="btn btn--accent-outlined btn--md header__btn" href="#">Оставить заявку<!-- content--></a></div>
 						</div>
 					</div>
 				</div>
@@ -113,9 +117,11 @@
 							<div class="facilities__sub-title">Пространства Daviani - это место силы, где можно отдохнуть от городской суеты и восстановить внутренний баланс.</div>
 						</div>
 						<div class="facilities__photos-wrap">
-							<div class="facilities__decor-line"><svg class="icon icon--golden-decor-line" fill="currentColor">
-									<use xlink:href="img/svg-sprite.svg#golden-decor-line"></use>
-								</svg></div>
+							<div class="facilities__decor-line">
+								<div class="facilities__decor-line-inner"><svg class="icon icon--golden-decor-line" fill="currentColor">
+										<use xlink:href="img/svg-sprite.svg#golden-decor-line"></use>
+									</svg></div>
+							</div>
 							<ul class="facilities__list">
 								<li class="facilities__item"><img class="facilities__img lazy" src="img/index/facilities/dummy/dummy-image-1.gif" data-src="img/index/facilities/item-1.png" alt=""></li>
 								<li class="facilities__item"><img class="facilities__img lazy" src="img/index/facilities/dummy/dummy-image-2.gif" data-src="img/index/facilities/item-2.jpg" alt=""></li>
@@ -130,9 +136,9 @@
 						<div class="services__tab-nav-wrap">
 							<nav class="tab-nav services__tab-nav">
 								<ul class="tab-nav__list">
-									<li class="tab-nav__item tab-nav__item--active"><a class="tab-nav__link" href="#tinting">Окрашивание<img class="tab-nav__link-img" src="img/index/services/dummy/dummy-image-btn-1.gif" data-src="img/index/services/btn-bg/image-1.png" alt=""></a></li>
-									<li class="tab-nav__item"><a class="tab-nav__link" href="#stylings">Укладки<img class="tab-nav__link-img" src="img/index/services/dummy/dummy-image-btn-2.gif" data-src="img/index/services/btn-bg/image-2.png" alt=""></a></li>
-									<li class="tab-nav__item"><a class="tab-nav__link" href="#haircuts">Стрижки<img class="tab-nav__link-img" src="img/index/services/dummy/dummy-image-btn-2.gif" data-src="img/index/services/btn-bg/image-2.png" alt=""></a></li>
+									<li class="tab-nav__item tab-nav__item--active"><a class="tab-nav__link" href="#tinting">Окрашивание<img class="tab-nav__link-img lazy" src="img/index/services/dummy/dummy-image-btn-1.gif" data-src="img/index/services/btn-bg/image-1.png" alt=""></a></li>
+									<li class="tab-nav__item"><a class="tab-nav__link" href="#stylings">Укладки<img class="tab-nav__link-img lazy" src="img/index/services/dummy/dummy-image-btn-2.gif" data-src="img/index/services/btn-bg/image-2.png" alt=""></a></li>
+									<li class="tab-nav__item"><a class="tab-nav__link" href="#haircuts">Стрижки<img class="tab-nav__link-img lazy" src="img/index/services/dummy/dummy-image-btn-2.gif" data-src="img/index/services/btn-bg/image-2.png" alt=""></a></li>
 								</ul>
 							</nav>
 						</div>
@@ -156,11 +162,12 @@
 													<li class="services-card__item"><a class="services-card__link" href="#image-6" data-price="9 900">Окрашивание в технике Шатуш</a></li>
 												</ul>
 												<div class="services-card__discount">При первом визите -15%</div>
-												<div class="services-card__price"><span>10 800</span> ₽</div><a class="btn btn--dark-text btn--bg-accent btn--iconed-right btn--aic btn--overlay-white-border btn--xl services-card__btn" href="#"><span>Записаться</span>
-													<div class="btn__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
-															<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
-														</svg></div>
-												</a>
+												<div class="services-card__price"><span>10 800</span> ₽</div>
+												<div class="services-card__btn-wrap"><a class="btn btn--dark-text btn--bg-accent btn--iconed-right btn--aic btn--overlay-white-border btn--xl services-card__btn" href="#"><span>Записаться</span>
+														<div class="btn__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+															</svg></div>
+													</a></div>
 											</div>
 										</div>
 										<div class="services-card__col services-card__col--right">
@@ -180,11 +187,12 @@
 													<li class="services-card__item"><a class="services-card__link" href="#image-5" data-price="7 800">Укладка детская</a></li>
 												</ul>
 												<div class="services-card__discount">При первом визите -15%</div>
-												<div class="services-card__price"><span>10 800</span> ₽</div><a class="btn btn--dark-text btn--bg-accent btn--iconed-right btn--aic btn--overlay-white-border btn--xl services-card__btn" href="#"><span>Записаться</span>
-													<div class="btn__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
-															<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
-														</svg></div>
-												</a>
+												<div class="services-card__price"><span>10 800</span> ₽</div>
+												<div class="services-card__btn-wrap"><a class="btn btn--dark-text btn--bg-accent btn--iconed-right btn--aic btn--overlay-white-border btn--xl services-card__btn" href="#"><span>Записаться</span>
+														<div class="btn__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+															</svg></div>
+													</a></div>
 											</div>
 										</div>
 										<div class="services-card__col services-card__col--right">
@@ -202,11 +210,12 @@
 													<li class="services-card__item"><a class="services-card__link" href="#image-3" data-price="3 100">Детская стрижка</a></li>
 												</ul>
 												<div class="services-card__discount">При первом визите -15%</div>
-												<div class="services-card__price"><span>10 800</span> ₽</div><a class="btn btn--dark-text btn--bg-accent btn--iconed-right btn--aic btn--overlay-white-border btn--xl services-card__btn" href="#"><span>Записаться</span>
-													<div class="btn__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
-															<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
-														</svg></div>
-												</a>
+												<div class="services-card__price"><span>10 800</span> ₽</div>
+												<div class="services-card__btn-wrap"><a class="btn btn--dark-text btn--bg-accent btn--iconed-right btn--aic btn--overlay-white-border btn--xl services-card__btn" href="#"><span>Записаться</span>
+														<div class="btn__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+															</svg></div>
+													</a></div>
 											</div>
 										</div>
 										<div class="services-card__col services-card__col--right">
