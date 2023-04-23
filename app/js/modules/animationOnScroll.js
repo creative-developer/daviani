@@ -97,15 +97,12 @@ class AnimationOnScroll {
 export const aosAnimationInit = () => {
   // Animation on scroll
   const anim = new AnimationOnScroll({
-    jsonUrl: '/js/animations.json',
+    jsonUrl: 'js/animations.json',
     aosOptions: {
       offset: 50,
       duration: 700,
       delay: 0,
       once: false,
-      mirror: true,
-      throttleDelay: 50,
-      startEvent: 'load',
       disable: function () {
         const maxWidth = 1200;
         const isMobile = document.documentElement.clientWidth < maxWidth;
@@ -115,9 +112,6 @@ export const aosAnimationInit = () => {
     },
   });
 
-  document.addEventListener('customEvent', ({ detail }) => {
-    console.log('in', detail);
-  });
   // Init animations
-  anim.init();
+  return anim.init();
 };

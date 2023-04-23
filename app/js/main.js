@@ -3,7 +3,6 @@ import { mediaQueriesInit } from './modules/mediaQueries.js';
 import { popupsInit } from './modules/popups.js';
 import { mfpPopupInit } from './modules/mfpPopup.js';
 import { initScrollSmoother } from './modules/scrollSmoother.js';
-import { collageAnimationInit } from './modules/collageAnimation.js';
 import { initFancyBox } from './modules/fancybox.js';
 import { initMastersSlider } from './modules/mastersSlider.js';
 import { initWorksSlider } from './modules/worksSlider.js';
@@ -22,28 +21,28 @@ export let scroller = null;
 $(document).ready(() => {
   gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
-  // gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
-  scroller = ScrollSmoother.create({
-    wrapper: '.smooth-wrapper',
-    content: '.smooth-content',
-    smooth: 1.5,
-    effects: true,
-    autoResize: true,
-    smoothTouch: false,
-    ignoreMobileResize: true,
+  gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
+    scroller = ScrollSmoother.create({
+      wrapper: '.smooth-wrapper',
+      content: '.smooth-content',
+      smooth: 1.5,
+      effects: true,
+      autoResize: true,
+      smoothTouch: false,
+      ignoreMobileResize: true,
+    });
+
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    initBlocksAnimation();
   });
 
-  ScrollTrigger.config({ ignoreMobileResize: true });
-  initBlocksAnimation();
-  // });
-
+  const aosOptions = aosAnimationInit();
   initRems();
   mfpPopupInit();
   mediaQueriesInit();
   smoothScroll();
   popupsInit();
   initScrollSmoother();
-  collageAnimationInit();
   initFancyBox();
   initMastersSlider();
   initWorksSlider();
@@ -52,10 +51,14 @@ $(document).ready(() => {
   initMenu();
   initMobileBlocksAnimation();
   initLazyLoadImages();
-  aosAnimationInit();
+
+  aosOptions.done(() => {
+    setTimeout(() => {
+      AOS.refresh();
+    }, 800);
+  });
 
   $(window).on('load', () => {
-    AOS.refresh();
     setTimeout(() => {
       ScrollTrigger.refresh();
     }, 500);

@@ -69,7 +69,7 @@ export const initContactsMaps = () => {
   }
 
   ScrollTrigger.create({
-    trigger: '.works',
+    trigger: '.masters',
     start: 'top',
     once: true,
     onEnter: () => {

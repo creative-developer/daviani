@@ -1,5 +1,4 @@
 import { MQ } from './MQ.js';
-import { initBlocksAnimation } from './blockAnimation.js';
 import { breakpoints } from './consts.js';
 
 export const mediaQueriesInit = () => {
@@ -35,6 +34,18 @@ export const mediaQueriesInit = () => {
     () => {
       ScrollTrigger.normalizeScroll(false);
       // out sm
+    },
+  );
+
+  MQ(
+    breakpoints.xl.minWidth,
+    () => {
+      // in xl
+      console.log('in xl');
+    },
+    () => {
+      // out xl
+      console.log('out xl');
     },
   );
 };

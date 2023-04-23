@@ -58,7 +58,7 @@ main
   +sm
     height: 120px
 
-.antiantialiased
+.antialiased
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -66,15 +66,16 @@ main
   overflow-x: hidden
 
 .smooth-content
-  box-sizing: border-box
-  overflow: visible
-  width: 100%
+  +min_xl
+    box-sizing: border-box
+    overflow: visible
+    width: 100%
 
 img.lazy
-  &:not(.collage__img)
+  &:not(.collage__img, .tab-nav__link-img)
     opacity: 0
-    transition: all 0.5s ease
+    transition: all 0.7s ease-in
 
 img.lazy[data-loaded="true"]
-  &:not(.collage__img)
+  &:not(.collage__img, .tab-nav__link-img)
     opacity: 1

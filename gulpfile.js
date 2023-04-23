@@ -152,7 +152,7 @@ function buildCopy() {
   return src(
     [
       'app/css/main.min.css',
-      'app/js/*.js',
+      'app/js/*.{js,json}',
       '!app/js/main.js',
       // 'app/js/main.bundle.js',
       // 'app/js/workers.js',
