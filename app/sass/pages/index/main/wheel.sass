@@ -4,8 +4,11 @@
   display: flex
   align-items: center
   justify-content: center
-  transform: translateX(-50%)
+  // transform: translateX(-50%)
   will-change: transform
+  transform-style: preserve-3d
+  animation: spin 360s linear infinite
+
   +min_xl
     top: 32.8125rem
     width: 305vw
@@ -45,3 +48,12 @@
       object-fit: cover
       cursor: pointer
       pointer-events: none
+
+@keyframes spin
+  0%
+    // transform: rotate3d(0)
+    transform: translateX(-50%) rotateZ(0)
+
+  100%
+    // transform: rotate3d(-360deg)
+    transform: translateX(-50%) rotateZ(-360deg)

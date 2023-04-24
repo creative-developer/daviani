@@ -26,25 +26,25 @@ const scrollSmootherAnimation = () => {
     });
   }
 
-  function infiniteReverse() {
-    tl.reverse();
-    checkReverseLoop();
-  }
+  // function infiniteReverse() {
+  //   tl.reverse();
+  //   checkReverseLoop();
+  // }
 
-  function checkReverseLoop() {
-    if (tl.reversed() && tl.totalTime() <= tl.duration()) {
-      tl.totalTime(tl.totalTime() + tl.duration() * 1000, true);
-    }
-  }
+  // function checkReverseLoop() {
+  //   if (tl.reversed() && tl.totalTime() <= tl.duration()) {
+  //     tl.totalTime(tl.totalTime() + tl.duration() * 1000, true);
+  //   }
+  // }
 
-  const tl = gsap.to('.wheel', {
-    rotate: -360,
-    duration: 160,
-    repeat: -1,
-    ease: 'none',
-    onRepeat: checkReverseLoop,
-    onReverseComplete: infiniteReverse,
-  });
+  // const tl = gsap.to('.wheel', {
+  //   rotate: -360,
+  //   duration: 360,
+  //   repeat: -1,
+  //   ease: 'none',
+  //   onRepeat: checkReverseLoop,
+  //   onReverseComplete: infiniteReverse,
+  // });
 
   // const mainScreenContainer = $('.main-screen');
   // let startPositionProgress = 0;
