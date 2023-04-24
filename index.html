@@ -43,13 +43,13 @@
 									</a></div>
 								<nav class="nav nav--small nav--light nav--horizontal nav--uppercase header__nav-left">
 									<ul class="nav__list">
-										<li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
-										<li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
-										<li class="nav__item"><a class="nav__link" href="#">Специалисты</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="#facilities">О нас</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="#services">Услуги</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="#masters">Специалисты</a></li>
 									</ul>
 								</nav>
 							</div>
-							<div class="header__content header__content--center"><a class="logo logo--medium header__logo" href="#" aria-label="Logotype link"><svg class="icon icon--logo" fill="currentColor">
+							<div class="header__content header__content--center"><a class="logo logo--medium header__logo" href="index.html" aria-label="Logotype link"><svg class="icon icon--logo" fill="currentColor">
 										<use xlink:href="img/svg-sprite.svg#logo"></use>
 									</svg></a></div>
 							<div class="header__content header__content--right">
@@ -60,9 +60,9 @@
 										</svg></a></div>
 								<nav class="nav nav--small nav--light nav--horizontal nav--uppercase header__nav-right">
 									<ul class="nav__list">
-										<li class="nav__item"><a class="nav__link" href="#">Почему мы</a></li>
-										<li class="nav__item"><a class="nav__link" href="#">Отзывы</a></li>
-										<li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+										<li class="nav__item"><a class="nav__link" href="#">Почему Давиани</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="#works">Отзывы</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="#main-contacts">Контакты</a></li>
 									</ul>
 								</nav>
 								<div class="header__right-btn-wrap"><a class="btn btn--accent-outlined btn--md header__btn" href="#">Оставить заявку<!-- content--></a></div>
@@ -72,7 +72,7 @@
 				</header><!-- Sections-->
 				<main class="main-page">
 					<div class="global-bg"></div>
-					<section class="main-screen">
+					<section class="main-screen" data-id="main-screen">
 						<div class="wheel">
 							<div class="wheel__card"><img class="wheel__card-img lazy" src="img/index/main/image-dummy.gif" data-src="img/index/main/image-01.png" width="318" height="450" alt=""></div>
 							<div class="wheel__card"><img class="wheel__card-img lazy" src="img/index/main/image-dummy.gif" data-src="img/index/main/image-02.png" width="318" height="450" alt=""></div>
@@ -81,7 +81,7 @@
 							<div class="wheel__card"><img class="wheel__card-img lazy" src="img/index/main/image-dummy.gif" data-src="img/index/main/image-05.png" width="318" height="450" alt=""></div>
 						</div>
 					</section>
-					<section class="main-gallery">
+					<section class="main-gallery" data-id="main-gallery">
 						<div class="main-gallery__top-line">
 							<div class="container-fluid">
 								<div class="main-gallery__title-wrap">
@@ -110,7 +110,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="facilities">
+					<section class="facilities" data-id="facilities">
 						<div class="container-fluid">
 							<div class="facilities__title-wrap">
 								<h2 class="facilities__title second-title second-title--light">Мы продумали всё для вашего удобства</h2>
@@ -130,7 +130,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="services">
+					<section class="services" data-id="services">
 						<div class="container-fluid">
 							<h2 class="services__title second-title second-title--light second-title--large">Идеальная прическа от лучших стилистов Москвы</h2>
 							<div class="services__tab-nav-wrap">
@@ -154,12 +154,36 @@
 											<div class="services-card__col services-card__col--left">
 												<div class="services-card__content">
 													<ul class="services-card__list">
-														<li class="services-card__item services-card__item--active"><a class="services-card__link" href="#image-1" data-price="7 300">Окрашивание волос</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-2" data-price="20 000">Airtouch с тонированием</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-3" data-price="8 700">Окрашивание волос хной</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-4" data-price="5 900">Тонирование волос</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-5" data-price="9 900">Мелирование волос</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-6" data-price="9 900">Окрашивание в технике Шатуш</a></li>
+														<li class="services-card__item services-card__item--active"><a class="services-card__link" href="#image-1" data-price="7 300">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Окрашивание волос</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-2" data-price="20 000">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Airtouch с тонированием</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-3" data-price="8 700">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Окрашивание волос хной</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-4" data-price="5 900">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Тонирование волос</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-5" data-price="9 900">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Мелирование волос</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-6" data-price="9 900">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Окрашивание в технике Шатуш</span>
+															</a></li>
 													</ul>
 													<div class="services-card__discount">При первом визите -15%</div>
 													<div class="services-card__price"><span>10 800</span> ₽</div>
@@ -180,11 +204,31 @@
 											<div class="services-card__col services-card__col--left">
 												<div class="services-card__content">
 													<ul class="services-card__list">
-														<li class="services-card__item services-card__item--active"><a class="services-card__link" href="#image-1" data-price="4 800">Укладка</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-2" data-price="7 800">Вечерняя укладка</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-3" data-price="7 800">Сложная укладка</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-4" data-price="7 800">Плетение кос</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-5" data-price="7 800">Укладка детская</a></li>
+														<li class="services-card__item services-card__item--active"><a class="services-card__link" href="#image-1" data-price="4 800">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Укладка</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-2" data-price="7 800">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Вечерняя укладка</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-3" data-price="7 800">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Сложная укладка</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-4" data-price="7 800">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Плетение кос</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-5" data-price="7 800">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Укладка детская</span>
+															</a></li>
 													</ul>
 													<div class="services-card__discount">При первом визите -15%</div>
 													<div class="services-card__price"><span>10 800</span> ₽</div>
@@ -205,9 +249,21 @@
 											<div class="services-card__col services-card__col--left">
 												<div class="services-card__content">
 													<ul class="services-card__list">
-														<li class="services-card__item services-card__item--active"><a class="services-card__link" href="#image-1" data-price="5 200">Женская стрижка</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-2" data-price="5 900">Мужская стрижка</a></li>
-														<li class="services-card__item"><a class="services-card__link" href="#image-3" data-price="3 100">Детская стрижка</a></li>
+														<li class="services-card__item services-card__item--active"><a class="services-card__link" href="#image-1" data-price="5 200">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Женская стрижка</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-2" data-price="5 900">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Мужская стрижка</span>
+															</a></li>
+														<li class="services-card__item"><a class="services-card__link" href="#image-3" data-price="3 100">
+																<div class="services-card__icon-wrap"><svg class="icon icon--arrow-styled-with-line" fill="currentColor">
+																		<use xlink:href="img/svg-sprite.svg#arrow-styled-with-line"></use>
+																	</svg></div><span>Детская стрижка</span>
+															</a></li>
 													</ul>
 													<div class="services-card__discount">При первом визите -15%</div>
 													<div class="services-card__price"><span>10 800</span> ₽</div>
@@ -236,7 +292,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="advantages">
+					<section class="advantages" data-id="advantages">
 						<div class="custom-container">
 							<div class="advantages__title-wrap">
 								<div class="advantages__title">Почему выбирают DAVIANI & SPA?</div>
@@ -273,7 +329,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="masters">
+					<section class="masters" data-id="masters">
 						<div class="container-fluid">
 							<div class="masters__top-line">
 								<div class="masters__title-wrap">
@@ -358,7 +414,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="works">
+					<section class="works" data-id="works">
 						<div class="container-fluid">
 							<h2 class="works__title second-title second-title--light">Наши работы в Инстаграм</h2>
 						</div>
@@ -374,7 +430,7 @@
 							<div class="works-slider__scroll-bar swiper-scrollbar"></div>
 						</div>
 					</section>
-					<section class="brands">
+					<section class="brands" data-id="brands">
 						<div class="container-fluid">
 							<div class="brands__wrapper">
 								<ul class="brands__list">
@@ -400,7 +456,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="main-contacts" data-src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=">
+					<section class="main-contacts" data-src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=" data-id="main-contacts">
 						<div class="container-fluid">
 							<div class="main-contacts__wrapper">
 								<div class="main-contacts__card main-contacts__card--left">
@@ -451,15 +507,15 @@
 					<div class="custom-container footer__wrap">
 						<div class="footer__row footer__row--top-line">
 							<div class="footer__col footer__col--left">
-								<div class="footer__logo-wrap"><a class="logo logo--small footer__logo" href="#" aria-label="Footer logotype link"><svg class="icon icon--logo" fill="currentColor">
+								<div class="footer__logo-wrap"><a class="logo logo--small footer__logo" href="index.html" aria-label="Footer logotype link"><svg class="icon icon--logo" fill="currentColor">
 											<use xlink:href="img/svg-sprite.svg#logo"></use>
 										</svg></a>
 									<nav class="nav nav--medium nav--light nav--vertical footer__left-nav">
 										<ul class="nav__list nav__list--vertical">
-											<li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
-											<li class="nav__item"><a class="nav__link" href="#">Услуги</a></li>
-											<li class="nav__item"><a class="nav__link" href="#">Специалисты</a></li>
-											<li class="nav__item"><a class="nav__link" href="#">Почему мы</a></li>
+											<li class="nav__item"><a class="nav__link js-scroll" href="#facilities">О нас</a></li>
+											<li class="nav__item"><a class="nav__link js-scroll" href="#services">Услуги</a></li>
+											<li class="nav__item"><a class="nav__link js-scroll" href="#masters">Специалисты</a></li>
+											<li class="nav__item"><a class="nav__link js-scroll" href="#">Почему Давиани</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -467,15 +523,15 @@
 							<div class="footer__col footer__col--center">
 								<nav class="nav nav--medium nav--light nav--vertical">
 									<ul class="nav__list nav__list--vertical">
-										<li class="nav__item"><a class="nav__link" href="#">Отзывы</a></li>
-										<li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
-										<li class="nav__item"><a class="nav__link" href="#">Политика конфиденциальности</a></li>
-										<li class="nav__item"><a class="nav__link" href="#">Пользовательское соглашение</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="#works">Отзывы</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="#main-contacts">Контакты</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="https://daviani.ru/privacy.html" target="_blank">Политика конфиденциальности</a></li>
+										<li class="nav__item"><a class="nav__link js-scroll" href="https://daviani.ru/terms.html" target="_blank">Пользовательское соглашение</a></li>
 									</ul>
 								</nav>
 							</div>
 							<div class="footer__col footer__col--right">
-								<div class="footer__phone-wrap"><a class="footer__phone" href="tel:+8495885705">
+								<div class="footer__phone-wrap"><a class="footer__phone" href="https://wa.me/+7495885705" target="_blank">
 										<div class="footer__phone-icon-wrap"><svg class="icon icon--whatsapp" fill="currentColor">
 												<use xlink:href="img/svg-sprite.svg#whatsapp"></use>
 											</svg></div><span>8 (495) 885-70-5</span>
@@ -484,13 +540,13 @@
 								</div>
 								<nav class="social footer__social">
 									<ul class="social__list">
-										<li class="social__item"><a class="social__link" href="#" aria-label="Social link VK"><svg class="icon icon--vk" fill="currentColor">
+										<li class="social__item"><a class="social__link" href="https://vk.com/daviani_ru" target="_blank" aria-label="Social link VK"><svg class="icon icon--vk" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#vk"></use>
 												</svg></a></li>
-										<li class="social__item"><a class="social__link" href="#" aria-label="Social link OK"><svg class="icon icon--ok" fill="currentColor">
+										<li class="social__item"><a class="social__link" href="https://ok.ru/group/70000000783276" target="_blank" aria-label="Social link OK"><svg class="icon icon--ok" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#ok"></use>
 												</svg></a></li>
-										<li class="social__item"><a class="social__link" href="#" aria-label="Social link telegram"><svg class="icon icon--tg" fill="currentColor">
+										<li class="social__item"><a class="social__link" href="https://t.me/davianispa" target="_blank" aria-label="Social link telegram"><svg class="icon icon--tg" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#tg"></use>
 												</svg></a></li>
 									</ul>
