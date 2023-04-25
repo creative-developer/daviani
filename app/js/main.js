@@ -15,13 +15,13 @@ import { initLazyLoadImages } from './modules/lazyLoadImages.js';
 import { initMobileBlocksAnimation } from './modules/initMobileBlocksAnimation.js';
 import { aosAnimationInit } from './modules/animationOnScroll.js';
 import { breakpoints, gsapMatchMedia } from './modules/consts.js';
+import { MQ } from './modules/MQ.js';
 
 export let scroller = null;
 
 $(document).ready(() => {
-  gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
-
   gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
+    gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
     scroller = ScrollSmoother.create({
       wrapper: '.smooth-wrapper',
       content: '.smooth-content',
@@ -36,7 +36,19 @@ $(document).ready(() => {
     initBlocksAnimation();
   });
 
-  const aosOptions = aosAnimationInit();
+  MQ(
+    breakpoints.xl.maxWidth,
+    () => {
+      aosAnimationInit();
+      // aosOptions.done(() => {
+      //   setTimeout(() => {
+      //     // AOS.refresh();
+      //   }, 800);
+      // });
+    },
+    () => {},
+  );
+
   initRems();
   mfpPopupInit();
   mediaQueriesInit();
@@ -52,15 +64,11 @@ $(document).ready(() => {
   initMobileBlocksAnimation();
   initLazyLoadImages();
 
-  aosOptions.done(() => {
-    setTimeout(() => {
-      AOS.refresh();
-    }, 800);
-  });
-
   $(window).on('load', () => {
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 500);
+    gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 500);
+    });
   });
 });

@@ -1,14 +1,8 @@
-const createAndSetMap = (src, elementClassName = '') => {
-  const map = document.createElement('iframe');
-  const element = document.querySelector(elementClassName);
+import { MQ } from './MQ.js';
+import { breakpoints } from './consts.js';
 
-  map.setAttribute('src', src);
-  map.setAttribute('width', '100%');
-  map.setAttribute('height', '100%');
-  map.setAttribute('frameborder', '0');
-
-  element.insertAdjacentElement('afterbegin', map);
-};
+const mapsSection = $('.main-contacts');
+let mapCounter = 0;
 
 function init(props) {
   return () => {
@@ -17,16 +11,7 @@ function init(props) {
       zoom: 16,
     });
 
-    let placemark = new ymaps.Placemark(
-      props.center,
-      {},
-      {
-        // iconLayout: 'default#image',
-        // iconImageHref: '/assets/icons/map-mark.svg',
-        // iconImageSize: [42, 42],
-        // iconImageOffset: [-15, -30],
-      },
-    );
+    let placemark = new ymaps.Placemark(props.center, {}, {});
 
     map.controls.remove('geolocationControl'); // удаляем геолокацию
     map.controls.remove('searchControl'); // удаляем поиск
@@ -41,7 +26,7 @@ function init(props) {
   };
 }
 
-const initLoop = mapsSection => {
+const initMaps = mapsSection => {
   const maps = mapsSection.find('.main-contacts__map');
 
   maps.each((i, el) => {
@@ -57,31 +42,50 @@ const fetchAndInitMaps = mapsSection => {
   $.ajax({
     url: ymapsSrc,
     dataType: 'script',
-  }).done(() => {
-    initLoop(mapsSection);
-  });
+  })
+    .fail(() => {
+      if (mapCounter < 5) {
+        fetchAndInitMaps(mapsSection);
+      }
+    })
+    .done(() => {
+      initMaps(mapsSection);
+    });
+};
+
+const loadMapOnTheScroll = e => {
+  const targetElement = $('.masters');
+  const targetElementOffsetTop = targetElement.offset().top;
+
+  console.log(targetElementOffsetTop, window.scrollY);
+  if (targetElementOffsetTop <= window.scrollY) {
+    fetchAndInitMaps(mapsSection);
+    document.removeEventListener('scroll', loadMapOnTheScroll);
+    return false;
+  }
 };
 
 export const initContactsMaps = () => {
-  const mapsSection = $('.main-contacts');
   if (!mapsSection.length) {
     return;
   }
 
-  ScrollTrigger.create({
-    trigger: '.masters',
-    start: 'top',
-    once: true,
-    onEnter: () => {
-      fetchAndInitMaps(mapsSection);
-      // createAndSetMap(
-      //   'https://yandex.ru/map-widget/v1/?um=constructor%3A585485ea05390ddda4058cf9daeb8c6511d91bc51e08f6e1624889c2697b3ed6&amp;source=constructor',
-      //   '.main-contacts__card--left .main-contacts__map',
-      // );
-      // createAndSetMap(
-      //   'https://yandex.ru/map-widget/v1/?um=constructor%3A585485ea05390ddda4058cf9daeb8c6511d91bc51e08f6e1624889c2697b3ed6&amp;source=constructor',
-      //   '.main-contacts__card--right .main-contacts__map',
-      // );
+  MQ(
+    breakpoints.xl.maxWidth,
+    () => {
+      // in xl
+      document.addEventListener('scroll', loadMapOnTheScroll);
     },
-  });
+    () => {
+      // out xl
+      ScrollTrigger.create({
+        trigger: '.masters',
+        start: 'top',
+        once: true,
+        onEnter: () => {
+          fetchAndInitMaps(mapsSection);
+        },
+      });
+    },
+  );
 };

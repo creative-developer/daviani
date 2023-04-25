@@ -3,32 +3,32 @@ footer.b-footer
     ._row.-top-line
       ._col.-left
         ._logo-wrap
-          a.b-logo.-small._logo(href='#', aria-label='Footer logotype link')
+          a.b-logo.-small._logo(href='index.html', aria-label='Footer logotype link')
             +icon('logo')
           nav.b-nav.-medium.-light.-vertical._left-nav
             ul._list.-vertical
               li._item
-                a._link(href='#') О нас
+                a._link.js-scroll(href='#facilities') О нас
               li._item
-                a._link(href='#') Услуги
+                a._link.js-scroll(href='#services') Услуги
               li._item
-                a._link(href='#') Специалисты
+                a._link.js-scroll(href='#masters') Специалисты
               li._item
-                a._link(href='#') Почему мы
+                a._link.js-scroll(href='#') Почему Давиани
       ._col.-center
         nav.b-nav.-medium.-light.-vertical
           ul._list.-vertical
             li._item
-              a._link(href='#') Отзывы
+              a._link.js-scroll(href='#works') Отзывы
             li._item
-              a._link(href='#') Контакты
+              a._link.js-scroll(href='#main-contacts') Контакты
             li._item
-              a._link(href='#') Политика конфиденциальности
+              a._link.js-scroll(href='https://daviani.ru/privacy.html', target='_blank') Политика конфиденциальности
             li._item
-              a._link(href='#') Пользовательское соглашение
+              a._link.js-scroll(href='https://daviani.ru/terms.html', target='_blank') Пользовательское соглашение
       ._col.-right
         ._phone-wrap
-          a._phone(href='tel:+8495885705')
+          a._phone(href='https://wa.me/+7495885705', target='_blank')
             ._phone-icon-wrap
               +icon('whatsapp')
             span 8 (495) 885-70-5
@@ -36,13 +36,13 @@ footer.b-footer
         nav.b-social._social
           ul._list
             li._item
-              a._link(href='#', aria-label='Social link VK')
+              a._link(href='https://vk.com/daviani_ru', target='_blank', aria-label='Social link VK')
                 +icon('vk')
             li._item
-              a._link(href='#', aria-label='Social link OK')
+              a._link(href='https://ok.ru/group/70000000783276', target='_blank', aria-label='Social link OK')
                 +icon('ok')
             li._item
-              a._link(href='#', aria-label='Social link telegram')
+              a._link(href='https://t.me/davianispa', target='_blank', aria-label='Social link telegram')
                 +icon('tg')
     ._row.-bottom-line
       ._col.-left
@@ -52,7 +52,6 @@ footer.b-footer
       ._col.-right
         ._info-text Проект и дизайн интерьера - Смолина Юлия
 
-// Testing
 //- .container
   .d-flex.align-items-center(style='border: 1px solid #fff; padding: 50px; background: #fff; margin-bottom: 300px')
     .mr-20(style='margin-right: 20px')
@@ -69,19 +68,21 @@ footer.b-footer
 |
 |
 |
-//- // Request popup
-//- .b-mfp.zoom-anim-dialog.mfp-hide#request-popup
+// Request popup
+#request-popup.b-mfp.zoom-anim-dialog.mfp-hide
   .b-request-popup
+    ._title Привет
+    h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos voluptatum perspiciatis animi deleniti reiciendis soluta, quae quos harum officiis obcaecati! Dolore veniam nemo ea! Maiores nobis numquam maxime? Ipsam, suscipit.
 
 |
 |
 |
-//- // Success popup
-  .b-mfp.-succes-popup.zoom-anim-dialog.mfp-hide#success
-    .b-form-result.-success
-      .b-mess
-        ._title Success!
-        ._desc We will contact with you soon
+// Success popup
+#success.b-mfp.-succes-popup.zoom-anim-dialog.mfp-hide
+  .b-form-result.-success
+    .b-mess
+      ._title Success!
+      ._desc We will contact with you soon
 
 |
 |

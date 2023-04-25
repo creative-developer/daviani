@@ -12,7 +12,7 @@
       padding: 30px 60px 30px 30px
     +md
       display: flex
-      align-items: center
+      align-items: flex-start
       flex-direction: column
       padding: 32px 0 0
 
@@ -80,15 +80,22 @@
       margin-bottom: 60px
     +md
       display: flex
-      align-items: center
+      align-items: flex-start
       flex-direction: column
+      width: 100%
+      overflow: hidden
 
   &__item
     &--active
-      .services-card__link
-        color: $accent
-        &:hover
+      .services-card
+        &__link
           color: $accent
+          transform: translateX(32px)
+          &:hover
+            color: $accent
+        &__icon-wrap
+          visibility: visible
+          opacity: 1
 
     &:not(:last-child)
       +min_xl
@@ -96,11 +103,33 @@
       +xl
         margin-bottom: 16px
 
+  &__icon-wrap
+    +min_md
+      display: none
+    +md
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 24px
+      height: 12px
+      margin-right: 8px
+      visibility: hidden
+      opacity: 0
+      transition: all 0.3s ease
+      transform: translateX(-32px)
+
   &__link
     font-weight: 400
     color: $white
     text-decoration: none
     font-family: $tenorSansFont
+    display: flex
+    align-items: center
+    margin-left: 0
+    span
+      display: inline-block
+      margin-left: -32px
+
     +min_xl
       font-size: 1.5rem
       line-height: 2.125rem
@@ -147,3 +176,5 @@
     width: 100%
     justify-content: center
     text-align: center
+    &-wrap
+      width: 100%

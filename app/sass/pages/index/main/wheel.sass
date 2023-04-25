@@ -7,7 +7,7 @@
   // transform: translateX(-50%)
   will-change: transform
   transform-style: preserve-3d
-  animation: spin 360s linear infinite
+  animation: spin 200s linear infinite
 
   +min_xl
     top: 32.8125rem
@@ -51,9 +51,7 @@
 
 @keyframes spin
   0%
-    // transform: rotate3d(0)
-    transform: translateX(-50%) rotateZ(0)
+    transform: translateX(-50%) rotate(0)
 
   100%
-    // transform: rotate3d(-360deg)
-    transform: translateX(-50%) rotateZ(-360deg)
+    transform: translateX(-50%) rotate(-360deg)
