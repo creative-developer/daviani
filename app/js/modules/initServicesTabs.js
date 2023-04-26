@@ -6,6 +6,7 @@ const initServicesInnerTabs = () => {
   const tabNavLink = currentParentTabElement.find('.services-card__link');
   const tabContentItem = currentParentTabElement.find('.services-card__img');
   const price = currentParentTabElement.find('.services-card__price span');
+  const submitBtn = currentParentTabElement.find('.services-card__btn');
 
   // init tabs first render
   const firstItem = tabContentItem.first().addClass('services-card__img--active');
@@ -18,6 +19,9 @@ const initServicesInnerTabs = () => {
     const currentElement = $(e.currentTarget);
     const id = currentElement.attr('href').replace('#', '');
     const currentTabContentItem = currentParentTabElement.find(`.services-card__img[data-id='${id}']`);
+
+    const currentServiceName = currentElement.find('span').text();
+    submitBtn.attr('data-value', currentServiceName);
 
     price.text(currentElement.attr('data-price'));
     currentElement.closest('.services-card__list').find('.services-card__item').removeClass('services-card__item--active');

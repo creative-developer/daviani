@@ -1,15 +1,24 @@
+const getData = element => {
+  const currentElement = $(element);
+
+  const name = currentElement.attr('data-field') || '';
+  const title = currentElement.attr('data-name') || '';
+  const value = currentElement.attr('data-value') || '';
+
+  return { name, title, value };
+};
+
 export const initForm = () => {
-  const additionalFormData = {};
+  let additionalFormData = {};
 
   $('.js-popup-additional').on('click', e => {
+    additionalFormData = {};
     const currentElement = $(e.currentTarget);
 
-    const name = currentElement.attr('data-field') || '';
-    const title = currentElement.attr('data-name') || '';
-    const value = currentElement.attr('data-value') || '';
+    const data = getData(currentElement);
 
-    if (name && title) {
-      additionalFormData[name] = { title, value };
+    if (data.name && data.title) {
+      additionalFormData[data.name] = { title: data.title, value: data.value };
     }
   });
 
@@ -60,6 +69,7 @@ export const initForm = () => {
 
           $.magnificPopup.close();
           form.trigger('reset');
+          additionalFormData = {};
         }, 3000);
       } else {
         alert('Ajax result: ' + data.status);

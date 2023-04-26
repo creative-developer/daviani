@@ -90,12 +90,14 @@
       .services-card
         &__link
           color: $accent
-          transform: translateX(32px)
+          +md
+            transform: translateX(32px)
           &:hover
             color: $accent
         &__icon-wrap
-          visibility: visible
-          opacity: 1
+          +md
+            visibility: visible
+            opacity: 1
 
     &:not(:last-child)
       +min_xl
@@ -123,12 +125,13 @@
     color: $white
     text-decoration: none
     font-family: $tenorSansFont
-    display: flex
-    align-items: center
-    margin-left: 0
-    span
-      display: inline-block
-      margin-left: -32px
+    +md
+      display: flex
+      align-items: center
+      margin-left: 0
+      span
+        display: inline-block
+        margin-left: -32px
 
     +min_xl
       font-size: 1.5rem
