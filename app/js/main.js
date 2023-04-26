@@ -17,6 +17,7 @@ import { aosAnimationInit } from './modules/animationOnScroll.js';
 import { breakpoints, gsapMatchMedia } from './modules/consts.js';
 import { MQ } from './modules/MQ.js';
 import { inputsMaskInit } from './modules/inputsMask.js';
+import { initForm } from './modules/form.js';
 
 export let scroller = null;
 
@@ -65,6 +66,7 @@ $(document).ready(() => {
   initMenu();
   initMobileBlocksAnimation();
   initLazyLoadImages();
+  initForm();
 
   $(window).on('load', () => {
     gsapMatchMedia.add(breakpoints.xl.minWidth, () => {

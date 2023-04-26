@@ -15,7 +15,7 @@
     +min_xl
       column-gap: 3.125rem
     +xl
-      column-gap: 50px
+      column-gap: 30px
     +lg
       flex-direction: column
       gap: 50px 0
@@ -36,14 +36,19 @@
       max-width: 100%
     +sm
       padding: 20px
+    &-wrap
+      display: flex
+      align-items: center
 
   &__map
     +min_xl
       height: 24.1875rem
       margin-bottom: 3.3125rem
     +xl
+      height: 300px
+      margin-bottom: 45px
+    +lg
       height: 387px
-      margin-bottom: 53px
     +sm
       height: 226px
       margin-bottom: 32px
@@ -75,6 +80,8 @@
 
   &__item
     font-weight: 400
+    display: flex
+    align-items: center
     +min_xl
       font-size: 1.125rem
       line-height: 1.125rem
@@ -138,16 +145,10 @@
 
   &__btn
     +min_xl
-      width: 13.8125rem
-      height: 3.3125rem
       margin-right: 1.375rem
     +xl
-      width: 190px
-      height: 42px
       margin-right: 20px
     +lg
-      width: 221px
-      height: 53px
       margin-right: 22px
     +sm
       display: flex
@@ -156,36 +157,12 @@
       width: 100%
       margin: 0 0 22px
 
-    span
-      color: $bg300
-      font-weight: 600
-      letter-spacing: 0.02em
-      +min_xl
-        font-size: 1.125rem
-        line-height: 1.3125rem
-      +xl
-        font-size: 16px
-        line-height: 21px
-      +lg
-        line-height: 19px
-
-    .icon
-      &--whatsapp
-        color: $black
-        +min_xl
-          width: 1.1875rem
-          height: 1.1875rem
-        +xl
-          width: 17px
-          height: 17px
-        +lg
-          width: 19px
-          height: 19px
-
   &__direction-link
     font-weight: 400
     text-decoration: none
     color: rgba($white, 0.75)
+    &:hover
+      color: rgba($accent, 0.75)
     +min_xl
       font-size: 1.125rem
       line-height: 1.375rem
