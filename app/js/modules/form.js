@@ -1,11 +1,25 @@
 export const initForm = () => {
+  const additionalFormData = {};
+
+  $('.js-popup-additional').on('click', e => {
+    const currentElement = $(e.currentTarget);
+
+    const name = currentElement.attr('data-field') || '';
+    const title = currentElement.attr('data-name') || '';
+    const value = currentElement.attr('data-value') || '';
+
+    if (name && title) {
+      additionalFormData[name] = { title, value };
+    }
+  });
+
   // // E-mail Ajax Send
   $('form').submit(function (e) {
     e.preventDefault();
 
     let form = $(this);
     let formData = {};
-    formData.data = {};
+    formData.data = { ...additionalFormData };
 
     // Serialize
     form.find('input, textarea').each(function () {

@@ -161,6 +161,7 @@ function buildCopy() {
       'app/img/**/*',
       'app/*.html',
       'app/.htaccess',
+      'app/mail/*',
     ],
     {
       base: 'app/',
