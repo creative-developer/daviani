@@ -1,25 +1,9 @@
 .input
-
-  &__field
-    background: transparent
-    padding: 4px 0 8px
-    &:hover
-      // border-color: $main-blue
-      // color: $main-blue
-
-  &__label
-    display: flex
-    align-items: center
-    margin-bottom: 0
-
-  &__text
-    display: inline-block
-    font-size: 16px
-    line-height: 16px
-    text-align: left
-    color: #555555
-    white-space: nowrap
-    width: 100%
-    max-width: 102px
-    margin-right: 12px
-    margin-bottom: -6px
+  font-weight: 400
+  color: $base-black
+  +min_xl
+    border-bottom: 0.0625rem solid #D9D9D9
+    padding: 0 0 0.75rem 0
+  +xl
+    border-bottom: 1px solid #D9D9D9
+    padding: 0 0 12px 0

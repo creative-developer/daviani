@@ -5,12 +5,15 @@
 input,
 textarea
   width: 100%
-  font-size: 20px
-  line-height: 20px
-  // color: $c1
+  color: $base-black
   border: none
-  padding: 5px 10px
   transition: all .3s ease
+  +min_xl
+    font-size: 1rem
+    line-height: 1.625rem
+  +xl
+    font-size: 16px
+    line-height: 26px
   &:focus
     outline: none
     // border-color: $c1
@@ -18,22 +21,4 @@ textarea
     background: $white
 
 ::placeholder
-  color: #999
-
-.form
-  display: flex
-  flex-direction: column
-  gap: 24px
-
-  &__group
-    position: relative
-
-  &__group, &__input
-    width: 100%
-
-  &__button
-    max-width: 200px
-    width: 100%
-
-    +sm
-      max-width: 100%
+  color: $base-black

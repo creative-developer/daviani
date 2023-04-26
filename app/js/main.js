@@ -16,6 +16,7 @@ import { initMobileBlocksAnimation } from './modules/initMobileBlocksAnimation.j
 import { aosAnimationInit } from './modules/animationOnScroll.js';
 import { breakpoints, gsapMatchMedia } from './modules/consts.js';
 import { MQ } from './modules/MQ.js';
+import { inputsMaskInit } from './modules/inputsMask.js';
 
 export let scroller = null;
 
@@ -50,6 +51,7 @@ $(document).ready(() => {
   );
 
   initRems();
+  inputsMaskInit();
   mfpPopupInit();
   mediaQueriesInit();
   smoothScroll();

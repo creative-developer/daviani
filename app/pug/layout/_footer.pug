@@ -69,10 +69,23 @@ footer.b-footer
 |
 |
 // Request popup
-#request-popup.b-mfp.zoom-anim-dialog.mfp-hide
+#request-popup.b-mfp.-request-popup.zoom-anim-dialog.mfp-hide
   .b-request-popup
-    ._title Привет
-    h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos voluptatum perspiciatis animi deleniti reiciendis soluta, quae quos harum officiis obcaecati! Dolore veniam nemo ea! Maiores nobis numquam maxime? Ipsam, suscipit.
+    ._img-wrap
+      img._img(src='img/bg/request-popup-bg.png', alt='')
+    ._content
+      h3._title Оставить заявку
+      form._form
+        ._inputs-wrap
+          .b-input._input
+            input._element(type='text', name='name', data-type='name', placeholder='Ваше имя')
+          .b-input._input
+            input._element(type='text', name='phone', data-type='phone', placeholder='Номер телефон')
+        ._btn-wrap
+          button.b-btn.-dark-text.-bg-accent.-iconed-right.-aic.-lg._btn(type='submit')
+            span Записаться
+            ._icon-wrap
+              +icon('expand-styled')
 
 |
 |
