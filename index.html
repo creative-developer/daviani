@@ -23,7 +23,6 @@
 <body>
 	<div class="antialiased overflow-x-hidden"><!-- Header-->
 		<div class="screen-overlay"></div>
-		<div class="loader">Loading...</div>
 		<div class="smooth-wrapper">
 			<div class="smooth-content">
 				<header class="header">
@@ -65,7 +64,7 @@
 										<li class="nav__item"><a class="nav__link js-scroll" href="#main-contacts">Контакты</a></li>
 									</ul>
 								</nav>
-								<div class="header__right-btn-wrap"><a class="btn btn--accent-outlined btn--md header__btn" href="#">Оставить заявку<!-- content--></a></div>
+								<div class="header__right-btn-wrap"><a class="btn btn--accent-outlined btn--sm header__btn js-popup" href="#request-popup">Оставить заявку<!-- content--></a></div>
 							</div>
 						</div>
 					</div>
@@ -466,17 +465,25 @@
 										<ul class="main-contacts__list">
 											<li class="main-contacts__item"><svg class="icon icon--contacts-location" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#contacts-location"></use>
-												</svg><a class="main-contacts__link" href="#">Трубная Площадь, д. 2, 2 этаж (м.Трубная)</a></li>
+												</svg>
+												<div class="main-contacts__link">Трубная Площадь, д. 2, 2 этаж (м.Трубная)</div>
+											</li>
 											<li class="main-contacts__item"><svg class="icon icon--contacts-phone" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#contacts-phone"></use>
-												</svg><a class="main-contacts__link" href="84958857059">8 (495) 885-70-59</a></li>
+												</svg>
+												<div class="main-contacts__link" href="tel:+74958857059">8 (495) 885-70-59</div>
+											</li>
 											<li class="main-contacts__item"><svg class="icon icon--contacts-clock" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#contacts-clock"></use>
-												</svg><a class="main-contacts__link" href="#">Ежедневно с 10:00 до 22:00</a></li>
+												</svg>
+												<div class="main-contacts__link">Ежедневно с 10:00 до 22:00</div>
+											</li>
 										</ul>
-										<div class="main-contacts__card-wrap"><button class="main-contacts__btn btn btn--bg-accent btn--iconed-left"><svg class="icon icon--whatsapp" fill="currentColor">
-													<use xlink:href="img/svg-sprite.svg#whatsapp"></use>
-												</svg><span>Чат WhatsApp</span></button><a class="main-contacts__direction-link" href="#">Проложить маршрут</a></div>
+										<div class="main-contacts__card-wrap"><a class="btn btn--bg-accent btn--iconed-left btn--bg300-text btn--md btn--aic main-contacts__btn" href="https://wa.me/+74958857059" target="_blank">
+												<div class="btn__icon-wrap"><svg class="icon icon--whatsapp" fill="currentColor">
+														<use xlink:href="img/svg-sprite.svg#whatsapp"></use>
+													</svg></div><span>Чат WhatsApp</span>
+											</a><a class="main-contacts__direction-link" href="https://yandex.ru/maps/org/daviani_beauty_spa/1747972544/?ll=37.621399%2C55.766061&amp;z=16" target="_blank">Проложить маршрут</a></div>
 									</div>
 								</div>
 								<div class="main-contacts__card main-contacts__card--right">
@@ -486,17 +493,25 @@
 										<ul class="main-contacts__list">
 											<li class="main-contacts__item"><svg class="icon icon--contacts-location" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#contacts-location"></use>
-												</svg><a class="main-contacts__link" href="#">Большая Якиманка, д. 22, 1 этаж (м.Полянка)</a></li>
+												</svg>
+												<div class="main-contacts__link">Большая Якиманка, д. 22, 1 этаж (м.Полянка)</div>
+											</li>
 											<li class="main-contacts__item"><svg class="icon icon--contacts-phone" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#contacts-phone"></use>
-												</svg><a class="main-contacts__link" href="84958857059">8 (495) 885-70-59</a></li>
+												</svg>
+												<div class="main-contacts__link">8 (495) 885-70-59</div>
+											</li>
 											<li class="main-contacts__item"><svg class="icon icon--contacts-clock" fill="currentColor">
 													<use xlink:href="img/svg-sprite.svg#contacts-clock"></use>
-												</svg><a class="main-contacts__link" href="#">Ежедневно с 10:00 до 22:00</a></li>
+												</svg>
+												<div class="main-contacts__link">Ежедневно с 10:00 до 22:00</div>
+											</li>
 										</ul>
-										<div class="main-contacts__card-wrap"><button class="main-contacts__btn btn btn--bg-accent btn--iconed-left"><svg class="icon icon--whatsapp" fill="currentColor">
-													<use xlink:href="img/svg-sprite.svg#whatsapp"></use>
-												</svg><span>Чат WhatsApp</span></button><a class="main-contacts__direction-link" href="#">Проложить маршрут</a></div>
+										<div class="main-contacts__card-wrap"><a class="btn btn--bg-accent btn--iconed-left btn--bg300-text btn--md btn--aic main-contacts__btn" href="https://wa.me/+74958857059" target="_blank">
+												<div class="btn__icon-wrap"><svg class="icon icon--whatsapp" fill="currentColor">
+														<use xlink:href="img/svg-sprite.svg#whatsapp"></use>
+													</svg></div><span>Чат WhatsApp</span>
+											</a><a class="main-contacts__direction-link" href="https://yandex.ru/maps/org/daviani_beauty_spa/42188203970/?ll=37.614563%2C55.738308&amp;z=16" target="_blank">Проложить маршрут</a></div>
 									</div>
 								</div>
 							</div>
@@ -565,13 +580,38 @@
 							</div>
 						</div>
 					</div>
-				</footer><!-- Testing-->
+				</footer>
 
+				<!-- Request popup-->
+				<div class="mfp mfp--request-popup zoom-anim-dialog mfp-hide" id="request-popup">
+					<div class="request-popup">
+						<div class="request-popup__img-wrap"><img class="request-popup__img" src="img/bg/request-popup-bg.png" alt=""></div>
+						<div class="request-popup__content">
+							<h3 class="request-popup__title">Оставить заявку</h3>
+							<form class="request-popup__form">
+								<div class="request-popup__inputs-wrap">
+									<div class="input request-popup__input"><input class="input__element" type="text" name="name" data-name="name" data-type="name" placeholder="Ваше имя"></div>
+									<div class="input request-popup__input"><input class="input__element" type="text" name="phone" data-name="phone" data-type="phone" placeholder="Номер телефон"></div>
+								</div>
+								<div class="request-popup__btn-wrap"><button class="btn btn--dark-text btn--bg-accent btn--iconed-right btn--aic btn--lg request-popup__btn" type="submit"><span>Записаться</span>
+										<div class="btn__icon-wrap"><svg class="icon icon--expand-styled" fill="currentColor">
+												<use xlink:href="img/svg-sprite.svg#expand-styled"></use>
+											</svg></div>
+									</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
 
-
-
-
-
+				<!-- Success popup-->
+				<div class="mfp mfp--succes-popup zoom-anim-dialog mfp-hide" id="success">
+					<div class="form-result form-result--success">
+						<div class="mess">
+							<div class="mess__title">Success!</div>
+							<div class="mess__desc">We will contact with you soon</div>
+						</div>
+					</div>
+				</div>
 
 				<!-- Scripts-->
 			</div>
