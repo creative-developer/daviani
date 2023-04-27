@@ -1,9 +1,9 @@
 <?
 $result = [ 'status' => 'error' ];
 $_SERVER['REQUEST_METHOD'] === 'POST' && !empty( $_POST['data'] ) ?: die( json_encode( $result ) );
-// spa@daviani.ru
+
 $data = [
-	'to'           => 'serdargurbanmyradow1996@gmail.com',
+	'to'           => 'spa@daviani.ru',
 	'from'         => 'no-reply@daviani.ru',
 	'subject'      => 'Новая заявка от ukladka.daviani.ru',
 	'project_name' => 'Daviani',
