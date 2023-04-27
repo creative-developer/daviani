@@ -3,7 +3,7 @@ export const smoothScroll = () => {
     e.preventDefault();
     const attr = $(e.currentTarget).attr('href').replace('#', '');
     const el = $(`[data-id=${attr}]`);
-    const headerHeight = 56;
+    const headerHeight = window.innerWidth >= 991 ? 0 : 83;
 
     if (el.length) {
       const position = el.offset().top - headerHeight;

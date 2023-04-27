@@ -19,6 +19,9 @@ export const mfpPopupInit = () => {
       mainClass: 'mfp-fade-zoom',
       callbacks: {
         open: function () {},
+        close: function () {
+          $(popupID).find('form').trigger('reset');
+        },
       },
     });
   };
