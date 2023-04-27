@@ -14,8 +14,30 @@
     margin: 40px auto
   +md
     max-width: 450px
+  &-container
+    padding: 0
   &--request-popup
     // padding: 114px 80px
+  &--menu
+    display: flex
+    max-width: 100vw
+    min-height: 100vh
+    margin: 0 auto
+    padding: 4.086vh 2.604vw 3.064vh 2.604vw
+    +lg
+      padding: 40px 40px 30px
+      max-width: calc( 100% - 70px )
+      margin: 0 auto 0 0
+      position: fixed
+      top: 0
+      width: 100%
+      height: 100%
+    +sm
+      padding: 32px 20px 20px
+      max-width: calc( 100% - 30px )
+    .mfp-close
+      background: #F9F9F9
+      border: 1px solid rgba(0, 0, 0, 0.09)
 
   .mfp-close
     display: flex

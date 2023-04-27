@@ -56,27 +56,13 @@ footer.b-footer
 |
 |
 // Request popup
-#request-popup.b-mfp.-request-popup.zoom-anim-dialog.mfp-hide
-  .b-request-popup
-    ._img-wrap
-      img._img(src='img/bg/request-popup-bg.png', alt='')
-    ._content
-      h3._title Оставить заявку
-      form._form
-        ._inputs-wrap
-          .b-input._input
-            input._element(type='text', name='name', data-name='Имя', data-type='name', placeholder='Ваше имя')
-          .b-input._input
-            input._element(type='text', name='phone', data-name='Телефон', data-type='phone', placeholder='Номер телефон')
-        ._btn-wrap
-          button.b-btn.-dark-text.-bg-accent.-iconed-right.-aic.-lg._btn(type='submit')
-            span Записаться
-            ._icon-wrap
-              +icon('expand-styled')
-        .b-form-result
-          .b-mess
-            h3.second-title._title Спасибо!
-            ._desc Мы свяжемся с Вами в ближайшее время.
+include ./modules/request-popup
+
+|
+|
+|
+// Request popup
+include ./modules/menu-popup
 
 |
 |
@@ -87,10 +73,3 @@ footer.b-footer
     .b-mess
       h3.second-title._title Спасибо!
       ._desc Мы свяжемся с Вами в ближайшее время.
-
-|
-|
-|
-// Scripts
-//- script(src='js/libs.min.js')
-//- script(src='js/main.bundle.js')

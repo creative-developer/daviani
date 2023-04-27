@@ -18,9 +18,21 @@ export const mfpPopupInit = () => {
       closeMarkup: `<button type="button" class="mfp-close">${closeBtn}</button>`,
       mainClass: 'mfp-fade-zoom',
       callbacks: {
+        beforeOpen: function () {
+          if (popupID === '#menu') {
+            $('body').addClass('menu-zoom');
+          }
+        },
         open: function () {},
         close: function () {
           $(popupID).find('form').trigger('reset');
+
+          if (popupID === '#menu') {
+            $('.hamburger').removeClass('is-active');
+          }
+        },
+        afterClose: function () {
+          $('body').removeClass('menu-zoom');
         },
       },
     });

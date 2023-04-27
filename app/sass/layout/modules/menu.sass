@@ -1,0 +1,103 @@
+.menu
+  // height: 100%
+  width: 100%
+  +min_lg
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  +lg
+    overflow: auto
+
+  &__row
+    display: flex
+    flex-wrap: wrap
+    +min_lg
+      padding-left: 7.813vw
+      padding-right: 5.781vw
+    &--top
+      align-items: center
+      justify-content: space-between
+      padding-left: 0
+      +lg
+        margin-bottom: 30px
+    &--center
+      // margin-top: -44px
+      .menu__col
+        &--left
+          +lg
+            margin-bottom: 20px
+        &--right
+          +lg
+            margin-bottom: 50px
+    &--bottom
+      +lg
+        display: none
+      .menu__col--right
+        +lg
+          display: none
+
+  &__mobile-title
+    font-weight: bold
+    font-size: 18px
+    line-height: 19px
+    letter-spacing: 0.02em
+    // color: $c1
+    +min_lg
+      display: none
+
+  // &__top-col
+  //   &--left
+  //   &--right
+  &__col
+    &--left
+      flex-basis: 39.9%
+      max-width: 39.9%
+      +lg
+        flex-basis: 100%
+        max-width: 100%
+    &--right
+      padding-top: 2px
+      flex-basis: 60.1%
+      max-width: 60.1%
+      +lg
+        flex-basis: 100%
+        max-width: 100%
+        padding-top: 0
+    &--mobile
+      +min_lg
+        display: none
+
+  &__logo
+    +lg
+      display: none
+
+  &__info-wrap
+    display: flex
+    align-items: flex-start
+
+  &__btn
+    padding: 15.5px 45.05px
+    &-wrap
+      +lg
+        margin-bottom: 40px
+
+  &__feedback-wrap
+    +min_lg
+      margin-right: 2.604vw
+    +lg
+      margin-bottom: 30px
+
+  &__address
+    +min_lg
+      display: none
+    +lg
+      // margin-bottom: 50px
+    +sm
+      display: none !important
+  &__phone
+    margin-bottom: 4px
+
+  &__email
+    padding-left: 35px
+    +sm
+      display: none !important
