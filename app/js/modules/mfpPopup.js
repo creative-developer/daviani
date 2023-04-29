@@ -1,3 +1,5 @@
+import { menuAnimation } from './menuAnimation.js';
+
 export const mfpPopupInit = () => {
   window.mfpPopup = function (popupID, source) {
     const closeBtn =
@@ -23,7 +25,11 @@ export const mfpPopupInit = () => {
             $('body').addClass('menu-zoom');
           }
         },
-        open: function () {},
+        open: function () {
+          if (popupID === '#menu') {
+            menuAnimation();
+          }
+        },
         close: function () {
           $(popupID).find('form').trigger('reset');
 

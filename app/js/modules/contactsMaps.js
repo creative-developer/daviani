@@ -57,7 +57,6 @@ const loadMapOnTheScroll = e => {
   const targetElement = $('.masters');
   const targetElementOffsetTop = targetElement.offset().top;
 
-  console.log(targetElementOffsetTop, window.scrollY);
   if (targetElementOffsetTop <= window.scrollY) {
     fetchAndInitMaps(mapsSection);
     document.removeEventListener('scroll', loadMapOnTheScroll);

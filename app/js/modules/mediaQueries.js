@@ -49,11 +49,9 @@ export const mediaQueriesInit = () => {
     breakpoints.xl.minWidth,
     () => {
       // in xl
-      // console.log('in xl');
     },
     () => {
       // out xl
-      // console.log('out xl');
     },
   );
 };

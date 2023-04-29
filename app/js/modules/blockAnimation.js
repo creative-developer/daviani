@@ -100,18 +100,15 @@ export const initBlocksAnimation = () => {
 
   gsapMatchMedia.add(breakpoints.xxl.minWidth, () => {
     mainTimeline.to('.main-gallery__title-wrap', mainTitleSettings).to(collage, collageSettings).to(items, collageItemsSettings);
-    console.log('breakpoints.xxl.minWidth');
   });
 
   gsapMatchMedia.add(breakpoints.xl.minWidth, () => {
     gsapMatchMedia.add(breakpoints.xxl.maxWidth, () => {
       mainTimeline.to(collage, { ...collageSettings, xPercent: -7, scale: 4 }).to(items, collageItemsSettings);
-      console.log('breakpoints.xxl.maxWidth');
     });
   });
 
   gsapMatchMedia.add(breakpoints.xl.maxWidth, () => {
-    console.log('breakpoints.xl.maxWidth');
     mainTimeline.pause().kill();
   });
 

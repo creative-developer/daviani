@@ -1,0 +1,30 @@
+
+.contact-item
+  font-weight: 400
+  display: flex
+  align-items: center
+  &:not(:last-child)
+    margin-bottom: 18px
+  +xl
+    font-size: 16px
+    line-height: 16px
+
+  &__text
+    display: block
+    &--top
+      opacity: 0.75
+      margin-bottom: 6px
+    &--bottom
+      opacity: 0.5
+
+  &__icon-wrap
+    width: 18px
+    height: 18px
+    min-width: 18px
+    min-height: 18px
+    margin-right: 16px
+    color: $accent
+
+  .icon
+    width: 100%
+    height: 100%
