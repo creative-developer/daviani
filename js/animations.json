@@ -131,6 +131,9 @@
       }
     },
     {
+      "el": ".masters__mobile-slider-btns-wrap"
+    },
+    {
       "el": ".masters-slider"
     },
     {
