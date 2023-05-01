@@ -120,6 +120,57 @@
     },
     {
       "el": ".facilities__decor-line-inner"
+    },
+    {
+      "el": ".masters__title-wrap"
+    },
+    {
+      "el": ".masters__slider-btns-wrap",
+      "animation": {
+        "delay": 100
+      }
+    },
+    {
+      "el": ".masters-slider"
+    },
+    {
+      "el": ".masters__video-container"
+    },
+    {
+      "el": ".works__title"
+    },
+    {
+      "el": ".works-slider"
+    },
+    {
+      "el": ".main-contacts__card",
+      "animation": {
+        "increment": true
+      }
+    },
+    {
+      "el": ".footer__logo"
+    },
+    {
+      "el": ".footer__phone-wrap"
+    },
+    {
+      "el": ".footer__social"
+    },
+    {
+      "el": ".footer__col--left .nav__item",
+      "animation": {
+        "increment": true
+      }
+    },
+    {
+      "el": ".footer__col--center .nav__item",
+      "animation": {
+        "increment": true
+      }
+    },
+    {
+      "el": ".footer__row--bottom-line .footer__col"
     }
   ]
 }
