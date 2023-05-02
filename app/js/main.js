@@ -18,6 +18,7 @@ import { breakpoints, gsapMatchMedia } from './modules/consts.js';
 import { MQ } from './modules/MQ.js';
 import { inputsMaskInit } from './modules/inputsMask.js';
 import { initForm } from './modules/form.js';
+import { initFixHeader } from './modules/fixHeader.js';
 
 export let scroller = null;
 
@@ -67,6 +68,7 @@ $(document).ready(() => {
   initMobileBlocksAnimation();
   initLazyLoadImages();
   initForm();
+  initFixHeader();
 
   $(window).on('load', () => {
     gsapMatchMedia.add(breakpoints.xl.minWidth, () => {

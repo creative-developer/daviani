@@ -47,6 +47,9 @@
       "el": ".main-title"
     },
     {
+      "el": ".main-gallery__mobile-title"
+    },
+    {
       "el": ".collage__item",
       "animation": {
         "increment": true,
@@ -120,6 +123,54 @@
     },
     {
       "el": ".facilities__decor-line-inner"
+    },
+    {
+      "el": ".masters__title-wrap"
+    },
+    {
+      "el": ".masters__slider-btns-wrap",
+      "animation": {
+        "delay": 100
+      }
+    },
+    {
+      "el": ".masters__mobile-slider-btns-wrap"
+    },
+    {
+      "el": ".masters-slider"
+    },
+    {
+      "el": ".masters__video-container"
+    },
+    {
+      "el": ".works__title"
+    },
+    {
+      "el": ".works-slider"
+    },
+    {
+      "el": ".main-contacts__card",
+      "animation": {
+        "increment": true
+      }
+    },
+    {
+      "el": ".footer__logo"
+    },
+    {
+      "el": ".footer__phone-wrap"
+    },
+    {
+      "el": ".footer__social"
+    },
+    {
+      "el": ".footer .nav__item",
+      "animation": {
+        "increment": true
+      }
+    },
+    {
+      "el": ".footer__row--bottom-line .footer__col"
     }
   ]
 }

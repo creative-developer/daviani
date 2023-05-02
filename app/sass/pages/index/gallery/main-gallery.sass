@@ -28,6 +28,10 @@
       // transform: translateY(6.25rem)
       // opacity: 0.1
 
+  &__mobile-title
+    +min_sm
+      display: none
+
 .main-title
   position: relative
   font-family: $titleFont
@@ -39,13 +43,15 @@
   margin-bottom: 0
   // &--op-55
   //   opacity: 0.55
+  +sm
+    display: none
 
   &__highlighted
     color: $accent
     display: block
 
   &__content
-    background-image: url('../img/index/collage/title-bg.webp')
+    background-image: url('../img/index/collage/title-bg.png')
     background-size: cover
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent

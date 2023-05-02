@@ -1,6 +1,6 @@
 import { MQ } from './MQ.js';
 import { breakpoints } from './consts.js';
-import { fixHeader } from './fixHeader.js';
+import { screenOverlaySwitcher } from './screenOverlaySwitcher.js';
 
 export const mediaQueriesInit = () => {
   MQ(
@@ -8,10 +8,12 @@ export const mediaQueriesInit = () => {
     () => {
       // in xl
       ScrollTrigger.killAll();
+      document.addEventListener('scroll', screenOverlaySwitcher);
     },
     () => {
       // out xl
       // initBlocksAnimation();
+      document.removeEventListener('scroll', screenOverlaySwitcher);
     },
   );
   MQ(
@@ -20,17 +22,11 @@ export const mediaQueriesInit = () => {
       // in lg
       const sliderBtns = $('.masters__slider-btns-wrap').find('.masters__slider-btn');
       $('.masters__mobile-slider-btns-wrap').append(sliderBtns);
-
-      fixHeader();
-      document.addEventListener('scroll', fixHeader);
     },
     () => {
       // out lg
       const sliderBtns = $('.masters__mobile-slider-btns-wrap').find('.masters__slider-btn');
       $('.masters__slider-btns-wrap').append(sliderBtns);
-
-      document.removeEventListener('scroll', fixHeader);
-      $('.header').removeClass('header--scrolled');
     },
   );
   MQ(

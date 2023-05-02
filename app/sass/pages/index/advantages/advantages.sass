@@ -11,7 +11,7 @@
     text-align: center
     letter-spacing: 0.04em
     color: $accent
-    background: url(../img/index/advantages/title-img.webp) no-repeat center center/cover
+    background: url(../img/index/advantages/title-img.png) no-repeat center center/cover
     -webkit-background-clip: text
     -webkit-text-fill-color: transparent
     opacity: 0.66
@@ -44,11 +44,16 @@
       line-height: 74px
       max-width: 90%
       background-size: 170%
+      display: none
     +xsm
       max-width: 100%
 
     &-wrap
       overflow: hidden
+
+  &__mobile-title
+    +min_sm
+      display: none
 
   &__wrap
     background: $bg300

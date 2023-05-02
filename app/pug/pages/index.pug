@@ -7,13 +7,13 @@ html(lang='ru')
   body
     |
     |
-    .antialiased.overflow-x-hidden
+    .antialiased
       // Header
       .b-screen-overlay
+      include ../layout/_header
       .smooth-wrapper
         .smooth-content
-          include ../layout/_header
-            // content
+          // content
           block content
             // Sections
             main.main-page
