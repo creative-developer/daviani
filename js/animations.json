@@ -47,6 +47,9 @@
       "el": ".main-title"
     },
     {
+      "el": ".main-gallery__mobile-title"
+    },
+    {
       "el": ".collage__item",
       "animation": {
         "increment": true,
@@ -161,13 +164,7 @@
       "el": ".footer__social"
     },
     {
-      "el": ".footer__col--left .nav__item",
-      "animation": {
-        "increment": true
-      }
-    },
-    {
-      "el": ".footer__col--center .nav__item",
+      "el": ".footer .nav__item",
       "animation": {
         "increment": true
       }
