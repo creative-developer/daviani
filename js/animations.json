@@ -171,6 +171,62 @@
     },
     {
       "el": ".footer__row--bottom-line .footer__col"
+    },
+    {
+      "el": ".advantages__title-wrap",
+      "animation": {
+        "delay": 300
+      }
+    },
+    {
+      "el": ".advantages__col--left .advantages__inner",
+      "animation": {
+        "delay": 450,
+        "offset": 150
+      }
+    },
+    {
+      "el": ".advantages__col--center .advantages__inner",
+      "animation": {
+        "offset": 250,
+        "delay": 100
+      }
+    },
+    {
+      "el": ".advantages__col--right .advantages__inner",
+      "animation": {
+        "delay": 450,
+        "offset": 200
+      }
+    },
+    {
+      "el": ".advantages-info__desc"
+    },
+    {
+      "el": ".advantages-info__icon--left",
+      "animation": {
+        "delay": 100,
+        "class": "fade-left"
+      }
+    },
+    {
+      "el": ".advantages-info__icon--right",
+      "animation": {
+        "delay": 100,
+        "class": "fade-right"
+      }
+    },
+    {
+      "el": ".advantages-info__signature-name",
+      "animation": {
+        "delay": 200
+      }
+    },
+    {
+      "el": ".advantages-info__signature-proffession",
+      "animation": {
+        "delay": 300
+      }
     }
   ]
 }
