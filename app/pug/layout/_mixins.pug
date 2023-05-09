@@ -12,3 +12,28 @@ mixin input(type, name, dataName, placeholder, required)
 mixin textarea(name, dataName, placeholder, required)
   .input-wrap
     textarea(name=name, data-name=dataName, cols='30', rows='5', placeholder=placeholder, required=required)
+
+mixin masterSliderItem(proffession, name, experience, img, desc, link)
+  .masters-slider__item.swiper-slide
+    .masters-slider__card
+      .masters-slider__card-top-line
+        .masters-slider__proffession #{ proffession }
+        .masters-slider__name !{ name }
+        .masters-slider__experience-wrap
+          span.masters-slider__experience-title Опыт работы:
+          span.masters-slider__experience-date !{ experience }
+        .masters-slider__desc
+          p !{ desc }
+      .masters-slider__btn-wrap
+        a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right.masters-slider__btn.js-popup.js-popup-additional(
+          href='#request-popup',
+          data-field='additional',
+          data-name='Мастер',
+          data-value=name + ' - ' + proffession
+        )
+          span Записаться
+          ._icon-wrap
+            +icon('expand-styled')
+        a.b-btn.-lg.-bg200-text.-link.masters-slider__link(href=link, target='_blank') Подробнее
+    .masters-slider__img-wrap
+      img.masters-slider__img.lazy(src='img/index/masters/dummy/dummy-image-1.gif', data-src=img, alt='')

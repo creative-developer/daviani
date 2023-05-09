@@ -13,75 +13,17 @@ section.b-masters(data-id='masters')
 
   .b-masters-slider.swiper._slider
     ._wrapper.swiper-wrapper
-      ._item.swiper-slide
-        ._card
-          ._card-top-line
-            ._proffession Косметолог
-            ._name Юлия Мартынова
-            ._experience-wrap
-              span._experience-title Опыт работы:
-              span._experience-date 17 лет
-            ._desc
-              p Косметолог салона Daviani. Специалист авторских массажей лица. Профессиональные навыки: диагностика кожи, владение и выполнение аппаратных методик, эпиляция воском, пирсинг, проведение химических пилингов, проведение механической и атравматической чистки лица. Юлия составляет и выполняет индивидуальные уходовые программы для каждого клиента. Ее сильная сторона в индивидуальном подборе домашнего ухода за лицом по типу кожи - Вы сможете использовать рекомендации Юлии для поддержания результата салонных процедур.
-          ._btn-wrap
-            a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right._btn.js-popup.js-popup-additional(
-              href='#request-popup',
-              data-field='additional',
-              data-name='Мастер',
-              data-value='Виктор Пустовалов - Массажист'
-            )
-              span Записаться
-              ._icon-wrap
-                +icon('expand-styled')
-            a.b-btn.-lg.-bg200-text.-link._link(href='#') Подробнее
-        ._img-wrap
-          img._img.lazy(src='img/index/masters/dummy/dummy-image-1.gif', data-src='img/index/masters/img-1.png', alt='')
-      ._item.swiper-slide
-        ._card
-          ._card-top-line
-            ._proffession Массажист
-            ._name Виктор Пустовалов
-            ._experience-wrap
-              span._experience-title Опыт работы:
-              span._experience-date 15 лет
-            ._desc
-              p Отлично выполняет мужские стрижки и авторский расслабляющий массаж головы. Ориентируется в трендах, придерживается современного видения парикмахерского искусства.
-          ._btn-wrap
-            a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right._btn.js-popup.js-popup-additional(
-              href='#request-popup',
-              data-field='additional',
-              data-name='Мастер',
-              data-value='Виктор Пустовалов - Массажист'
-            )
-              span Записаться
-              ._icon-wrap
-                +icon('expand-styled')
-            a.b-btn.-lg.-bg200-text.-link._link(href='#') Подробнее
-        ._img-wrap
-          img._img.lazy(src='img/index/masters/dummy/dummy-image-1.gif', data-src='img/index/masters/img-1.png', alt='')
-      ._item.swiper-slide
-        ._card
-          ._card-top-line
-            ._proffession Парикмахер-Стилист
-            ._name Дмитрий
-            ._experience-wrap
-              span._experience-title Опыт работы:
-              span._experience-date 15 лет
-            ._desc
-              p Отлично выполняет мужские стрижки и авторский расслабляющий массаж головы. Ориентируется в трендах, придерживается современного видения парикмахерского искусства.
-          ._btn-wrap
-            a.b-btn.-aic.-bg-dark.-lg.-accent-text.-iconed-right._btn.js-popup.js-popup-additional(
-              href='#request-popup',
-              data-field='additional',
-              data-name='Мастер',
-              data-value='Виктор Пустовалов - Массажист'
-            )
-              span Записаться
-              ._icon-wrap
-                +icon('expand-styled')
-            a.b-btn.-lg.-bg200-text.-link._link(href='#') Подробнее
-        ._img-wrap
-          img._img.lazy(src='img/index/masters/dummy/dummy-image-1.gif', data-src='img/index/masters/img-1.png', alt='')
+      +masterSliderItem('Косметолог', 'Юлия Мартынова', '17 лет', 'img/index/masters/img-1.png', 'Специалист авторских массажей лица. Профессиональные навыки: диагностика кожи, владение и выполнение аппаратных методик, эпиляция воском, пирсинг, проведение химических пилингов, проведение механической и атравматической чистки лица. Юлия составляет и выполняет индивидуальные уходовые программы для каждого клиента. Ее сильная сторона в индивидуальном подборе домашнего ухода за лицом по типу кожи - Вы сможете использовать рекомендации Юлии для поддержания результата салонных процедур.', 'https://daviani.ru/index.php?route=master/profi&master_category_id=75&profi_id=136')
+      +masterSliderItem('Мастер ногтевого сервиса', 'Шафрай Лилия', '12 лет', 'img/index/masters/img-2.png', 'Делает все виды маникюра, педикюра, дизайн ногтей любой сложности. Проходит повышение квалификации каждый год.', 'https://daviani.ru/index.php?route=master/profi&profi_id=169')
+      +masterSliderItem('Мастер ногтевого сервиса', 'Александра Германова', '15 лет', 'img/index/masters/img-3.png', 'Александру отличает потрясающий результат при высокой скорости работы - у нее вы сможете быстро сделать качественный, аккуратный и креативный маникюр. Идеальный френч - ее сильная сторона.', 'https://daviani.ru/index.php?route=master/profi&profi_id=142&ysclid=lhezx7p65i174421099')
+      +masterSliderItem('Топ-мастер маникюра', 'Виктория Мелёшина', '5 лет', 'img/index/masters/img-4.png', 'Виктория погрузилась в индустрию ногтевого сервиса не сразу, но с прохождением каждого нового курса интерес к профессиональным знаниям рос. Аккуратно и внимательно подходит к работе. Викторию отличает стремление к совершенству, выполнение процедур в удовольствие клиентам и безупречная работа над ошибками.', 'https://daviani.ru/index.php?route=master/profi&profi_id=157&ysclid=lhezz0b8pu631816387')
+      +masterSliderItem('Мастер маникюра', 'Анна Апексимова', '13 лет', 'img/index/masters/img-5.png', 'Анна - подолог, она имеет большой опыт бережной и эффективной заботы о проблемных стопах. Преображает кожу рук и ног, с любовью работает с ногтями и стопами любой сложности.', 'https://daviani.ru/index.php?route=master/profi&profi_id=144&ysclid=lhezzql2ta781858134')
+      +masterSliderItem('Мастер ногтевого сервиса', 'Шакирова Вероника', '15 лет', 'img/index/masters/img-6.png', 'Сертифицированный подолог<br /> В сфере бьюти больше 15 лет <br /> Делает все виды маникюра и педикюра <br />В год проходит от 5 обучений <br />Делает наращивание и дизайн ногтей любой сложности <br />«В работе для меня важен комфорт клиента и качество моей работы»', 'https://daviani.ru/index.php?route=master/profi&master_category_id=74&profi_id=168')
+      +masterSliderItem('Визажист- бровист', 'Лукина Майя', 'более 5 лет', 'img/index/masters/img-7.png', 'Опыт работы на показах, на фотосессиях. <br />Делает все виды макияжа, от дневного до креативного вечернего <br />Подбирает идеальную форму бровей, цвет и также делает долговременную укладку бровей и коллагенирование ресниц', '#')
+      +masterSliderItem('Косметолог', 'Маснева Оксана', '20 лет', 'img/index/masters/img-8.png', 'Оксана работала в премиальных салонах и проявила себя как тренер-косметолог.', 'https://daviani.ru/index.php?route=master/profi&profi_id=152&ysclid=lhf5ccp27f870588729')
+      +masterSliderItem('Массажист', 'Виктор Пустовалов', '15 лет', 'img/index/masters/img-9.png', 'Знаток множества техник массажа, превосходно владеет аппаратом Icoone Laser. За время своей карьеры Виктор работал со спортсменами и хоккеистками, а наши клиенты всегда отмечают его хорошее настроение и высокие вибрации.', 'https://daviani.ru/index.php?route=master/profi&profi_id=143&ysclid=lhf5m6x59m285078920')
+      +masterSliderItem('Стилист- визажист', 'Сакурин Дмитрий', 'более 15 лет', 'img/index/masters/img-10.png', 'Профессионально подбирает образ для клиента от укладки до макияжа. <br />Выполняет любые виды make-up, укладок, причёсок, окрашиваний.', '#')
+      +masterSliderItem('Барбер', 'Пачалов Камран', 'более 5 лет', 'img/index/masters/img-11.png', 'Знает о мужских стрижках всё. Проходил повышение квалификации в лучших школах барберинга. <br />Также выполняет женские укладки на брашинг и горячие инструменты. Проходит обучение по колористике', 'https://daviani.ru/index.php?route=master/profi&profi_id=167')
   ._mobile-slider-btns-wrap
   .container-fluid
     ._video-container
