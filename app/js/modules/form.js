@@ -58,6 +58,7 @@ export const initForm = () => {
       if (data.status === 'success') {
         if (form.closest('.mfp-wrap').hasClass('mfp-ready')) {
           form.find('.form-result').addClass('form-result--success');
+          ym(93510853, 'reachGoal', 'lead-ukladka');
         } else {
           mfpPopup('#success');
         }
