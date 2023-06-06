@@ -6,7 +6,7 @@ node_modules/
 
 # Optional npm cache directory
 .npm
-
+.jshintrc
 # Css files
 app/css/
 
